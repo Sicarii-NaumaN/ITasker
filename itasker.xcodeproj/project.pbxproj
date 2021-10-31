@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F967D32272D93B30090D0E6 /* itasker(registration).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itasker(registration).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F967D35272D93B30090D0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F967D37272D93B30090D0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F967D39272D93B30090D0E6 /* GreetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
-				0F967D34272D93B30090D0E6 /* itasker(registration) */,
+				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,12 +74,12 @@
 		0F967D33272D93B30090D0E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F967D32272D93B30090D0E6 /* itasker(registration).app */,
+				0F967D32272D93B30090D0E6 /* itasker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F967D34272D93B30090D0E6 /* itasker(registration) */ = {
+		0F967D34272D93B30090D0E6 /* itasker */ = {
 			isa = PBXGroup;
 			children = (
 				0F967D58272EAB370090D0E6 /* Scenes */,
@@ -87,7 +87,7 @@
 				0F967D53272DA1250090D0E6 /* ModuleBuilder.swift */,
 				0F967D43272D93B70090D0E6 /* Info.plist */,
 			);
-			path = "itasker(registration)";
+			path = itasker;
 			sourceTree = "<group>";
 		};
 		0F967D4F272D9E520090D0E6 /* GreetingScreen */ = {
@@ -236,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F967D31272D93B30090D0E6 /* itasker(registration) */ = {
+		0F967D31272D93B30090D0E6 /* itasker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker(registration)" */;
+			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */;
 			buildPhases = (
 				0F967D2E272D93B30090D0E6 /* Sources */,
 				0F967D2F272D93B30090D0E6 /* Frameworks */,
@@ -248,12 +248,12 @@
 			);
 			dependencies = (
 			);
-			name = "itasker(registration)";
+			name = itasker;
 			packageProductDependencies = (
 				0F967D75272EBE4D0090D0E6 /* EasyPeasy */,
 			);
 			productName = "itasker(registration)";
-			productReference = 0F967D32272D93B30090D0E6 /* itasker(registration).app */;
+			productReference = 0F967D32272D93B30090D0E6 /* itasker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker(registration)" */;
+			buildConfigurationList = 0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,7 +286,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F967D31272D93B30090D0E6 /* itasker(registration) */,
+				0F967D31272D93B30090D0E6 /* itasker */,
 			);
 		};
 /* End PBXProject section */
@@ -463,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "itasker(registration)/Info.plist";
+				INFOPLIST_FILE = itasker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "itasker(registration)/Info.plist";
+				INFOPLIST_FILE = itasker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker(registration)" */ = {
+		0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F967D44272D93B70090D0E6 /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker(registration)" */ = {
+		0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F967D47272D93B70090D0E6 /* Debug */,
