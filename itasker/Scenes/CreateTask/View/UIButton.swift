@@ -17,13 +17,36 @@ class UIButtonTextIcon: UIButton {
     //
     //private let constants: Constants?
     
-    //var imageName: String
-    var myIcon: UIImageView
+    var imageNameButton: String?
+    var myIcon: UIImageView?
+    var labelButton: UILabel?
+    var colorButton: UIColor
+    var colorIcon: UIColor
     
-    init(imageName: String) {
-        //self.imageName = "heart.fill"
-        self.myIcon = UIImageView(image: UIImage(systemName: "heart.fill"))
+    init(image: String?, text: String?, colorForButton: UIColor, colorForIcon: UIColor) {
+        
+        labelButton = UILabel()
+        imageNameButton = image
+        labelButton?.text = text
+        colorButton = colorForButton
+        colorIcon = colorForIcon
+        
+        //labelButton?.font = UIFont.withDesign(design: .rounded)  //
+        //UIFont.systemFont(ofSize: 17) //
+        labelButton?.font = UIFont(name: "ui-rounded", size: 17)
+        
+        if imageNameButton != nil {
+            self.myIcon = UIImageView(image: UIImage(systemName: imageNameButton!))
+        }
+        
         super.init(frame: .zero)
+        
+        if labelButton != nil {
+            self.setTitle(labelButton!.text, for: .normal)
+            labelButton!.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy)
+                //.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
+            self.addSubview(labelButton!)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -31,37 +54,37 @@ class UIButtonTextIcon: UIButton {
     }
     
     public func configureButton() {
-        print("Button cobfiguration started")
         self.configuration = .filled()
-        //myButton.setTitle("I love you", for: .normal)
-        //myButton.backgroundColor = .systemPink
-        self.configuration?.baseBackgroundColor = .systemPink
-        self.configuration?.baseForegroundColor = .green
+        self.configuration?.baseBackgroundColor = colorButton
+        self.configuration?.baseForegroundColor = colorIcon
         
-        //myButton.setTitleColor(.white, for: .normal)
+        labelButton?.center = self.center
+        labelButton?.textAlignment = NSTextAlignment.center
+        //self.labelButton.font
         
+        self.setTitleColor(.white, for: .normal)
         
         self.configuration?.imagePadding = 6
-        print("Configuration ended")
         
-        self.addSubview(myIcon)
-        configureIcon(color: .white)
+        if imageNameButton != nil {
+            self.addSubview(myIcon!)
+            //configureIcon()
+        }
     }
     
-    func configureIcon(color: UIColor) {
-        myIcon.tintColor = color
-        myIcon.tintColor = .white
+    func configureIcon() {
+        myIcon!.tintColor = colorIcon
         addImageConstrains()
     }
     
     func addImageConstrains(){
-        myIcon.translatesAutoresizingMaskIntoConstraints = false
+        myIcon!.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            myIcon.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            myIcon.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            myIcon.widthAnchor.constraint(equalToConstant: 30),
-            myIcon.heightAnchor.constraint(equalToConstant: 30)
+            myIcon!.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            myIcon!.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            myIcon!.widthAnchor.constraint(equalToConstant: 30),
+            myIcon!.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

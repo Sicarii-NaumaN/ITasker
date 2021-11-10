@@ -29,7 +29,42 @@
 		639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */; };
 		639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */; };
 		639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A00272EF09E00C5FFBC /* UIButton.swift */; };
+		639B2A0327388E5500C5FFBC /* UIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A0227388E5500C5FFBC /* UIText.swift */; };
+		639B2A092739A4E500C5FFBC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639B2A082739A3DF00C5FFBC /* Storyboard.storyboard */; };
+		63D4E170273B503900F3DF70 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D692B4BD638DCA100F548B82 /* Pods_itasker.framework */; };
+		63D4E171273B503900F3DF70 /* Pods_itasker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D692B4BD638DCA100F548B82 /* Pods_itasker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63D4E16C273B503400F3DF70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC670FB7DDD0D048291D46F39D4DE442;
+			remoteInfo = "Pods-itasker";
+		};
+		63D4E16E273B503400F3DF70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F0C7FE88342E3772A8A133204A1E1910;
+			remoteInfo = "UITextView+Placeholder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63D4E172273B503900F3DF70 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				63D4E171273B503900F3DF70 /* Pods_itasker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +87,17 @@
 		0F967D72272EBA600090D0E6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
 		639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskPresent.swift; sourceTree = "<group>"; };
 		639B2A00272EF09E00C5FFBC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIButton.swift; sourceTree = "<group>"; };
+		639B2A0227388E5500C5FFBC /* UIText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIText.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIText.swift; sourceTree = "<group>"; };
+		639B2A072739A3DF00C5FFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		63D4E165273B4FE700F3DF70 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		63D4E166273B4FF800F3DF70 /* UITextView+Placeholder */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "UITextView+Placeholder"; path = "Pods/UITextView+Placeholder"; sourceTree = "<group>"; };
+		63D4E167273B503400F3DF70 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D692B4BD638DCA100F548B82 /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D4E170273B503900F3DF70 /* Pods_itasker.framework in Frameworks */,
 				0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,8 +116,11 @@
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
+				639B2A082739A3DF00C5FFBC /* Storyboard.storyboard */,
 				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
+				ABBF8C443DC224BED88EB42C /* Pods */,
+				E029433174A02055ADC11B1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +309,7 @@
 			children = (
 				639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */,
 				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
+				639B2A0227388E5500C5FFBC /* UIText.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +322,35 @@
 			path = Present;
 			sourceTree = "<group>";
 		};
+		63D4E168273B503400F3DF70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63D4E16D273B503400F3DF70 /* Pods-itasker */,
+				63D4E16F273B503400F3DF70 /* UITextView+Placeholder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABBF8C443DC224BED88EB42C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */,
+				DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E029433174A02055ADC11B1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D4E167273B503400F3DF70 /* Pods.xcodeproj */,
+				63D4E166273B4FF800F3DF70 /* UITextView+Placeholder */,
+				63D4E165273B4FE700F3DF70 /* Pods */,
+				D692B4BD638DCA100F548B82 /* Pods_itasker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,9 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */;
 			buildPhases = (
+				C5560691D4D9E9A0FFE36BB2 /* [CP] Check Pods Manifest.lock */,
 				0F967D2E272D93B30090D0E6 /* Sources */,
 				0F967D2F272D93B30090D0E6 /* Frameworks */,
 				0F967D30272D93B30090D0E6 /* Resources */,
+				53E479655D62E75F01BDAD4B /* [CP] Embed Pods Frameworks */,
+				63D4E172273B503900F3DF70 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,7 +391,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "iTasker" */;
+			buildConfigurationList = 0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -325,12 +405,37 @@
 			);
 			productRefGroup = 0F967D33272D93B30090D0E6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 63D4E168273B503400F3DF70 /* Products */;
+					ProjectRef = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0F967D31272D93B30090D0E6 /* itasker */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		63D4E16D273B503400F3DF70 /* Pods-itasker */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-itasker";
+			path = Pods_itasker.framework;
+			remoteRef = 63D4E16C273B503400F3DF70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63D4E16F273B503400F3DF70 /* UITextView+Placeholder */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "UITextView+Placeholder";
+			path = UITextView_Placeholder.framework;
+			remoteRef = 63D4E16E273B503400F3DF70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0F967D30272D93B30090D0E6 /* Resources */ = {
@@ -339,10 +444,53 @@
 			files = (
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
+				639B2A092739A4E500C5FFBC /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53E479655D62E75F01BDAD4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5560691D4D9E9A0FFE36BB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-itasker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F967D2E272D93B30090D0E6 /* Sources */ = {
@@ -363,6 +511,7 @@
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
 				639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */,
+				639B2A0327388E5500C5FFBC /* UIText.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */,
@@ -380,6 +529,15 @@
 				0F967D41272D93B70090D0E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		639B2A082739A3DF00C5FFBC /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639B2A072739A3DF00C5FFBC /* Base */,
+			);
+			name = Storyboard.storyboard;
+			path = ../ITasker;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -503,6 +661,7 @@
 		};
 		0F967D47272D93B70090D0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +682,7 @@
 		};
 		0F967D48272D93B70090D0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,7 +704,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "iTasker" */ = {
+		0F967D2D272D93B30090D0E6 /* Build configuration list for PBXProject "itasker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F967D44272D93B70090D0E6 /* Debug */,
