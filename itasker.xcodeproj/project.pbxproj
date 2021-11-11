@@ -21,11 +21,16 @@
 		0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6A272EB9B30090D0E6 /* RegistrationPresenter.swift */; };
 		0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6C272EBA000090D0E6 /* GreetingView.swift */; };
 		0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6E272EBA2B0090D0E6 /* LoginModel.swift */; };
-		0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D70272EBA4C0090D0E6 /* CircleView.swift */; };
+		0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */; };
 		0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D72272EBA600090D0E6 /* LoginPresenter.swift */; };
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D77272EC58B0090D0E6 /* LoginViewController.swift */; };
 		0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */; };
+		0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CD273B2DA20027D9BC /* LabelsView.swift */; };
+		0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */; };
+		0FF678AB2730462E00FA422C /* LayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AA2730462E00FA422C /* LayoutProtocol.swift */; };
+		0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AC2730487700FA422C /* ButtonBlock.swift */; };
+		0FF678AF2732A21800FA422C /* SomeGreetWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AE2732A21800FA422C /* SomeGreetWords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +50,15 @@
 		0F967D6A272EB9B30090D0E6 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		0F967D6C272EBA000090D0E6 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		0F967D6E272EBA2B0090D0E6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		0F967D70272EBA4C0090D0E6 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolCircleForDisign.swift; sourceTree = "<group>"; };
 		0F967D72272EBA600090D0E6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0FF172CD273B2DA20027D9BC /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
+		0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesAndLabel.swift; sourceTree = "<group>"; };
+		0FF678AA2730462E00FA422C /* LayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProtocol.swift; sourceTree = "<group>"; };
+		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
+		0FF678AE2732A21800FA422C /* SomeGreetWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeGreetWords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +121,13 @@
 		0F967D51272D9E910090D0E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */,
+				0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */,
+				0FF678AC2730487700FA422C /* ButtonBlock.swift */,
 				0F967D39272D93B30090D0E6 /* GreetViewController.swift */,
+				0FF678AE2732A21800FA422C /* SomeGreetWords.swift */,
 				0F967D6C272EBA000090D0E6 /* GreetingView.swift */,
+				0FF678AA2730462E00FA422C /* LayoutProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				0F967D66272EB9590090D0E6 /* RegistrationView.swift */,
+				0FF172CD273B2DA20027D9BC /* LabelsView.swift */,
 				0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */,
 			);
 			path = View;
@@ -219,7 +235,6 @@
 		0F967D64272EB8FE0090D0E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F967D70272EBA4C0090D0E6 /* CircleView.swift */,
 				0F967D77272EC58B0090D0E6 /* LoginViewController.swift */,
 			);
 			path = View;
@@ -317,11 +332,16 @@
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
 				0F967D4C272D94520090D0E6 /* GreetingModel.swift in Sources */,
+				0FF678AB2730462E00FA422C /* LayoutProtocol.swift in Sources */,
+				0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */,
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
+				0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
-				0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */,
+				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
+				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
+				0FF678AF2732A21800FA422C /* SomeGreetWords.swift in Sources */,
 				0F967D67272EB9590090D0E6 /* RegistrationView.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
 			);

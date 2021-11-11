@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let presenter = LoginPresenter()
-        let vc = LoginViewControler(presenter: presenter)
+        let presenter = GreetPresenter()
+        let vc = GreetViewControler(presenter: presenter)
         
         let navController = UINavigationController(rootViewController: vc)
         navController.navigationBar.isHidden = true

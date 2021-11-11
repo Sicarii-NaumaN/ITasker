@@ -6,14 +6,3 @@
 //
 
 import UIKit
-
-protocol LoginPresenterProtocol {
-    func showRegistrationVC(_ root: UIViewController)
-}
-
-final class LoginPresenter: LoginPresenterProtocol {
-
-    func showRegistrationVC(_ root: UIViewController) {
-        root.navigationController?.present(RegistrationViewController(), animated: true)
-    }
-}

@@ -7,14 +7,26 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController,
+                                  UITextFieldDelegate, UITextViewDelegate {
+    
+    private var labels = RegistrationLabels()
+    
+    
+    override func loadView() {
+        super.loadView()
+        view = labels
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemBackground
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
 
 
 }
