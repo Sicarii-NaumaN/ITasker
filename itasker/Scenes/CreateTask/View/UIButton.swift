@@ -9,14 +9,6 @@ import UIKit
 
 class UIButtonTextIcon: UIButton {
     
-    //    private struct Constants {
-    //        static let buttonWidth: CGFloat = 50
-    //        static let buttonHeight: CGFloat = 50
-    //        static let buttonRadius: CGFloat = 6
-    //    }
-    //
-    //private let constants: Constants?
-    
     var imageNameButton: String?
     var myIcon: UIImageView?
     var labelButton: UILabel?
@@ -31,8 +23,7 @@ class UIButtonTextIcon: UIButton {
         colorButton = colorForButton
         colorIcon = colorForIcon
         
-        //labelButton?.font = UIFont.withDesign(design: .rounded)  //
-        //UIFont.systemFont(ofSize: 17) //
+        //как сделать загругленный шрифт?
         labelButton?.font = UIFont(name: "ui-rounded", size: 17)
         
         if imageNameButton != nil {
@@ -44,7 +35,6 @@ class UIButtonTextIcon: UIButton {
         if labelButton != nil {
             self.setTitle(labelButton!.text, for: .normal)
             labelButton!.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy)
-                //.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
             self.addSubview(labelButton!)
         }
     }
@@ -60,15 +50,12 @@ class UIButtonTextIcon: UIButton {
         
         labelButton?.center = self.center
         labelButton?.textAlignment = NSTextAlignment.center
-        //self.labelButton.font
         
         self.setTitleColor(.white, for: .normal)
-        
         self.configuration?.imagePadding = 6
         
         if imageNameButton != nil {
             self.addSubview(myIcon!)
-            //configureIcon()
         }
     }
     
