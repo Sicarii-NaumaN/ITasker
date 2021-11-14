@@ -10,7 +10,11 @@ import UIKit
 class RegistrationViewController: UIViewController,
                                   UITextFieldDelegate, UITextViewDelegate {
     
+    let width = UIScreen.main.bounds.width
+    let heigth = UIScreen.main.bounds.height
+    
     private var labels = RegistrationLabels()
+    
     
     
     override func loadView() {
