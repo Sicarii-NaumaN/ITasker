@@ -25,6 +25,7 @@
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D77272EC58B0090D0E6 /* LoginViewController.swift */; };
 		0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */; };
+		0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F5A527419ACE00ACB55B /* loginView.swift */; };
 		0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CD273B2DA20027D9BC /* LabelsView.swift */; };
 		0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */; };
 		0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FF172D127414BA60027D9BC /* GoogleService-Info.plist */; };
@@ -32,9 +33,11 @@
 		0FF678AB2730462E00FA422C /* LayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AA2730462E00FA422C /* LayoutProtocol.swift */; };
 		0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AC2730487700FA422C /* ButtonBlock.swift */; };
 		0FF678AF2732A21800FA422C /* SomeGreetWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AE2732A21800FA422C /* SomeGreetWords.swift */; };
+		8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8380005B856A8AA370CE1CE /* Pods_itasker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F967D35272D93B30090D0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F967D37272D93B30090D0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		0F967D72272EBA600090D0E6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0FA3F5A527419ACE00ACB55B /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		0FF172CD273B2DA20027D9BC /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
 		0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegAndLogCircles.swift; sourceTree = "<group>"; };
 		0FF172D127414BA60027D9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		0FF678AA2730462E00FA422C /* LayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProtocol.swift; sourceTree = "<group>"; };
 		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
 		0FF678AE2732A21800FA422C /* SomeGreetWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeGreetWords.swift; sourceTree = "<group>"; };
+		14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
+		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +75,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */,
+				8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012331F9B8F97807A5B6630E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */,
+				0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
 				0FF172D127414BA60027D9BC /* GoogleService-Info.plist */,
 				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
+				012331F9B8F97807A5B6630E /* Pods */,
+				9DEDC0E115BA98258AD6E1AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				0F967D77272EC58B0090D0E6 /* LoginViewController.swift */,
+				0FA3F5A527419ACE00ACB55B /* loginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +270,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		9DEDC0E115BA98258AD6E1AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8380005B856A8AA370CE1CE /* Pods_itasker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */;
 			buildPhases = (
+				4C06B235022C648462324A60 /* [CP] Check Pods Manifest.lock */,
 				0F967D2E272D93B30090D0E6 /* Sources */,
 				0F967D2F272D93B30090D0E6 /* Frameworks */,
 				0F967D30272D93B30090D0E6 /* Resources */,
+				15E4FD638F5D65E43E8C946E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +351,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15E4FD638F5D65E43E8C946E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C06B235022C648462324A60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-itasker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F967D2E272D93B30090D0E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -343,6 +414,7 @@
 				0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
+				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
 				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
@@ -483,6 +555,7 @@
 		};
 		0F967D47272D93B70090D0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -501,6 +574,7 @@
 		};
 		0F967D48272D93B70090D0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -29,7 +29,7 @@ final class ButtonBlock: UIView {
     
     var loginButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         button.setTitle("Авторизация", for: .normal)
         return button
     }()

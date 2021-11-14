@@ -49,6 +49,7 @@ final class RegistrationLabels: UIView {
         let textField = UITextField(frame: CGRect())
         textField.placeholder = "вот сюда пароль надо"
         textField.borderStyle = .roundedRect
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -79,7 +80,6 @@ final class RegistrationLabels: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     
     override func layoutSubviews() {

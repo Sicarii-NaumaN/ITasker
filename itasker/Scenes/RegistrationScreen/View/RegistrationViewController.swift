@@ -14,8 +14,7 @@ class RegistrationViewController: UIViewController,
     let heigth = UIScreen.main.bounds.height
     
     private var labels = RegistrationLabels()
-    
-    
+
     
     override func loadView() {
         super.loadView()

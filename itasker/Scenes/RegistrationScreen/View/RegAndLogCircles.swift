@@ -71,7 +71,6 @@ final class RegAndLogCircles: UIView {
             Top(-width * 1/5),
             Left(-100),
             Size(width * 5/6)
-            
         )
         topCentreCircle.easy.layout(
             Top(-width * 1/5),

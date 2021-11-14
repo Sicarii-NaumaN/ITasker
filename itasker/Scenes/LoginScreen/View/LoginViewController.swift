@@ -9,12 +9,25 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let width = UIScreen.main.bounds.width
+    let heigth = UIScreen.main.bounds.height
+    
+    private var labels = LoginLabels()
+
+    
+    override func loadView() {
+        super.loadView()
+        view = labels
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .blue
+        view.backgroundColor = .systemBackground
     }
     
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
 
 }
