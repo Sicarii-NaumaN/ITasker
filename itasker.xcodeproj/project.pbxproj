@@ -26,7 +26,7 @@
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D77272EC58B0090D0E6 /* LoginViewController.swift */; };
 		0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */; };
-		639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */; };
+		639B29FD272EEC8300C5FFBC /* CreateTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FC272EEC8300C5FFBC /* CreateTaskController.swift */; };
 		639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */; };
 		639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A00272EF09E00C5FFBC /* UIButton.swift */; };
 		639B2A0327388E5500C5FFBC /* UIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A0227388E5500C5FFBC /* UIText.swift */; };
@@ -88,10 +88,10 @@
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
-		639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		639B29FC272EEC8300C5FFBC /* CreateTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskController.swift; sourceTree = "<group>"; };
 		639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskPresent.swift; sourceTree = "<group>"; };
-		639B2A00272EF09E00C5FFBC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIButton.swift; sourceTree = "<group>"; };
-		639B2A0227388E5500C5FFBC /* UIText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIText.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIText.swift; sourceTree = "<group>"; };
+		639B2A00272EF09E00C5FFBC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		639B2A0227388E5500C5FFBC /* UIText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIText.swift; sourceTree = "<group>"; };
 		639B2A072739A3DF00C5FFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		63D4E165273B4FE700F3DF70 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		63D4E166273B4FF800F3DF70 /* UITextView+Placeholder */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "UITextView+Placeholder"; path = "Pods/UITextView+Placeholder"; sourceTree = "<group>"; };
@@ -300,6 +300,8 @@
 		639B29F9272EE81900C5FFBC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
+				639B2A0227388E5500C5FFBC /* UIText.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,9 +309,7 @@
 		639B29FA272EE82000C5FFBC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */,
-				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
-				639B2A0227388E5500C5FFBC /* UIText.swift */,
+				639B29FC272EEC8300C5FFBC /* CreateTaskController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,7 +501,7 @@
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
-				639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */,
+				639B29FD272EEC8300C5FFBC /* CreateTaskController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */,
 				0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */,

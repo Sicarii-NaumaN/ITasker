@@ -8,12 +8,7 @@
 import UIKit
 
 protocol CreateTaskPresenterProtocol {
-    func showCreateTaskVC(_ root: UIViewController)
 }
 
 final class CreateTaskPresenter: CreateTaskPresenterProtocol {
-    
-    func showCreateTaskVC(_ root: UIViewController) {
-        //root.navigationController?.present(CreateTaskViewControler(), animated: true)
-    }
 }

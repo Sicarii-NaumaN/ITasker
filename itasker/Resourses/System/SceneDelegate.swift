@@ -19,11 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        //let presenter = LoginPresenter()
-        //let vc = LoginViewControler(presenter: presenter)
-        
         let presenter = CreateTaskPresenter()
-        let vc = CreateTaskViewControler(presenter: presenter)
+        let vc = CreateTaskControler(presenter: presenter)
         
         let navController = UINavigationController(rootViewController: vc)
         navController.navigationBar.isHidden = true
