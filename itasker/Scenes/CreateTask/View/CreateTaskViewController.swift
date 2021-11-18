@@ -10,10 +10,11 @@ import UIKit
 import UITextView_Placeholder
 import EasyPeasy
 
-class CreateTaskViewControler: UIViewController, UITextViewDelegate {
+class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var presenter: CreateTaskPresenter
     
+    @IBOutlet weak var tableView: UITableView!
     private var myButton = UIButtonTextIcon(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: .white)
     
     let nameTask = UILabel(frame: .zero)
@@ -62,6 +63,12 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate {
         myHeader.text = "Создать задачу"
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
         
+        tableView.register(TableViewCell.nib, forCellReuseIdentifier: TableViewCell.identifire)
+        tableView.rowHeight = 125
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         
         
         imageView.image = UIImage(systemName: "square.and.pencil")
@@ -95,6 +102,39 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate {
         myButton.layer.cornerRadius = 10
         view.backgroundColor = .systemBackground
         setupLayout()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 2
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 10
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.rowHeight
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifire, for: indexPath) as? TableViewCell else {
+            return UITableViewCell()
+        }
+
+        // TODO choose color depending on task type
+        
+        
+        cell.label.font = UIFont.systemFont(ofSize: 22)
+      
+        return cell
     }
 
     private func setupLayout() {

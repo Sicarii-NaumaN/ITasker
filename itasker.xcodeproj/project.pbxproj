@@ -41,6 +41,9 @@
 		BCB6FB00274182B700F659EA /* TicketsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FAFE274182B700F659EA /* TicketsViewCell.swift */; };
 		BCB6FB01274182B700F659EA /* TicketsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FAFF274182B700F659EA /* TicketsViewCell.xib */; };
 		BCB6FB032741AD7200F659EA /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB022741AD7200F659EA /* UIView + Ext.swift */; };
+		BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB062746F2B200F659EA /* TableViewCell.swift */; };
+		BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB072746F2B200F659EA /* TableViewCell.xib */; };
+		BCB6FB0D2746F2E900F659EA /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB0C2746F2E900F659EA /* TableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		BCB6FAFE274182B700F659EA /* TicketsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewCell.swift; sourceTree = "<group>"; };
 		BCB6FAFF274182B700F659EA /* TicketsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsViewCell.xib; sourceTree = "<group>"; };
 		BCB6FB022741AD7200F659EA /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		BCB6FB062746F2B200F659EA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BCB6FB072746F2B200F659EA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		BCB6FB0C2746F2E900F659EA /* TableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
 		D692B4BD638DCA100F548B82 /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,6 +336,9 @@
 				639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */,
 				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
 				639B2A0227388E5500C5FFBC /* UIText.swift */,
+				BCB6FB062746F2B200F659EA /* TableViewCell.swift */,
+				BCB6FB072746F2B200F659EA /* TableViewCell.xib */,
+				BCB6FB0C2746F2E900F659EA /* TableView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,7 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
+				BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */,
 				BCB6FAFD274181DB00F659EA /* TicketsViewController.xib in Resources */,
+				BCB6FB0D2746F2E900F659EA /* TableView.xib in Resources */,
 				BCB6FB01274182B700F659EA /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 			);
@@ -567,6 +578,7 @@
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
+				BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */,
 				639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */,
