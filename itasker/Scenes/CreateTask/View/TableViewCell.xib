@@ -18,9 +18,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a35-hV-Ntq">
-                        <rect key="frame" x="10" y="10" width="280" height="80"/>
+                        <rect key="frame" x="3" y="10" width="294" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-ZW-PcX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-ZW-PcX">
                                 <rect key="frame" x="49" y="11" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -32,16 +32,16 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="a35-hV-Ntq" secondAttribute="trailing" constant="10" id="DlD-Hl-Vye"/>
                     <constraint firstItem="a35-hV-Ntq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HZF-WG-gkk"/>
-                    <constraint firstItem="a35-hV-Ntq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JaU-Cs-3dq"/>
                     <constraint firstAttribute="bottom" secondItem="a35-hV-Ntq" secondAttribute="bottom" constant="10" id="MSm-Me-Mnm"/>
+                    <constraint firstAttribute="trailing" secondItem="a35-hV-Ntq" secondAttribute="trailing" constant="3" id="bm9-5Y-OER"/>
+                    <constraint firstItem="a35-hV-Ntq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="vNN-dD-TZA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="label" destination="5rS-ZW-PcX" id="SMa-py-sbU"/>
-                <outlet property="myCell" destination="a35-hV-Ntq" id="6mX-jD-buR"/>
+                <outlet property="label" destination="5rS-ZW-PcX" id="ELg-nd-OZ6"/>
+                <outlet property="layout" destination="a35-hV-Ntq" id="F37-Vy-U3M"/>
             </connections>
             <point key="canvasLocation" x="123.18840579710145" y="93.080357142857139"/>
         </tableViewCell>

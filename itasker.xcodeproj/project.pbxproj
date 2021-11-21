@@ -26,7 +26,6 @@
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D77272EC58B0090D0E6 /* LoginViewController.swift */; };
 		0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */; };
-		639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */; };
 		639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */; };
 		639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A00272EF09E00C5FFBC /* UIButton.swift */; };
 		639B2A0327388E5500C5FFBC /* UIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2A0227388E5500C5FFBC /* UIText.swift */; };
@@ -43,7 +42,8 @@
 		BCB6FB032741AD7200F659EA /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB022741AD7200F659EA /* UIView + Ext.swift */; };
 		BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB062746F2B200F659EA /* TableViewCell.swift */; };
 		BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB072746F2B200F659EA /* TableViewCell.xib */; };
-		BCB6FB0D2746F2E900F659EA /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB0C2746F2E900F659EA /* TableView.xib */; };
+		BCB6FB14274A802900F659EA /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */; };
+		BCB6FB15274A802900F659EA /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,6 @@
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
-		639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskPresent.swift; sourceTree = "<group>"; };
 		639B2A00272EF09E00C5FFBC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIButton.swift; sourceTree = "<group>"; };
 		639B2A0227388E5500C5FFBC /* UIText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIText.swift; path = ../../../../../ITasker/itasker/Scenes/CreateTask/View/UIText.swift; sourceTree = "<group>"; };
@@ -117,7 +116,8 @@
 		BCB6FB022741AD7200F659EA /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		BCB6FB062746F2B200F659EA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BCB6FB072746F2B200F659EA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		BCB6FB0C2746F2E900F659EA /* TableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
+		BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
 		D692B4BD638DCA100F548B82 /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,12 +333,12 @@
 		639B29FA272EE82000C5FFBC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				639B29FC272EEC8300C5FFBC /* CreateTaskViewController.swift */,
 				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
 				639B2A0227388E5500C5FFBC /* UIText.swift */,
 				BCB6FB062746F2B200F659EA /* TableViewCell.swift */,
 				BCB6FB072746F2B200F659EA /* TableViewCell.xib */,
-				BCB6FB0C2746F2E900F659EA /* TableView.xib */,
+				BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */,
+				BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,7 +518,7 @@
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
 				BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */,
 				BCB6FAFD274181DB00F659EA /* TicketsViewController.xib in Resources */,
-				BCB6FB0D2746F2E900F659EA /* TableView.xib in Resources */,
+				BCB6FB15274A802900F659EA /* CreateTaskViewController.xib in Resources */,
 				BCB6FB01274182B700F659EA /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 			);
@@ -579,7 +579,6 @@
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
 				BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */,
-				639B29FD272EEC8300C5FFBC /* CreateTaskViewController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */,
 				0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */,
@@ -601,6 +600,7 @@
 				0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */,
 				0F967D67272EB9590090D0E6 /* RegistrationView.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
+				BCB6FB14274A802900F659EA /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,9 @@ import UIKit
 import UITextView_Placeholder
 import EasyPeasy
 
-class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
-    
+class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
     var presenter: CreateTaskPresenter
+    
     
     @IBOutlet weak var tableView: UITableView!
     private var myButton = UIButtonTextIcon(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: .white)
@@ -48,8 +48,6 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
         return nil
     }
     
-    
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,11 +62,9 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
         
         tableView.register(TableViewCell.nib, forCellReuseIdentifier: TableViewCell.identifire)
-        tableView.rowHeight = 125
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         
         imageView.image = UIImage(systemName: "square.and.pencil")
@@ -102,6 +98,8 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
         myButton.layer.cornerRadius = 10
         view.backgroundColor = .systemBackground
         setupLayout()
+
+        // Do any additional setup after loading the view.
     }
     
     override func awakeFromNib() {
@@ -110,17 +108,17 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 3
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.rowHeight
+        return 90
     }
     
     
@@ -130,13 +128,14 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
         }
 
         // TODO choose color depending on task type
+        cell.layout.backgroundColor = .red
+//        cell.layout.tintColor = UIColor.red
         
+        cell.label.font = UIFont.systemFont(ofSize: 18)
+        cell.label.text = "Kristina"
         
-        cell.label.font = UIFont.systemFont(ofSize: 22)
-      
         return cell
     }
-
     private func setupLayout() {
         imageView.easy.layout(
             Top(55).to(myHeader),
@@ -180,4 +179,15 @@ class CreateTaskViewControler: UIViewController, UITextViewDelegate, UITableView
             Width(25)
         )
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
