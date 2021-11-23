@@ -26,13 +26,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-vV-TPH">
+                                <rect key="frame" x="17" y="17" width="47" height="46"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5rS-ZW-PcX" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="8" id="C7n-9n-O6U"/>
+                            <constraint firstItem="H5h-vV-TPH" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="17" id="FZ1-2i-Gxh"/>
                             <constraint firstItem="5rS-ZW-PcX" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="81" id="Omx-c6-TjJ"/>
                             <constraint firstAttribute="bottom" secondItem="5rS-ZW-PcX" secondAttribute="bottom" constant="8" id="bRk-Mx-kW3"/>
+                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="leading" secondItem="H5h-vV-TPH" secondAttribute="trailing" constant="17" id="iUD-Ts-nT8"/>
                             <constraint firstAttribute="trailing" secondItem="5rS-ZW-PcX" secondAttribute="trailing" constant="8" id="kDP-CP-phL"/>
+                            <constraint firstItem="H5h-vV-TPH" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="17" id="r3k-je-Hq5"/>
+                            <constraint firstAttribute="bottom" secondItem="H5h-vV-TPH" secondAttribute="bottom" constant="17" id="tMi-Y7-VvW"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -45,6 +52,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="icon" destination="H5h-vV-TPH" id="s0x-N8-5Y6"/>
                 <outlet property="label" destination="5rS-ZW-PcX" id="ELg-nd-OZ6"/>
                 <outlet property="layout" destination="a35-hV-Ntq" id="F37-Vy-U3M"/>
             </connections>
