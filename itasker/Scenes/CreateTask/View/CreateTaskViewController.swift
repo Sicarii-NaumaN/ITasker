@@ -34,6 +34,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var myTextField : TaskTextView
     var myTextFieldDescription: TaskTextView
     
+    var dataForTable: [String] = ["Понедельник","9:00","Повторять по ПН"]
+    
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
         nameTask.text = "Название задачи"
@@ -133,15 +135,19 @@ override func viewDidLoad() {
         }
 
         // TODO choose color depending on task type
+        cell.label.text = dataForTable[indexPath.row]
         cell.layout.backgroundColor = .white
 //        cell.layout.tintColor = UIColor.red
         
         cell.label.font = UIFont.systemFont(ofSize: 18)
-        cell.label.text = "Kristina"
+        //cell.label.text = "Kristina"
         //cell.   layer.borderWidth = 1
         //cell.layout.layer.borderColor = UIColor.gray.cgColor
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
         
     private func setupLayout() {
