@@ -15,31 +15,36 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     
     @IBOutlet weak var tableView: UITableView!
-    private var myButton = UIButtonTextIcon(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: .white)
     
+    let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
+    let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
+    let inputSettingButton = InputInitButton(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
+            
+    var myButton: UIButtonTextIcon
+    var backButton: UIButtonTextIcon
+    let settingButton: UIButtonTextIcon
+            
     let nameTask = UILabel(frame: .zero)
-    
-    
     let describeTask = UILabel(frame: .zero)
- 
-    
-    
-    let imageView_describe = UIImageView(frame: .zero)
-    let imageView = UIImageView(frame: .zero)
-    
     let myHeader = UILabel()
-    let backButton = UIButtonTextIcon(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black)
-    let settingButton = UIButtonTextIcon(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black)
-    var myTextField : UIText
-    var myTextField_description: UIText
+            
+    let imageViewDescribe = UIImageView(frame: .zero)
+    let imageView = UIImageView(frame: .zero)
+            
+    var myTextField : TaskTextView
+    var myTextFieldDescription: TaskTextView
     
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
         nameTask.text = "Название задачи"
         describeTask.text = "Введите описание"
 
-         myTextField = UIText(myText: nameTask, frame: .zero, textContainer: nil)
-         myTextField_description = UIText(myText: describeTask, frame: .zero, textContainer: nil)
+         myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
+         myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
+        
+        myButton = UIButtonTextIcon.create(input: inputMyButton)
+        backButton = UIButtonTextIcon.create(input: inputBackButton)
+        settingButton = UIButtonTextIcon.create(input: inputSettingButton)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -48,16 +53,9 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         return nil
     }
     
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let style = NSMutableParagraphStyle()
-        style.lineSpacing = 5
-        let myAttribute = [ NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue, NSAttributedString.Key.paragraphStyle : style] as [NSAttributedString.Key : Any]
-        let myAttrString = NSAttributedString(string: myTextField_description.text, attributes: myAttribute)
-        //не понимаю почему не применяются аттрибуты?
-        myTextField_description.attributedText = myAttrString
-
+    
         myHeader.text = "Создать задачу"
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
         
@@ -70,38 +68,45 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         imageView.image = UIImage(systemName: "square.and.pencil")
         imageView.tintColor = .systemGray
         
-        imageView_describe.image = UIImage(systemName: "text.justify")
-        imageView_describe.tintColor = .systemGray
+        imageViewDescribe.image = UIImage(systemName: "text.justify")
+        imageViewDescribe.tintColor = .systemGray
         
         backButton.configureButton()
-        backButton.configureIcon()
-        
+    
         myButton.configureButton()
         
         settingButton.configureButton()
-        settingButton.myIcon?.tintColor = .black
         settingButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
-        settingButton.myIcon?.frame = CGRect(x: 0, y: 0, width: 25, height: 8)
+   
         
         self.view.addSubview(myTextField)
-        self.view.addSubview(myTextField_description)
+        self.view.addSubview(myTextFieldDescription)
         self.view.addSubview(backButton)
         self.view.addSubview(myHeader)
         self.view.addSubview(settingButton)
-        self.view.addSubview(imageView_describe)
+        self.view.addSubview(imageViewDescribe)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
         
-        myTextField_description.configure(frame: CGRect(x: 90, y: 265, width: 245, height: 100))
-        myTextField.configure(frame: CGRect(x: 90, y: 220, width: 245, height: 30))
+        myTextFieldDescription.configure(frame: CGRect(
+                                                        x: 90,
+                                                        y: 265,
+                                                        width: 245,
+                                                        height: 100)
+                                                    )
+        myTextField.configure(frame: CGRect(
+                                            x: 90,
+                                            y: 220,
+                                            width: 245,
+                                            height: 30)
+                                        )
         
+        myTextFieldDescription.attribute()
         myButton.layer.cornerRadius = 10
         view.backgroundColor = .systemBackground
         setupLayout()
-
-        // Do any additional setup after loading the view.
     }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -136,6 +141,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         
         return cell
     }
+        
     private func setupLayout() {
         imageView.easy.layout(
             Top(55).to(myHeader),
@@ -144,7 +150,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             Height(23)
         )
         
-        imageView_describe.easy.layout(
+        imageViewDescribe.easy.layout(
             Top(25).to(imageView),
             CenterX(0).to(imageView),
             Width(25),
@@ -179,6 +185,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             Width(25)
         )
     }
+}
+
 
     /*
     // MARK: - Navigation
@@ -190,4 +198,3 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     }
     */
 
-}
