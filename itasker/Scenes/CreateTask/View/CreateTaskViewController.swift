@@ -102,7 +102,7 @@ override func viewDidLoad() {
                                         )
         
         myTextFieldDescription.attribute()
-        myButton.layer.cornerRadius = 10
+        myButton.layer.cornerRadius = 2
         view.backgroundColor = .systemBackground
         setupLayout()
     }
@@ -118,7 +118,7 @@ override func viewDidLoad() {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
     }
     
     
@@ -133,11 +133,13 @@ override func viewDidLoad() {
         }
 
         // TODO choose color depending on task type
-        cell.layout.backgroundColor = .red
+        cell.layout.backgroundColor = .white
 //        cell.layout.tintColor = UIColor.red
         
         cell.label.font = UIFont.systemFont(ofSize: 18)
         cell.label.text = "Kristina"
+        //cell.   layer.borderWidth = 1
+        //cell.layout.layer.borderColor = UIColor.gray.cgColor
         
         return cell
     }

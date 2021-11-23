@@ -14,6 +14,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        layout.layer.borderWidth = 1
+        layout.layer.borderColor = UIColor.gray.cgColor
         // Initialization code
     }
     

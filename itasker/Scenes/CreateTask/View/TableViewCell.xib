@@ -20,15 +20,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a35-hV-Ntq">
                         <rect key="frame" x="3" y="10" width="294" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-ZW-PcX">
-                                <rect key="frame" x="49" y="11" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-ZW-PcX">
+                                <rect key="frame" x="81" y="8" width="205" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="8" id="C7n-9n-O6U"/>
+                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="81" id="Omx-c6-TjJ"/>
+                            <constraint firstAttribute="bottom" secondItem="5rS-ZW-PcX" secondAttribute="bottom" constant="8" id="bRk-Mx-kW3"/>
+                            <constraint firstAttribute="trailing" secondItem="5rS-ZW-PcX" secondAttribute="trailing" constant="8" id="kDP-CP-phL"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
