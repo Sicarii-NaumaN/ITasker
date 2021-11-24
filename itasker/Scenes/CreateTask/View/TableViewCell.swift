@@ -12,13 +12,15 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var layout: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var fillView: UIView!
     @IBOutlet weak var icon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layout.layer.borderWidth = 1
-        layout.layer.borderColor = UIColor.gray.cgColor
+        layout.layer.borderColor = UIColor.gray.withAlphaComponent(0.4).cgColor
         // Initialization code
+        fillView.roundCorners(corners: .allCorners, radius: 10)
     }
     
 
@@ -38,8 +40,8 @@ class TableViewCell: UITableViewCell {
 //        backView.frame = frame.inset(by: margins)
 //        leftView.frame = frame.inset(by: margins)
        
-        self.roundCorners(corners: [ .bottomRight], radius: 10)
-        layout.layer.cornerRadius = 20
+        self.roundCorners(corners: [ .allCorners], radius: 0)
+        layout.layer.cornerRadius = 15
 //        roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight, .topRight], radius: 10.0)
     }
     

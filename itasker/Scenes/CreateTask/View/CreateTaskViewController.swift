@@ -142,7 +142,7 @@ override func viewDidLoad() {
         cell.icon.tintColor = colorForTable[indexPath.row]
         cell.layout.backgroundColor = .white
 //        cell.layout.tintColor = UIColor.red
-        
+        cell.fillView.backgroundColor = colorForTable[indexPath.row].withAlphaComponent(0.2)
         cell.label.font = UIFont.systemFont(ofSize: 18)
         //cell.label.text = "Kristina"
         //cell.   layer.borderWidth = 1
@@ -152,6 +152,7 @@ override func viewDidLoad() {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
         
     private func setupLayout() {
