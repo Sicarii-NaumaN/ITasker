@@ -11,7 +11,8 @@ class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var layout: UIView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UITextField!
+    //@IBOutlet weak var label: UILabel!
     @IBOutlet weak var fillView: UIView!
     @IBOutlet weak var icon: UIImageView!
     
@@ -21,6 +22,7 @@ class TableViewCell: UITableViewCell {
         layout.layer.borderColor = UIColor.gray.withAlphaComponent(0.4).cgColor
         // Initialization code
         fillView.roundCorners(corners: .allCorners, radius: 10)
+        label.tintColor = .clear
     }
     
 

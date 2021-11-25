@@ -20,12 +20,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a35-hV-Ntq">
                         <rect key="frame" x="3" y="10" width="294" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-ZW-PcX">
-                                <rect key="frame" x="89" y="17" width="192" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-En-98V">
                                 <rect key="frame" x="13" y="9" width="53" height="59"/>
                                 <subviews>
@@ -42,17 +36,25 @@
                                     <constraint firstAttribute="bottom" secondItem="H5h-vV-TPH" secondAttribute="bottom" constant="8" id="xru-uH-F5Y"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPP-pa-eOC">
+                                <rect key="frame" x="89" y="22" width="187" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qfl-En-98V" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="13" id="C0h-WB-449"/>
-                            <constraint firstAttribute="bottom" secondItem="5rS-ZW-PcX" secondAttribute="bottom" constant="17" id="HXY-RO-grT"/>
+                            <constraint firstItem="hPP-pa-eOC" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="89" id="DKp-TJ-Ueq"/>
                             <constraint firstAttribute="bottom" secondItem="Qfl-En-98V" secondAttribute="bottom" constant="12" id="Mwz-KH-u5T"/>
+                            <constraint firstItem="hPP-pa-eOC" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="22" id="UnD-d0-t9r"/>
                             <constraint firstItem="Qfl-En-98V" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="9" id="cr9-zP-nCn"/>
-                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="leading" secondItem="Qfl-En-98V" secondAttribute="trailing" constant="23" id="kC9-Qu-fAe"/>
-                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="17" id="wgp-ef-RS9"/>
-                            <constraint firstItem="5rS-ZW-PcX" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="89" id="xJL-k2-dKD"/>
-                            <constraint firstAttribute="trailing" secondItem="5rS-ZW-PcX" secondAttribute="trailing" constant="13" id="xLv-zW-AGf"/>
+                            <constraint firstAttribute="trailing" secondItem="hPP-pa-eOC" secondAttribute="trailing" constant="18" id="g7X-tE-cgt"/>
+                            <constraint firstAttribute="bottom" secondItem="hPP-pa-eOC" secondAttribute="bottom" constant="24" id="k98-L5-Ez8"/>
+                            <constraint firstItem="hPP-pa-eOC" firstAttribute="leading" secondItem="Qfl-En-98V" secondAttribute="trailing" constant="23" id="nit-la-2p5"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -67,7 +69,7 @@
             <connections>
                 <outlet property="fillView" destination="Qfl-En-98V" id="CWA-zn-x07"/>
                 <outlet property="icon" destination="H5h-vV-TPH" id="s0x-N8-5Y6"/>
-                <outlet property="label" destination="5rS-ZW-PcX" id="ELg-nd-OZ6"/>
+                <outlet property="label" destination="hPP-pa-eOC" id="ric-aU-ZrA"/>
                 <outlet property="layout" destination="a35-hV-Ntq" id="F37-Vy-U3M"/>
             </connections>
             <point key="canvasLocation" x="123.18840579710145" y="93.080357142857139"/>
