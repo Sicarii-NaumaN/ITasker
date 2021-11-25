@@ -1,16 +1,20 @@
 PODS:
+  - DateTimePicker (2.5.3)
   - "UITextView+Placeholder (1.4.0)"
 
 DEPENDENCIES:
+  - DateTimePicker
   - "UITextView+Placeholder"
 
 SPEC REPOS:
   trunk:
+    - DateTimePicker
     - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
+  DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 45646060dfa8dd49426479d7c2a11b9468b23b3c
+PODFILE CHECKSUM: 32c5d209954e628221a920affbdd69f593be4619
 
 COCOAPODS: 1.11.2

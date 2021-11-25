@@ -5,4 +5,5 @@ use_frameworks!
 target 'itasker' do
   # Pods for itasker
   pod 'UITextView+Placeholder'
+  pod 'DateTimePicker'
 end

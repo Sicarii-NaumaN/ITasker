@@ -9,42 +9,66 @@
 import UIKit
 import UITextView_Placeholder
 import EasyPeasy
+import DateTimePicker
 
 class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
     var presenter: CreateTaskPresenter
     
-    
+//    struct ViewState {
+//        var rows: [Cell]
+//
+//        struct Cell: DatePickerCell {
+//            var text: String
+//            var mode: UIDatePicker.Mode
+//            var backColor: UIColor
+//            var onDate: ((Date)->())
+//        }
+//    }
+//
+//    var viewState: ViewState = .init(rows: []) {
+//        didSet {
+//            tableView.reloadData
+//        }
+//
+//    }
+        
     @IBOutlet weak var tableView: UITableView!
+    
+    //let datePicker = UIDatePicker()
+
+
+    
+    
     
     let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
-            
+    
     var myButton: UIButtonTextIcon
     var backButton: UIButtonTextIcon
     let settingButton: UIButtonTextIcon
-            
+    
     let nameTask = UILabel(frame: .zero)
     let describeTask = UILabel(frame: .zero)
     let myHeader = UILabel()
-            
+    
     let imageViewDescribe = UIImageView(frame: .zero)
     let imageView = UIImageView(frame: .zero)
-            
+    
     var myTextField : TaskTextView
     var myTextFieldDescription: TaskTextView
     
-    var dataForTable: [String] = ["Понедельник","9:00","Повторять по ПН", "Теги"]
-    var imageForTable: [String] = ["calendar","clock","arrow.triangle.2.circlepath", "tag"]
+    var dataForTable: [String] = ["Понедельник, 9:00", "Повторять по ПН", "Теги"]
+    var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
     
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
         nameTask.text = "Название задачи"
         describeTask.text = "Введите описание"
-
-         myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
-         myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
+        
+        myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
+        myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
         
         myButton = UIButtonTextIcon.create(input: inputMyButton)
         backButton = UIButtonTextIcon.create(input: inputBackButton)
@@ -57,9 +81,29 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         return nil
     }
     
-override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
+        let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
+        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "LLL d, h:mm"
+        let stringDate = dateFormatter.string(from: Date())
+        
+        picker.frame = CGRect(x: 0, y: -20, width: picker.frame.size.width, height: picker.frame.size.height)
+        picker.dateFormat = stringDate
+        picker.doneButtonTitle = "Подтвердить"
+        picker.locale = Locale(identifier: "ru_RU")
+        picker.darkColor = .black
+        picker.highlightColor = .systemOrange
+        //picker.delegate =
+        
+        
         myHeader.text = "Создать задачу"
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
         
@@ -67,6 +111,7 @@ override func viewDidLoad() {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         
         imageView.image = UIImage(systemName: "square.and.pencil")
@@ -76,12 +121,12 @@ override func viewDidLoad() {
         imageViewDescribe.tintColor = .systemGray
         
         backButton.configureButton()
-    
+        
         myButton.configureButton()
         
         settingButton.configureButton()
         settingButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
-   
+        
         
         self.view.addSubview(myTextField)
         self.view.addSubview(myTextFieldDescription)
@@ -91,26 +136,27 @@ override func viewDidLoad() {
         self.view.addSubview(imageViewDescribe)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
+        self.view.addSubview(picker)
         
         myTextFieldDescription.configure(frame: CGRect(
-                                                        x: 90,
-                                                        y: 265,
-                                                        width: 245,
-                                                        height: 100)
-                                                    )
+            x: 90,
+            y: 265,
+            width: 240,
+            height: 100)
+        )
         myTextField.configure(frame: CGRect(
-                                            x: 90,
-                                            y: 220,
-                                            width: 245,
-                                            height: 30)
-                                        )
+            x: 90,
+            y: 225,
+            width: 240,
+            height: 33)
+        )
         
         myTextFieldDescription.attribute()
         myButton.layer.cornerRadius = 2
         view.backgroundColor = .systemBackground
         setupLayout()
     }
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -119,10 +165,10 @@ override func viewDidLoad() {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 3
     }
     
     
@@ -135,26 +181,20 @@ override func viewDidLoad() {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifire, for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
-
-        // TODO choose color depending on task type
+        
         cell.label.text = dataForTable[indexPath.row]
         cell.icon.image = UIImage(systemName: imageForTable[indexPath.row])
         cell.icon.tintColor = colorForTable[indexPath.row]
         cell.layout.backgroundColor = .white
-//        cell.layout.tintColor = UIColor.red
         cell.fillView.backgroundColor = colorForTable[indexPath.row].withAlphaComponent(0.2)
         cell.label.font = UIFont.systemFont(ofSize: 18)
-        //cell.label.text = "Kristina"
-        //cell.   layer.borderWidth = 1
-        //cell.layout.layer.borderColor = UIColor.gray.cgColor
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-        
+    
     private func setupLayout() {
         imageView.easy.layout(
             Top(55).to(myHeader),
@@ -169,14 +209,14 @@ override func viewDidLoad() {
             Width(25),
             Height(20)
         )
-
+        
         myHeader.easy.layout(
             Top(120),
             CenterX(),
             Height(50),
             Width(230)
         )
-
+        
         myButton.easy.layout(
             Top(550).to(myHeader),
             CenterX(),
@@ -199,15 +239,15 @@ override func viewDidLoad() {
         )
     }
 }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    

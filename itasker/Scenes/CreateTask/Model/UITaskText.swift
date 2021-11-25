@@ -36,8 +36,10 @@ class TaskTextView: UITextView {
                                     height: 1.0
                                 )
         bottomLine.backgroundColor = UIColor.systemGray.cgColor
-        layer.addSublayer(bottomLine)
+        layer.cornerRadius = 10
+        backgroundColor = UIColor.systemGray.withAlphaComponent(0.1)
         font = UIFont.systemFont(ofSize: ConstantsUIText.fontSize)
+        tintColor = .orange
     }
     
     func attribute() {

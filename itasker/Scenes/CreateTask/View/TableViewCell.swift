@@ -7,14 +7,32 @@
 
 import UIKit
 
+//protocol DatePickerCell {
+//
+//    var text: String {get}
+//    var dateMode: UIDatePickerMode {get}
+//
+//    cell.label.text = dataForTable[indexPath.row]
+//    cell.icon.image = UIImage(systemName: imageForTable[indexPath.row])
+//    cell.icon.tintColor = colorForTable[indexPath.row]
+//    cell.layout.backgroundColor = .white
+//    cell.fillView.backgroundColor = colorForTable[indexPath.row].withAlphaComponent(0.2)
+//    cell.label.font = UIFont.systemFont(ofSize: 18)
+//    cell.label.inputView = datePicker
+//    datePicker.datePickerMode = .date
+//}
+
 class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var layout: UIView!
     @IBOutlet weak var label: UITextField!
-    //@IBOutlet weak var label: UILabel!
     @IBOutlet weak var fillView: UIView!
     @IBOutlet weak var icon: UIImageView!
+    
+    var datePicker: UIDatePicker?
+    
+    var onDate: ((Date)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,28 +41,26 @@ class TableViewCell: UITableViewCell {
         // Initialization code
         fillView.roundCorners(corners: .allCorners, radius: 10)
         label.tintColor = .clear
-    }
-    
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        selectionStyle = .none
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: .zero, bottom: 0, right: .zero))
-//        backView.frame = frame.inset(by: UIEdgeInsets(top: 10, left: .zero, bottom: 0, right: .zero))
-//        leftView.frame = backView.frame.inset(by: UIEdgeInsets(top: 0, left: .zero, bottom: 0, right: .zero))
+
         contentView.frame = contentView.frame.inset(by: margins)
 //        backView.frame = frame.inset(by: margins)
 //        leftView.frame = frame.inset(by: margins)
        
-        self.roundCorners(corners: [ .allCorners], radius: 0)
+        self.roundCorners(corners: [ .allCorners], radius: 10)
         layout.layer.cornerRadius = 15
 //        roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight, .topRight], radius: 10.0)
     }
     
 }
+
+//extension TableViewCell {
+//    public func configure(with data: DatePickerCell) {
+//        onDate = data.onDate
+//    }
+//}
