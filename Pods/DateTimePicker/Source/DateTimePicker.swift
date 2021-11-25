@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol DateTimePickerDelegate: class {
+public protocol DateTimePickerDelegate: AnyObject {
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date)
 }
 
@@ -38,7 +38,7 @@ public protocol DateTimePickerDelegate: class {
         
         public init(cancelButtonFont: UIFont = .boldSystemFont(ofSize: 15),
             todayButtonFont: UIFont = .boldSystemFont(ofSize: 15),
-            doneButtonFont: UIFont = .systemFont(ofSize: 17, weight: UIFont.Weight.heavy),
+            doneButtonFont: UIFont = .boldSystemFont(ofSize: 13),
             selectedDateLabelFont: UIFont = .systemFont(ofSize: 15),
             timeLabelFont: UIFont = .boldSystemFont(ofSize: 18),
             colonLabelFont: UIFont = .boldSystemFont(ofSize: 18),
@@ -170,6 +170,7 @@ public protocol DateTimePickerDelegate: class {
             let formatter = DateFormatter()
             formatter.dateFormat = self.dateFormat
             formatter.timeZone = self.timeZone
+            formatter.locale = Locale(identifier: "ru_RU")
             return formatter.string(from: self.selectedDate)
         }
     }
@@ -315,8 +316,8 @@ public protocol DateTimePickerDelegate: class {
         guard let dateTimePicker = Bundle.resource.loadNibNamed("DateTimePicker", owner: nil, options: nil)?.first as? DateTimePicker else {
             fatalError("Error loading nib")
         }
-        dateTimePicker.minimumDate = minimumDate ?? Date(timeIntervalSinceNow: -3600 * 24 * 10)
-        dateTimePicker.maximumDate = maximumDate ?? Date(timeIntervalSinceNow: 3600 * 24 * 10)
+        dateTimePicker.minimumDate = Date(timeIntervalSinceNow: -3600 * 24 * 50)
+        dateTimePicker.maximumDate = Date(timeIntervalSinceNow: 3600 * 24 * 50)
         assert(dateTimePicker.minimumDate.compare(dateTimePicker.maximumDate) == .orderedAscending, "Minimum date should be earlier than maximum date")
         dateTimePicker.configureView()
         return dateTimePicker

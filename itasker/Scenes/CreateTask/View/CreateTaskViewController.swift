@@ -62,6 +62,10 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
     
+    //let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
+    //let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
+    let picker = DateTimePicker.create()
+    
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
         nameTask.text = "Название задачи"
@@ -81,27 +85,19 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         return nil
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
-        let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
-        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
-        
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ru_RU")
-        dateFormatter.dateFormat = "LLL d, h:mm"
-        let stringDate = dateFormatter.string(from: Date())
-        
-        picker.frame = CGRect(x: 0, y: -20, width: picker.frame.size.width, height: picker.frame.size.height)
-        picker.dateFormat = stringDate
+        picker.frame = CGRect(x: 0, y: -20, width: picker.frame.size.width, height:
+                                picker.frame.size.height)
+        picker.dateFormat = "LLL d, h:mm"
         picker.doneButtonTitle = "Подтвердить"
         picker.locale = Locale(identifier: "ru_RU")
-        picker.darkColor = .black
-        picker.highlightColor = .systemOrange
-        //picker.delegate =
+        picker.darkColor = UIColor.black
+        picker.highlightColor = UIColor.systemOrange
+        picker.isHidden = true
+        //picker.delegate = 
         
         
         myHeader.text = "Создать задачу"
@@ -193,6 +189,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        picker.isHidden = false
     }
     
     private func setupLayout() {
