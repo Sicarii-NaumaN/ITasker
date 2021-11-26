@@ -283,6 +283,7 @@ public protocol DateTimePickerDelegate: AnyObject {
     @IBOutlet private var dateTitleLabel: UILabel!
     @IBOutlet private var todayButton: UIButton!
     @IBOutlet private var doneButton: UIButton!
+    //UIBarButtonItem(UIBarButtonItem: .done, target: self, action: #selector(doneAction))!
     @IBOutlet private var cancelButton: UIButton!
     @IBOutlet private var colonLabel1: UILabel!
     @IBOutlet private var colonLabel2: UILabel!
@@ -300,6 +301,17 @@ public protocol DateTimePickerDelegate: AnyObject {
     @IBOutlet private weak var doneButtonTopSpace: NSLayoutConstraint!
     
     private var modalCloseHandler: (() -> Void)?
+//
+//    @objc func doneAction() {
+//        getDateFromPicker()
+//        view.endEditing(true)
+//    }
+//
+//    func getDateFromPicker() {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "MMM d, h:mm"
+//        tableView.
+//    }
     
     internal var minimumDate: Date!
     internal var maximumDate: Date!
@@ -418,7 +430,7 @@ public protocol DateTimePickerDelegate: AnyObject {
         cancelButton.titleLabel?.textColor = .systemOrange
         cancelButton.setTitleColor(highlightColor, for: .normal)
         cancelButton.contentHorizontalAlignment = isRTL ? .right : .left
-        cancelButton.addTarget(self, action: #selector(DateTimePicker.dismissView(sender:)), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(dismisser(_:)), for:.touchUpInside) //#selector(DateTimePicker.dismissView(sender:)), for: //.touchUpInside)
         cancelButton.titleLabel?.font = customFontSetting.cancelButtonFont
         
         todayButton.setTitle(todayButtonTitle, for: .normal)
@@ -557,6 +569,10 @@ public protocol DateTimePickerDelegate: AnyObject {
         contentView.isHidden = false
         
         resetTime()
+    }
+    
+    @IBAction func dismisser(_ sender: UIButton) {
+        self.removeFromSuperview()
     }
     
     @objc

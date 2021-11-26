@@ -8,12 +8,12 @@
 import UIKit
 
 protocol CreateTaskPresenterProtocol {
-    func showCreateTaskVC(_ root: UIViewController)
+    //func showAlert(_ root: UIViewController)
 }
 
 final class CreateTaskPresenter: CreateTaskPresenterProtocol {
     
-    func showCreateTaskVC(_ root: UIViewController) {
-        //root.navigationController?.present(CreateTaskViewControler(), animated: true)
-    }
+//    func showAlert(_ root: UIViewController) {
+//        root.navigationController?.present(AlertViewController(), animated: true)
+//    }
 }

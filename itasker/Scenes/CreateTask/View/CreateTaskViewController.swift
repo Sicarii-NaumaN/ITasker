@@ -44,6 +44,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
     
+    //let alert: AlertViewController
+    
     var myButton: UIButtonTextIcon
     var backButton: UIButtonTextIcon
     let settingButton: UIButtonTextIcon
@@ -55,7 +57,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     let imageViewDescribe = UIImageView(frame: .zero)
     let imageView = UIImageView(frame: .zero)
     
-    var myTextField : TaskTextView
+    var myTextField: TaskTextView
     var myTextFieldDescription: TaskTextView
     
     var dataForTable: [String] = ["Понедельник, 9:00", "Повторять по ПН", "Теги"]
@@ -78,6 +80,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         backButton = UIButtonTextIcon.create(input: inputBackButton)
         settingButton = UIButtonTextIcon.create(input: inputSettingButton)
         
+        //alert.init()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -97,7 +100,11 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         picker.darkColor = UIColor.black
         picker.highlightColor = UIColor.systemOrange
         picker.isHidden = true
-        //picker.delegate = 
+        //picker.delegate = tableView as! DateTimePickerDelegate
+        
+        picker.dismissHandler = { [self] in
+            picker.removeFromSuperview()
+        }
         
         
         myHeader.text = "Создать задачу"
@@ -190,6 +197,11 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         picker.isHidden = false
+        tableView.reloadData()
+        
+//        if indexPath.row == 1 {
+//            alert.showAlert(self)
+//        }
     }
     
     private func setupLayout() {
@@ -235,6 +247,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             Width(25)
         )
     }
+    
 }
     
     
