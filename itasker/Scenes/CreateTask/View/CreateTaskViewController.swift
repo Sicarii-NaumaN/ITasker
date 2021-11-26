@@ -11,7 +11,7 @@ import UITextView_Placeholder
 import EasyPeasy
 import DateTimePicker
 
-class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate {
     var presenter: CreateTaskPresenter
     
 //    struct ViewState {
@@ -99,8 +99,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         picker.highlightColor = UIColor.systemOrange
         picker.isHidden = false
         self.view.addSubview(picker)
-
-        //picker.delegate = tableView as! DateTimePickerDelegate
+        picker.delegate = self
         
         picker.dismissHandler = { [self] in
             picker.removeFromSuperview()
@@ -206,6 +205,11 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
 //        if indexPath.row == 1 {
 //            alert.showAlert(self)
 //        }
+    }
+    
+    func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
+        dataForTable[0] = picker.selectedDateString
+        tableView.reloadData()
     }
     
     private func setupLayout() {
