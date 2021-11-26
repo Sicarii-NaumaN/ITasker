@@ -43,7 +43,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
-    
+    var picker = DateTimePicker()
     //let alert: AlertViewController
     
     var myButton: UIButtonTextIcon
@@ -66,7 +66,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     //let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
     //let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
-    let picker = DateTimePicker.create()
+    //let picker = DateTimePicker.create()
     
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
@@ -88,10 +88,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         return nil
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func createPicker() {
+        picker = DateTimePicker.create()
         picker.frame = CGRect(x: 0, y: -20, width: picker.frame.size.width, height:
                                 picker.frame.size.height)
         picker.dateFormat = "LLL d, h:mm"
@@ -99,13 +97,18 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         picker.locale = Locale(identifier: "ru_RU")
         picker.darkColor = UIColor.black
         picker.highlightColor = UIColor.systemOrange
-        picker.isHidden = true
+        picker.isHidden = false
+        self.view.addSubview(picker)
+
         //picker.delegate = tableView as! DateTimePickerDelegate
         
         picker.dismissHandler = { [self] in
             picker.removeFromSuperview()
         }
-        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         myHeader.text = "Создать задачу"
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
@@ -139,7 +142,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         self.view.addSubview(imageViewDescribe)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
-        self.view.addSubview(picker)
+        //self.view.addSubview(picker)
         
         myTextFieldDescription.configure(frame: CGRect(
             x: 90,
@@ -196,8 +199,9 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        picker.isHidden = false
-        tableView.reloadData()
+        print(indexPath)
+        createPicker()
+        //tableView.reloadData()
         
 //        if indexPath.row == 1 {
 //            alert.showAlert(self)
