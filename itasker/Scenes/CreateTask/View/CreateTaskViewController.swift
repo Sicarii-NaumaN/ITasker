@@ -198,13 +198,18 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath == [0, 0] {
+            createPicker()
+        }
+        if indexPath == [0, 1] {
+            let alert = UIAlertController(title: "Пошел", message: "нахуй", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Пойду", style: .default))
+            alert.addAction(UIAlertAction(title: "Не пойду", style: .default))
+            alert.addAction(UIAlertAction(title: "С удовольствием", style: .default))
+            alert.addAction(UIAlertAction(title: "Тык", style: .default))
+            self.present(alert, animated: true)
+        }
         print(indexPath)
-        createPicker()
-        //tableView.reloadData()
-        
-//        if indexPath.row == 1 {
-//            alert.showAlert(self)
-//        }
     }
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
