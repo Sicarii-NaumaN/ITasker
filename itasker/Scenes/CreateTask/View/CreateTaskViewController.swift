@@ -196,6 +196,12 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         return cell
     }
     
+    func updateRepeatLabel(action: UIAlertAction) {
+        print(action.title!)
+        dataForTable[1] = action.title!
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0, 0] {
@@ -203,10 +209,10 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         }
         if indexPath == [0, 1] {
             let alert = UIAlertController(title: "Пошел", message: "нахуй", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Пойду", style: .default))
-            alert.addAction(UIAlertAction(title: "Не пойду", style: .default))
-            alert.addAction(UIAlertAction(title: "С удовольствием", style: .default))
-            alert.addAction(UIAlertAction(title: "Тык", style: .default))
+            alert.addAction(UIAlertAction(title: "Пойду", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "Не пойду", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "С удовольствием", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "Тык", style: .default, handler: updateRepeatLabel))
             self.present(alert, animated: true)
         }
         print(indexPath)
