@@ -20,20 +20,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWq-wF-qaT">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYf-29-KCB">
-                                    <rect key="frame" x="188.5" y="13" width="37.5" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-Rm-EkJ">
-                                    <rect key="frame" x="16" y="0.0" width="172.5" height="44"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-Rm-EkJ">
+                                    <rect key="frame" x="22" y="0.0" width="172.5" height="44"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" systemColor="systemOrangeColor"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-1K-pXz">
-                                    <rect key="frame" x="226" y="0.0" width="172" height="44"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-1K-pXz">
+                                    <rect key="frame" x="220" y="0.0" width="172" height="44"/>
                                     <state key="normal" title="Today">
                                         <color key="titleColor" systemColor="systemOrangeColor"/>
                                     </state>
@@ -41,28 +35,30 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="aFz-1K-pXz" secondAttribute="trailing" constant="22" id="3ig-tf-1bo"/>
                                 <constraint firstItem="aFz-1K-pXz" firstAttribute="top" secondItem="gWq-wF-qaT" secondAttribute="top" id="6vx-9d-5Hb"/>
-                                <constraint firstItem="kYf-29-KCB" firstAttribute="centerY" secondItem="gWq-wF-qaT" secondAttribute="centerY" id="Kb4-x8-1CR"/>
-                                <constraint firstItem="kYf-29-KCB" firstAttribute="leading" secondItem="0lH-Rm-EkJ" secondAttribute="trailing" id="Lac-fa-RBG"/>
-                                <constraint firstItem="kYf-29-KCB" firstAttribute="centerX" secondItem="gWq-wF-qaT" secondAttribute="centerX" id="Xyb-zX-uTd"/>
-                                <constraint firstAttribute="trailing" secondItem="aFz-1K-pXz" secondAttribute="trailing" constant="16" id="bQ7-GX-QbC"/>
                                 <constraint firstAttribute="height" constant="44" id="ds5-Yn-o9g"/>
-                                <constraint firstItem="aFz-1K-pXz" firstAttribute="leading" secondItem="kYf-29-KCB" secondAttribute="trailing" id="euU-nP-EDu"/>
                                 <constraint firstItem="0lH-Rm-EkJ" firstAttribute="top" secondItem="gWq-wF-qaT" secondAttribute="top" id="fmy-DO-AzM"/>
-                                <constraint firstItem="0lH-Rm-EkJ" firstAttribute="leading" secondItem="gWq-wF-qaT" secondAttribute="leading" constant="16" id="lW9-AV-6YB"/>
                                 <constraint firstAttribute="bottom" secondItem="0lH-Rm-EkJ" secondAttribute="bottom" id="owL-Ju-Ka6"/>
                                 <constraint firstAttribute="bottom" secondItem="aFz-1K-pXz" secondAttribute="bottom" id="rWz-Es-lrL"/>
+                                <constraint firstItem="0lH-Rm-EkJ" firstAttribute="leading" secondItem="gWq-wF-qaT" secondAttribute="leading" constant="22" id="tUQ-Oj-xye"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGW-1b-76M">
-                            <rect key="frame" x="16" y="282" width="382" height="44"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGW-1b-76M">
+                            <rect key="frame" x="76" y="282" width="260" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="H6V-cd-H4J"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Done">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="titleShadowColor" systemColor="systemOrangeColor"/>
                             </state>
+                            <buttonConfiguration key="configuration" style="tinted" title="Done">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                            </buttonConfiguration>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-kS-2jV">
                             <rect key="frame" x="0.0" y="44" width="414" height="222"/>
@@ -174,12 +170,12 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="PGW-1b-76M" firstAttribute="leading" secondItem="q9d-RF-GrX" secondAttribute="leading" constant="16" id="0Yk-bq-scL"/>
                         <constraint firstItem="DNy-kS-2jV" firstAttribute="top" secondItem="gWq-wF-qaT" secondAttribute="bottom" id="69S-uM-bKy"/>
                         <constraint firstItem="DNy-kS-2jV" firstAttribute="leading" secondItem="q9d-RF-GrX" secondAttribute="leading" id="9ha-A3-ang"/>
                         <constraint firstAttribute="trailing" secondItem="gWq-wF-qaT" secondAttribute="trailing" id="C6V-FU-0Za"/>
+                        <constraint firstAttribute="trailing" secondItem="PGW-1b-76M" secondAttribute="trailing" constant="77" id="Mzp-et-VdR"/>
+                        <constraint firstItem="PGW-1b-76M" firstAttribute="leading" secondItem="q9d-RF-GrX" secondAttribute="leading" constant="77" id="TF5-GB-SRA"/>
                         <constraint firstItem="DNy-kS-2jV" firstAttribute="trailing" secondItem="q9d-RF-GrX" secondAttribute="trailing" id="Vhb-he-JK8"/>
-                        <constraint firstAttribute="trailing" secondItem="PGW-1b-76M" secondAttribute="trailing" constant="16" id="WsY-04-iIj"/>
                         <constraint firstItem="gWq-wF-qaT" firstAttribute="leading" secondItem="q9d-RF-GrX" secondAttribute="leading" id="a7O-mg-zNA"/>
                         <constraint firstItem="PGW-1b-76M" firstAttribute="top" secondItem="DNy-kS-2jV" secondAttribute="bottom" constant="16" id="bm8-Uw-HcX"/>
                         <constraint firstItem="K7h-lq-Fpy" firstAttribute="top" secondItem="lVg-4m-JC2" secondAttribute="bottom" constant="38" id="c1M-ap-Wkd"/>
@@ -207,7 +203,6 @@
                 <outlet property="colonLabel2" destination="Gux-es-FVZ" id="equ-EK-yfp"/>
                 <outlet property="contentView" destination="q9d-RF-GrX" id="6ec-Dx-Amm"/>
                 <outlet property="contentViewHeight" destination="kg6-af-apQ" id="nPL-wP-JPy"/>
-                <outlet property="dateTitleLabel" destination="kYf-29-KCB" id="mOX-pO-dCc"/>
                 <outlet property="dayCollectionView" destination="0j6-O2-Yx4" id="Tfm-J4-zVl"/>
                 <outlet property="doneButton" destination="PGW-1b-76M" id="fLK-tx-ouc"/>
                 <outlet property="doneButtonTopSpace" destination="bm8-Uw-HcX" id="gw3-uE-KXf"/>
@@ -222,7 +217,7 @@
                 <outlet property="titleView" destination="gWq-wF-qaT" id="aD5-80-bRL"/>
                 <outlet property="todayButton" destination="aFz-1K-pXz" id="h9R-Tv-MFY"/>
             </connections>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </view>
     </objects>
     <resources>

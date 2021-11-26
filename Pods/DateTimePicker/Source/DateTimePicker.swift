@@ -38,7 +38,7 @@ public protocol DateTimePickerDelegate: AnyObject {
         
         public init(cancelButtonFont: UIFont = .boldSystemFont(ofSize: 15),
             todayButtonFont: UIFont = .boldSystemFont(ofSize: 15),
-            doneButtonFont: UIFont = .boldSystemFont(ofSize: 13),
+            doneButtonFont: UIFont = .boldSystemFont(ofSize: 20),
             selectedDateLabelFont: UIFont = .systemFont(ofSize: 15),
             timeLabelFont: UIFont = .boldSystemFont(ofSize: 18),
             colonLabelFont: UIFont = .boldSystemFont(ofSize: 18),
@@ -91,7 +91,7 @@ public protocol DateTimePickerDelegate: AnyObject {
     /// custom dark color, default to grey
     public var darkColor = UIColor(red: 0, green: 22.0/255.0, blue: 39.0/255.0, alpha: 1) {
         didSet {
-            dateTitleLabel.textColor = darkColor
+            //dateTitleLabel.textColor = darkColor
             cancelButton.setTitleColor(darkColor.withAlphaComponent(0.5), for: .normal)
             doneButton.backgroundColor = .systemOrange
             borderTopView.backgroundColor = .systemOrange
@@ -418,10 +418,10 @@ public protocol DateTimePickerDelegate: AnyObject {
         titleView.layer.borderWidth = 1
         titleView.layer.borderColor = UIColor.systemOrange.cgColor
         
-        dateTitleLabel.textColor = darkColor
-        dateTitleLabel.textAlignment = .center
-        dateTitleLabel.font = customFontSetting.selectedDateLabelFont
-        resetDateTitle()
+        //dateTitleLabel.textColor = darkColor
+        //dateTitleLabel.textAlignment = .center
+        //dateTitleLabel.font = customFontSetting.selectedDateLabelFont
+        //resetDateTitle()
         
         let isRTL = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
 

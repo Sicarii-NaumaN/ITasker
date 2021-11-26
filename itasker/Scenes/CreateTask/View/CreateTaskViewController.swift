@@ -11,7 +11,7 @@ import UITextView_Placeholder
 import EasyPeasy
 import DateTimePicker
 
-class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate {
+class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate, UITextFieldDelegate {
     var presenter: CreateTaskPresenter
     
 //    struct ViewState {
@@ -31,13 +31,20 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
 //        }
 //
 //    }
+    
+    // Screen width.
+    public var screenWidth: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+
+    // Screen height.
+    public var screenHeight: CGFloat {
+        return UIScreen.main.bounds.height
+    }
         
     @IBOutlet weak var tableView: UITableView!
     
     //let datePicker = UIDatePicker()
-
-
-    
     
     
     let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
@@ -60,13 +67,9 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var myTextField: TaskTextView
     var myTextFieldDescription: TaskTextView
     
-    var dataForTable: [String] = ["Понедельник, 9:00", "Повторять по ПН", "Теги"]
+    var dataForTable: [String] = ["нояб. 6, 10:00", "Повторять по ПН", "Теги"]
     var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
-    
-    //let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
-    //let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
-    //let picker = DateTimePicker.create()
     
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
@@ -90,8 +93,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func createPicker() {
         picker = DateTimePicker.create()
-        picker.frame = CGRect(x: 0, y: -20, width: picker.frame.size.width, height:
-                                picker.frame.size.height)
+        picker.frame = CGRect(x: 0, y: 0, width: screenWidth, height:
+                                screenHeight)
         picker.dateFormat = "LLL d, h:mm"
         picker.doneButtonTitle = "Подтвердить"
         picker.locale = Locale(identifier: "ru_RU")
@@ -104,6 +107,10 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         picker.dismissHandler = { [self] in
             picker.removeFromSuperview()
         }
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return false
     }
     
     override func viewDidLoad() {
@@ -144,15 +151,15 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         //self.view.addSubview(picker)
         
         myTextFieldDescription.configure(frame: CGRect(
-            x: 90,
+            x: 70,
             y: 265,
-            width: 240,
+            width: screenWidth - 130,
             height: 100)
         )
         myTextField.configure(frame: CGRect(
-            x: 90,
+            x: 70,
             y: 225,
-            width: 240,
+            width: screenWidth - 130,
             height: 33)
         )
         
@@ -187,6 +194,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             return UITableViewCell()
         }
         
+        cell.label.delegate = self
         cell.label.text = dataForTable[indexPath.row]
         cell.icon.image = UIImage(systemName: imageForTable[indexPath.row])
         cell.icon.tintColor = colorForTable[indexPath.row]
@@ -203,16 +211,16 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0, 0] {
             createPicker()
         }
         if indexPath == [0, 1] {
-            let alert = UIAlertController(title: "Пошел", message: "нахуй", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Пойду", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Не пойду", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "С удовольствием", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Тык", style: .default, handler: updateRepeatLabel))
+            let alert = UIAlertController(title: "Повторять задачу", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ежедневно", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "Еженедельно", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "Ежемесячно", style: .default, handler: updateRepeatLabel))
+            alert.addAction(UIAlertAction(title: "Ежегодно", style: .default, handler: updateRepeatLabel))
             self.present(alert, animated: true)
         }
         print(indexPath)
@@ -246,7 +254,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         )
         
         myButton.easy.layout(
-            Top(550).to(myHeader),
+            Top(screenHeight - 120),
             CenterX(),
             Height(50),
             Width(300)
