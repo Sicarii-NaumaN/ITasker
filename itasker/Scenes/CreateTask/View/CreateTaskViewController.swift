@@ -14,42 +14,24 @@ import DateTimePicker
 class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate, UITextFieldDelegate {
     var presenter: CreateTaskPresenter
     
-//    struct ViewState {
-//        var rows: [Cell]
-//
-//        struct Cell: DatePickerCell {
-//            var text: String
-//            var mode: UIDatePicker.Mode
-//            var backColor: UIColor
-//            var onDate: ((Date)->())
-//        }
-//    }
-//
-//    var viewState: ViewState = .init(rows: []) {
-//        didSet {
-//            tableView.reloadData
-//        }
-//
-//    }
-    
     // Screen width.
     public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
-
+    
     // Screen height.
     public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
-        
+    
     @IBOutlet weak var tableView: UITableView!
     
     //let datePicker = UIDatePicker()
     
     
     let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
-    let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
-    let inputSettingButton = InputInitButton(image: "ellipsis", text: nil, colorForButton: .white, colorForIcon: .black, colorForText: nil)
+    let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
+    let inputSettingButton = InputInitButton(image: "trash", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     var picker = DateTimePicker()
     //let alert: AlertViewController
     
@@ -67,7 +49,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var myTextField: TaskTextView
     var myTextFieldDescription: TaskTextView
     
-    var dataForTable: [String] = ["нояб. 6, 10:00", "Повторять по ПН", "Теги"]
+    var dataForTable: [String] = ["нояб. 6, 10:00", "Ежедневно", "Теги"]
     var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
     
@@ -82,14 +64,28 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         myButton = UIButtonTextIcon.create(input: inputMyButton)
         backButton = UIButtonTextIcon.create(input: inputBackButton)
         settingButton = UIButtonTextIcon.create(input: inputSettingButton)
+
         
-        //alert.init()
         super.init(nibName: nil, bundle: nil)
+        //alert.init()
+        settingButton.addTarget(self, action: #selector(handleDeleteBtn), for: .touchUpInside)
+        
+        myTextField.delegate = self
     }
     
     required init?(coder: NSCoder) {
         return nil
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let str = (textView.text + text)
+        if str.count <= 28 {
+            return true
+        }
+        textView.text = str.substring(to: str.index(str.startIndex, offsetBy: 28))
+        return false
+    }
+    
     
     func createPicker() {
         picker = DateTimePicker.create()
@@ -137,7 +133,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         myButton.configureButton()
         
         settingButton.configureButton()
-        settingButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
+        //settingButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
         
         
         self.view.addSubview(myTextField)
@@ -198,7 +194,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         cell.label.text = dataForTable[indexPath.row]
         cell.icon.image = UIImage(systemName: imageForTable[indexPath.row])
         cell.icon.tintColor = colorForTable[indexPath.row]
-        cell.layout.backgroundColor = .white
+        cell.layout.backgroundColor = .clear
         cell.fillView.backgroundColor = colorForTable[indexPath.row].withAlphaComponent(0.2)
         cell.label.font = UIFont.systemFont(ofSize: 18)
         return cell
@@ -221,9 +217,28 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             alert.addAction(UIAlertAction(title: "Еженедельно", style: .default, handler: updateRepeatLabel))
             alert.addAction(UIAlertAction(title: "Ежемесячно", style: .default, handler: updateRepeatLabel))
             alert.addAction(UIAlertAction(title: "Ежегодно", style: .default, handler: updateRepeatLabel))
-            self.present(alert, animated: true)
+            alert.addAction(UIAlertAction(title: "Никогда", style: .default, handler: updateRepeatLabel))
+            self.present(alert, animated: true) {
+                alert.view.superview?.isUserInteractionEnabled = true
+                alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+            }
         }
-        print(indexPath)
+    }
+    
+    @IBAction func handleDeleteBtn(sender: UIButtonTextIcon) {
+        let alert = UIAlertController(title: "Удалить задачу?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Да", style: .destructive))
+        alert.addAction(UIAlertAction(title: "Нет", style: .default))
+        //alert.view.tintColor = UIColor.systemRed
+        self.present(alert, animated: true) {
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        }
+    }
+    
+    @objc func alertControllerBackgroundTapped()
+    {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
@@ -276,15 +291,15 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     }
     
 }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
