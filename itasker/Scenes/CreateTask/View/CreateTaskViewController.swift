@@ -120,6 +120,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.isScrollEnabled = false
         
         
         imageView.image = UIImage(systemName: "square.and.pencil")
