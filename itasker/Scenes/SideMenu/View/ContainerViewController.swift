@@ -14,7 +14,6 @@ protocol SideButtonDelegate: AnyObject {
 
 class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     
-    
     var presenter: SideMenuPresenter
     
     let menuVC = MenuViewController()
@@ -22,6 +21,14 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     var navVC: UINavigationController?
     
 
+    private var eagleCircle: UIView = {
+        let buttomRightCircle = CoolCircleForDisign()
+        buttomRightCircle.backgroundColor = UIColor(red: 255.0/255.0, green: 159.0/255.0, blue: 10.0/255.0, alpha: 1)
+        return buttomRightCircle
+    }()
+        
+        
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.1489986479, green: 0.1490316391, blue: 0.1489965916, alpha: 1)
@@ -38,12 +45,6 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     }
     
     private func addChildVCs() {
-        // Menu
-        addChild(menuVC)
-        view.addSubview(menuVC.view)
-        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: 200, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height - 200)
-
-        
         //Tasks
         tasksVC.delegate = self
         let navVC = UINavigationController(rootViewController: tasksVC)
@@ -54,7 +55,19 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         self.navVC?.view.frame = CGRect(x: 0, y: 0, width: self.tasksVC.view.frame.width * 5/6, height: self.tasksVC.view.frame.height)
       //  self.navVC?.view.frame.origin.x = self.tasksVC.view.frame.width - 370
         
+        // Menu
+        addChild(menuVC)
+        view.addSubview(menuVC.view)
+        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.topbarHeight, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height - 200)
+
+        view.addSubview(eagleCircle)
         
+        eagleCircle.easy.layout(
+            Top(-100),
+            Right(-100),
+            Size(self.tasksVC.view.frame.width * 1 / 2)
+            
+        )
     }
     
 

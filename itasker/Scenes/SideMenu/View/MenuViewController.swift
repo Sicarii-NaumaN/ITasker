@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import EasyPeasy
 
 class TableViewCell: UITableViewCell {
-
+    //highforrow    
 }
 
 
@@ -52,15 +53,17 @@ class MenuViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.1489986479, green: 0.1490316391, blue: 0.1489965916, alpha: 1)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.isScrollEnabled = false
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = CGRect(
             x: 0,
-            y: view.safeAreaInsets.top,
+            y: view.bounds.height / 2,
             width: view.bounds.size.width / 5,
             height: view.bounds.size.height
         )

@@ -25,5 +25,6 @@ class TasksViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Все задачи"
+        navigationController?.navigationBar.barTintColor = .black
     }
 }
