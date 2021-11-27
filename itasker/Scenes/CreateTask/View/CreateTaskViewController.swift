@@ -91,7 +91,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         picker = DateTimePicker.create()
         picker.frame = CGRect(x: 0, y: 0, width: screenWidth, height:
                                 screenHeight)
-        picker.dateFormat = "LLL d, h:mm"
+        picker.dateFormat = "LLL d, HH:mm"
         picker.doneButtonTitle = "Подтвердить"
         picker.locale = Locale(identifier: "ru_RU")
         picker.darkColor = UIColor.black
