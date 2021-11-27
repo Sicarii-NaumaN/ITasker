@@ -1,17 +1,27 @@
 import UIKit
 import EasyPeasy
 
-
+protocol EnterToAppDelegate: AnyObject {
+    
+    func withoutRegButtonTappedDelegate()
+    
+}
 
 
 final class LoginLabels: UIView {
     
-    private var regButton: UIButton = {
+    weak var delegate: EnterToAppDelegate?
+    
+   // private var withoutLogin: UI
+    
+    var enterButton: UIButton = {
         let button = UIButton()
         button.setTitle("ВОЙТИ", for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         return button
     }()
+    
+
     
     private var registrationTitle: UIView = {
         let title = UILabel()
@@ -60,7 +70,7 @@ final class LoginLabels: UIView {
             loginLabel,
             passwordLabel,
             userPasswordTextField,
-            regButton
+            enterButton,
         ]
         
         allSubviews.forEach {
@@ -83,8 +93,7 @@ final class LoginLabels: UIView {
     }
     
     private func configureButton() {
-        regButton.frame = CGRect(x: 0, y: 0, width: 270, height: 100)
-        regButton.layer.cornerRadius = 20
+        enterButton.layer.cornerRadius = 20
     }
     
     
@@ -119,11 +128,13 @@ final class LoginLabels: UIView {
             Height(40)
         )
         
-        regButton.easy.layout(
+        enterButton.easy.layout(
             Top(40).to(userPasswordTextField),
             CenterX(),
             Height(45),
             Width(200)
         )
+        
+        
     }
 }

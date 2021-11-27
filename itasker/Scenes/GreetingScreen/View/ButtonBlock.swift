@@ -11,6 +11,7 @@ import EasyPeasy
 protocol ButtonBlockDelegate: AnyObject {
     func loginButtonTappedDelegate()
     func regButtonTappedDelegate()
+    func withoutRegButtonTappedDelegate()
 }
 
 
@@ -34,6 +35,13 @@ final class ButtonBlock: UIView {
         return button
     }()
     
+    var withoutLogButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("без авторизации", for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        return button
+    }()
+    
     private lazy var separatingRectangle: UIView = {
         let rectView = UIView()
         rectView.backgroundColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
@@ -49,6 +57,7 @@ final class ButtonBlock: UIView {
             regButton,
             loginButton,
             separatingRectangle,
+            withoutLogButton,
         ]
         
         allSubviews.forEach {
@@ -68,14 +77,14 @@ final class ButtonBlock: UIView {
     
     
     private func configureButtons() {
-        regButton.frame = CGRect(x: 0, y: 0, width: 270, height: 100)
         regButton.layer.cornerRadius = 20
         regButton.layer.maskedCorners = [.layerMaxXMaxYCorner]
             
-        
-        loginButton.frame = CGRect(x: 0, y: 0, width: 270, height: 100)
         loginButton.layer.cornerRadius = 20
         loginButton.layer.maskedCorners = [.layerMaxXMinYCorner]
+        
+        withoutLogButton.layer.cornerRadius = 20
+        withoutLogButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
     }
     
     private func setupLayout() {
@@ -97,6 +106,15 @@ final class ButtonBlock: UIView {
             Height(45),
             Width()
                 .like(loginButton)
+        )
+        
+        withoutLogButton.easy.layout(
+            Top(10).to(regButton),
+            CenterX().to(loginButton),
+            Height(45),
+            Width()
+                .like(loginButton)
+        
         )
         
     }

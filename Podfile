@@ -7,6 +7,7 @@ target 'itasker' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'SideMenu'
   # Pods for itasker
 
 end

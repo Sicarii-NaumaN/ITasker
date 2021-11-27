@@ -15,6 +15,7 @@ class GreetViewControler: UIViewController {
     
     private var circles = CirclesAndLabel()
     
+    
     private var buttons: ButtonBlock = {
         let buttons = ButtonBlock(frame: CGRect(x: 0, y: UIScreen.main.bounds.height * 4/6, width: 200, height: 350))
         return buttons
@@ -35,7 +36,7 @@ class GreetViewControler: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        buttons.withoutLogButton.addTarget(self, action: #selector(withoutRegButtonTapped), for: .touchUpInside)
         buttons.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         buttons.regButton.addTarget(self, action: #selector(regButtonTapped), for: .touchUpInside)
         buttons.delegate = self
@@ -50,6 +51,11 @@ class GreetViewControler: UIViewController {
         super.viewDidLayoutSubviews()
     }
     
+    
+    @objc func withoutRegButtonTapped() {
+        buttons.delegate?.withoutRegButtonTappedDelegate()
+    }
+    
     @objc func loginButtonTapped() {
         buttons.delegate?.loginButtonTappedDelegate()
     }
@@ -57,18 +63,29 @@ class GreetViewControler: UIViewController {
     @objc func regButtonTapped() {
         buttons.delegate?.regButtonTappedDelegate()
     }
-    
-    
 }
 
         
 extension GreetViewControler: ButtonBlockDelegate {
+    func withoutRegButtonTappedDelegate() {
+        presenter.showTrickyPassage(self)
+    }
+    
     func loginButtonTappedDelegate () {
         presenter.showLoginVC(self)
     }
     
     func regButtonTappedDelegate () {
         presenter.showRegistrationVC(self)
+    }
+    
+    
+    
+}
+
+extension GreetViewControler: SideButtonDelegate {
+    func sideMenuButtonTappedDelegate() {
+        presenter.showTrickyPassage(self)
     }
     
 }
