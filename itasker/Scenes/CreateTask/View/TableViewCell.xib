@@ -51,7 +51,6 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Qfl-En-98V" firstAttribute="leading" secondItem="a35-hV-Ntq" secondAttribute="leading" constant="13" id="6jW-E0-hP2"/>
-                            <constraint firstAttribute="trailing" secondItem="Qfl-En-98V" secondAttribute="trailing" constant="228" id="fQH-yk-4Qg"/>
                             <constraint firstItem="Qfl-En-98V" firstAttribute="top" secondItem="a35-hV-Ntq" secondAttribute="top" constant="9" id="gzT-J7-XTu"/>
                             <constraint firstAttribute="bottom" secondItem="Qfl-En-98V" secondAttribute="bottom" constant="12" id="wjl-FM-aiC"/>
                         </constraints>
