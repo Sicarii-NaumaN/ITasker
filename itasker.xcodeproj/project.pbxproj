@@ -16,19 +16,30 @@
 		0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D4D272D95320090D0E6 /* GreetPresenter.swift */; };
 		0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D53272DA1250090D0E6 /* ModuleBuilder.swift */; };
 		0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D5A272EABF00090D0E6 /* Exitensions.swift */; };
-		0F967D67272EB9590090D0E6 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D66272EB9590090D0E6 /* RegistrationView.swift */; };
 		0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D68272EB9840090D0E6 /* RegistrationModel.swift */; };
 		0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6A272EB9B30090D0E6 /* RegistrationPresenter.swift */; };
-		0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6C272EBA000090D0E6 /* GreetingView.swift */; };
 		0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D6E272EBA2B0090D0E6 /* LoginModel.swift */; };
-		0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D70272EBA4C0090D0E6 /* CircleView.swift */; };
+		0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */; };
 		0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D72272EBA600090D0E6 /* LoginPresenter.swift */; };
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D77272EC58B0090D0E6 /* LoginViewController.swift */; };
 		0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */; };
+		0FA34A77274E23F300F6BE3C /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA34A76274E23F300F6BE3C /* SideMenu */; };
+		0FA34A84274E823C00F6BE3C /* SideMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA34A83274E823C00F6BE3C /* SideMenuPresenter.swift */; };
+		0FA34A86274FEB8400F6BE3C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA34A85274FEB8400F6BE3C /* ContainerViewController.swift */; };
+		0FA34A88274FEBA100F6BE3C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA34A87274FEBA100F6BE3C /* MenuViewController.swift */; };
+		0FA34A8A274FEBC800F6BE3C /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA34A89274FEBC800F6BE3C /* TasksViewController.swift */; };
+		0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F5A527419ACE00ACB55B /* loginView.swift */; };
+		0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CD273B2DA20027D9BC /* LabelsView.swift */; };
+		0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */; };
+		0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FF172D127414BA60027D9BC /* GoogleService-Info.plist */; };
+		0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */; };
+		0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AC2730487700FA422C /* ButtonBlock.swift */; };
+		8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8380005B856A8AA370CE1CE /* Pods_itasker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F967D35272D93B30090D0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F967D37272D93B30090D0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,15 +51,25 @@
 		0F967D4D272D95320090D0E6 /* GreetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetPresenter.swift; sourceTree = "<group>"; };
 		0F967D53272DA1250090D0E6 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		0F967D5A272EABF00090D0E6 /* Exitensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exitensions.swift; sourceTree = "<group>"; };
-		0F967D66272EB9590090D0E6 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0F967D68272EB9840090D0E6 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		0F967D6A272EB9B30090D0E6 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
-		0F967D6C272EBA000090D0E6 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		0F967D6E272EBA2B0090D0E6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		0F967D70272EBA4C0090D0E6 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolCircleForDisign.swift; sourceTree = "<group>"; };
 		0F967D72272EBA600090D0E6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		0F967D77272EC58B0090D0E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0FA34A83274E823C00F6BE3C /* SideMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuPresenter.swift; sourceTree = "<group>"; };
+		0FA34A85274FEB8400F6BE3C /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		0FA34A87274FEBA100F6BE3C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0FA34A89274FEBC800F6BE3C /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		0FA3F5A527419ACE00ACB55B /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		0FF172CD273B2DA20027D9BC /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
+		0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegAndLogCircles.swift; sourceTree = "<group>"; };
+		0FF172D127414BA60027D9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesAndLabel.swift; sourceTree = "<group>"; };
+		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
+		14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
+		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +78,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */,
+				0FA34A77274E23F300F6BE3C /* SideMenu in Frameworks */,
+				8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012331F9B8F97807A5B6630E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */,
+				0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
+				0FF172D127414BA60027D9BC /* GoogleService-Info.plist */,
 				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
+				012331F9B8F97807A5B6630E /* Pods */,
+				9DEDC0E115BA98258AD6E1AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,8 +146,10 @@
 		0F967D51272D9E910090D0E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F967D70272EBA4C0090D0E6 /* CoolCircleForDisign.swift */,
+				0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */,
+				0FF678AC2730487700FA422C /* ButtonBlock.swift */,
 				0F967D39272D93B30090D0E6 /* GreetViewController.swift */,
-				0F967D6C272EBA000090D0E6 /* GreetingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +185,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0FA34A78274E242400F6BE3C /* SideMenu */,
 				0F967D5F272EB8C10090D0E6 /* LoginScreen */,
 				0F967D5E272EB8830090D0E6 /* RegistrationScreen */,
 				0F967D4F272D9E520090D0E6 /* GreetingScreen */,
@@ -194,7 +232,8 @@
 		0F967D61272EB8D30090D0E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F967D66272EB9590090D0E6 /* RegistrationView.swift */,
+				0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */,
+				0FF172CD273B2DA20027D9BC /* LabelsView.swift */,
 				0F967D79272EC8130090D0E6 /* RegistrationViewController.swift */,
 			);
 			path = View;
@@ -219,8 +258,8 @@
 		0F967D64272EB8FE0090D0E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F967D70272EBA4C0090D0E6 /* CircleView.swift */,
 				0F967D77272EC58B0090D0E6 /* LoginViewController.swift */,
+				0FA3F5A527419ACE00ACB55B /* loginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +272,49 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0FA34A78274E242400F6BE3C /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0FA34A82274E2F5B00F6BE3C /* Presenter */,
+				0FA34A81274E2F5000F6BE3C /* Model */,
+				0FA34A7F274E2F1B00F6BE3C /* View */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		0FA34A7F274E2F1B00F6BE3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FA34A85274FEB8400F6BE3C /* ContainerViewController.swift */,
+				0FA34A87274FEBA100F6BE3C /* MenuViewController.swift */,
+				0FA34A89274FEBC800F6BE3C /* TasksViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FA34A81274E2F5000F6BE3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FA34A82274E2F5B00F6BE3C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0FA34A83274E823C00F6BE3C /* SideMenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DEDC0E115BA98258AD6E1AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8380005B856A8AA370CE1CE /* Pods_itasker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */;
 			buildPhases = (
+				4C06B235022C648462324A60 /* [CP] Check Pods Manifest.lock */,
 				0F967D2E272D93B30090D0E6 /* Sources */,
 				0F967D2F272D93B30090D0E6 /* Frameworks */,
 				0F967D30272D93B30090D0E6 /* Resources */,
+				15E4FD638F5D65E43E8C946E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +335,7 @@
 			name = itasker;
 			packageProductDependencies = (
 				0F967D75272EBE4D0090D0E6 /* EasyPeasy */,
+				0FA34A76274E23F300F6BE3C /* SideMenu */,
 			);
 			productName = "itasker(registration)";
 			productReference = 0F967D32272D93B30090D0E6 /* itasker.app */;
@@ -281,6 +366,7 @@
 			mainGroup = 0F967D29272D93B30090D0E6;
 			packageReferences = (
 				0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
+				0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 0F967D33272D93B30090D0E6 /* Products */;
 			projectDirPath = "";
@@ -298,10 +384,53 @@
 			files = (
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
+				0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15E4FD638F5D65E43E8C946E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-itasker/Pods-itasker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C06B235022C648462324A60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-itasker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F967D2E272D93B30090D0E6 /* Sources */ = {
@@ -309,20 +438,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D3A272D93B30090D0E6 /* GreetViewController.swift in Sources */,
+				0FA34A84274E823C00F6BE3C /* SideMenuPresenter.swift in Sources */,
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
-				0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
+				0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
 				0F967D4C272D94520090D0E6 /* GreetingModel.swift in Sources */,
+				0FA34A86274FEB8400F6BE3C /* ContainerViewController.swift in Sources */,
+				0FA34A8A274FEBC800F6BE3C /* TasksViewController.swift in Sources */,
+				0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */,
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
+				0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */,
+				0FA34A88274FEBA100F6BE3C /* MenuViewController.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
+				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
-				0F967D71272EBA4C0090D0E6 /* CircleView.swift in Sources */,
-				0F967D67272EB9590090D0E6 /* RegistrationView.swift in Sources */,
+				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
+				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +595,7 @@
 		};
 		0F967D47272D93B70090D0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +614,7 @@
 		};
 		0F967D48272D93B70090D0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,6 +663,14 @@
 				minimumVersion = 1.10.0;
 			};
 		};
+		0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -532,6 +678,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
 			productName = EasyPeasy;
+		};
+		0FA34A76274E23F300F6BE3C /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

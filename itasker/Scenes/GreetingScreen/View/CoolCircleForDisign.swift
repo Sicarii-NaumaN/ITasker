@@ -10,21 +10,23 @@ import EasyPeasy
 
 
 final class CoolCircleForDisign: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
-        layer.cornerRadius = layer.bounds.width / 2
-        self.clipsToBounds = true
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = width / 2
+    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+
 }
-
-
-
-
 
 
 

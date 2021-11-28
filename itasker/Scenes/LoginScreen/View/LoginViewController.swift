@@ -7,21 +7,16 @@
 
 import UIKit
 
-class LoginViewControler: UIViewController {
+class LoginViewController: UIViewController {
     
-    var presenter: LoginPresenter
+    var presenter: GreetPresenter
+
+    let width = UIScreen.main.bounds.width
+    let heigth = UIScreen.main.bounds.height
     
-    private var circle = CoolCircleForDisign(frame: CGRect(x: 200, y: 200, width: 200, height: 200))
+    private var labels = LoginLabels()
     
-    private lazy var coolButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .systemPink
-        button.setTitle("hit me", for: .normal)
-        button.setTitle("thanks", for: .highlighted)
-        return button
-    }()
-    
-    init(presenter: LoginPresenter) {
+    init(presenter: GreetPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,23 +25,34 @@ class LoginViewControler: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = labels
+    }
 
-    
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.addSubview(circle)
-        view.addSubview(coolButton)
-        coolButton.frame = CGRect(x: 200, y: 400, width: 200, height: 50)
-        coolButton.addTarget(self, action: #selector(didCoolButtonTapped), for: .touchUpInside)
-        coolButton.layer.cornerRadius = 20
-        coolButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        view.backgroundColor = .systemBackground
         
+        labels.delegate = self
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
     
-    @objc func didCoolButtonTapped() {
-        presenter.showRegistrationVC(self)
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
+    
+    @objc func enterButtonTapped() {
+        labels.delegate?.withoutRegButtonTappedDelegate()
+    }
+
+}
+
+
+extension LoginViewController: EnterToAppDelegate {
+    func withoutRegButtonTappedDelegate() {
+        presenter.showTrickyPassage(self)
+    }
+    
     
 }
