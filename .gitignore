@@ -2,7 +2,7 @@ Pods/
 *.swp
 *.xcworkspace
 Podfile.lock
-
+itasker.xcworkspace/
 .DS_Store
 
 ## Build generated
