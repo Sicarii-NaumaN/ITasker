@@ -1,5 +1,4 @@
 PODS:
-  - "UITextView+Placeholder (1.4.0)"
   - Firebase/Analytics (8.9.1):
     - Firebase/Core
   - Firebase/Auth (8.9.1):
@@ -114,7 +113,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - "UITextView+Placeholder"
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -132,7 +130,6 @@ SPEC REPOS:
     - SideMenu
 
 SPEC CHECKSUMS:
-  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
