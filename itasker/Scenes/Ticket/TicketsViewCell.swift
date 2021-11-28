@@ -32,6 +32,7 @@ class TicketsViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        label.font = UIFont.systemFont(ofSize: 22)
         selectionStyle = .none
 //        backView.layer.cornerRadius = 10
     }

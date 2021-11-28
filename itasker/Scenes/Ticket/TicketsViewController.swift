@@ -27,7 +27,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         tableView.register(TicketsViewCell.nib, forCellReuseIdentifier: TicketsViewCell.identifire)
-        tableView.rowHeight = 125
+//        tableView.rowHeight = 135
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -68,12 +68,6 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 10
     }
     
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.rowHeight
-    }
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TicketsViewCell.identifire, for: indexPath) as? TicketsViewCell else {
             return UITableViewCell()
@@ -83,7 +77,6 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         cell.leftView.backgroundColor = .orange
-        cell.label.font = UIFont.systemFont(ofSize: 22)
         let xNSNumber = count as NSNumber
         cell.label.text = "Label " + xNSNumber.stringValue
         count += 1
@@ -109,6 +102,12 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.date.text = "\(day) \(date.month) \(year)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? TicketsViewCell {
+            cell.label.textColor = .red
+        }
     }
     
     private func setupLayout() {
