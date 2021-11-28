@@ -44,6 +44,7 @@
 		BC0C3FA62753DA8B00E03330 /* UICollectionViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */; };
 		BC0C3FA72753DA8B00E03330 /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */; };
 		BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */; };
+		BC3D855A2753DC7700F358C1 /* UIButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonIcon.swift; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +126,6 @@
 		0F967D34272D93B30090D0E6 /* itasker */ = {
 			isa = PBXGroup;
 			children = (
-				BC0C3F962753DA2B00E03330 /* Ticket */,
 				0F967D58272EAB370090D0E6 /* Scenes */,
 				0F967D55272EAA310090D0E6 /* Resourses */,
 				0F967D53272DA1250090D0E6 /* ModuleBuilder.swift */,
@@ -193,6 +194,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C3F962753DA2B00E03330 /* Ticket */,
 				0FA34A78274E242400F6BE3C /* SideMenu */,
 				0F967D5F272EB8C10090D0E6 /* LoginScreen */,
 				0F967D5E272EB8830090D0E6 /* RegistrationScreen */,
@@ -343,9 +345,9 @@
 				BC0C3F9A2753DA2B00E03330 /* TicketsViewCell.xib */,
 				BC0C3F9B2753DA2B00E03330 /* TicketViewCell.swift */,
 				BC0C3F9C2753DA2B00E03330 /* TicketsViewCell.swift */,
+				BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */,
 			);
-			name = Ticket;
-			path = Scenes/Ticket;
+			path = Ticket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +496,7 @@
 				0FA34A88274FEBA100F6BE3C /* MenuViewController.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
+				BC3D855A2753DC7700F358C1 /* UIButtonIcon.swift in Sources */,
 				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
 				BC0C3FA22753DA2B00E03330 /* TicketsViewCell.swift in Sources */,
@@ -642,6 +645,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = itasker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,6 +665,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = itasker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

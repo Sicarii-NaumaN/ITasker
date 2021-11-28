@@ -17,7 +17,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     var presenter: SideMenuPresenter
     
     let menuVC = MenuViewController()
-    let tasksVC = TasksViewController()
+    let tasksVC = TicketsViewController()
     var navVC: UINavigationController?
     
 
@@ -46,7 +46,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     
     private func addChildVCs() {
         //Tasks
-        tasksVC.delegate = self
+//        tasksVC.delegate = self
         let navVC = UINavigationController(rootViewController: tasksVC)
         navVC.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         addChild(navVC)
