@@ -39,7 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F967D35272D93B30090D0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F967D37272D93B30090D0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +67,9 @@
 		0FF172D127414BA60027D9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesAndLabel.swift; sourceTree = "<group>"; };
 		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
-		14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
+		75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,23 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		012331F9B8F97807A5B6630E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */,
-				0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
 				0FF172D127414BA60027D9BC /* GoogleService-Info.plist */,
 				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
-				012331F9B8F97807A5B6630E /* Pods */,
 				9DEDC0E115BA98258AD6E1AD /* Frameworks */,
+				7E09F13F9592286494A6915D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +298,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		7E09F13F9592286494A6915D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */,
+				F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9DEDC0E115BA98258AD6E1AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,8 +366,8 @@
 			);
 			mainGroup = 0F967D29272D93B30090D0E6;
 			packageReferences = (
-				0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
-				0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */,
+				0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */,
+				0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */,
 			);
 			productRefGroup = 0F967D33272D93B30090D0E6 /* Products */;
 			projectDirPath = "";
@@ -595,7 +596,7 @@
 		};
 		0F967D47272D93B70090D0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14180C49E60006BC67ABCE9F /* Pods-itasker.debug.xcconfig */;
+			baseConfigurationReference = 75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -614,7 +615,7 @@
 		};
 		0F967D48272D93B70090D0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */;
+			baseConfigurationReference = F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -655,7 +656,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
+		0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nakiostudio/EasyPeasy.git";
 			requirement = {
@@ -663,7 +664,7 @@
 				minimumVersion = 1.10.0;
 			};
 		};
-		0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+		0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
 			requirement = {
@@ -676,12 +677,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		0F967D75272EBE4D0090D0E6 /* EasyPeasy */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
+			package = 0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */;
 			productName = EasyPeasy;
 		};
 		0FA34A76274E23F300F6BE3C /* SideMenu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */;
+			package = 0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */;
 			productName = SideMenu;
 		};
 /* End XCSwiftPackageProductDependency section */
