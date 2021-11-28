@@ -36,6 +36,14 @@
 		0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */; };
 		0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AC2730487700FA422C /* ButtonBlock.swift */; };
 		8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8380005B856A8AA370CE1CE /* Pods_itasker.framework */; };
+		BC0C3F9D2753DA2B00E03330 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3F972753DA2B00E03330 /* TicketsViewController.swift */; };
+		BC0C3F9E2753DA2B00E03330 /* TicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0C3F982753DA2B00E03330 /* TicketsViewController.xib */; };
+		BC0C3FA02753DA2B00E03330 /* TicketsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0C3F9A2753DA2B00E03330 /* TicketsViewCell.xib */; };
+		BC0C3FA12753DA2B00E03330 /* TicketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3F9B2753DA2B00E03330 /* TicketViewCell.swift */; };
+		BC0C3FA22753DA2B00E03330 /* TicketsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3F9C2753DA2B00E03330 /* TicketsViewCell.swift */; };
+		BC0C3FA62753DA8B00E03330 /* UICollectionViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */; };
+		BC0C3FA72753DA8B00E03330 /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */; };
+		BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,14 @@
 		0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesAndLabel.swift; sourceTree = "<group>"; };
 		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
 		75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0C3F972753DA2B00E03330 /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		BC0C3F982753DA2B00E03330 /* TicketsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketsViewController.xib; sourceTree = "<group>"; };
+		BC0C3F9A2753DA2B00E03330 /* TicketsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketsViewCell.xib; sourceTree = "<group>"; };
+		BC0C3F9B2753DA2B00E03330 /* TicketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketViewCell.swift; sourceTree = "<group>"; };
+		BC0C3F9C2753DA2B00E03330 /* TicketsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewCell.swift; sourceTree = "<group>"; };
+		BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Ext.swift"; sourceTree = "<group>"; };
+		BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
+		BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +124,7 @@
 		0F967D34272D93B30090D0E6 /* itasker */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C3F962753DA2B00E03330 /* Ticket */,
 				0F967D58272EAB370090D0E6 /* Scenes */,
 				0F967D55272EAA310090D0E6 /* Resourses */,
 				0F967D53272DA1250090D0E6 /* ModuleBuilder.swift */,
@@ -187,6 +204,9 @@
 		0F967D59272EABB40090D0E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */,
+				BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */,
+				BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */,
 				0F967D5A272EABF00090D0E6 /* Exitensions.swift */,
 			);
 			path = Extensions;
@@ -304,7 +324,6 @@
 				75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */,
 				F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,6 +333,19 @@
 				D8380005B856A8AA370CE1CE /* Pods_itasker.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC0C3F962753DA2B00E03330 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				BC0C3F972753DA2B00E03330 /* TicketsViewController.swift */,
+				BC0C3F982753DA2B00E03330 /* TicketsViewController.xib */,
+				BC0C3F9A2753DA2B00E03330 /* TicketsViewCell.xib */,
+				BC0C3F9B2753DA2B00E03330 /* TicketViewCell.swift */,
+				BC0C3F9C2753DA2B00E03330 /* TicketsViewCell.swift */,
+			);
+			name = Ticket;
+			path = Scenes/Ticket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,8 +398,8 @@
 			);
 			mainGroup = 0F967D29272D93B30090D0E6;
 			packageReferences = (
-				0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */,
-				0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */,
+				0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
+				0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 0F967D33272D93B30090D0E6 /* Products */;
 			projectDirPath = "";
@@ -383,7 +415,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0C3F9E2753DA2B00E03330 /* TicketsViewController.xib in Resources */,
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
+				BC0C3FA02753DA2B00E03330 /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 				0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */,
 			);
@@ -441,11 +475,15 @@
 				0F967D3A272D93B30090D0E6 /* GreetViewController.swift in Sources */,
 				0FA34A84274E823C00F6BE3C /* SideMenuPresenter.swift in Sources */,
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
+				BC0C3FA62753DA8B00E03330 /* UICollectionViewCell + Ext.swift in Sources */,
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
+				BC0C3FA12753DA2B00E03330 /* TicketViewCell.swift in Sources */,
+				BC0C3F9D2753DA2B00E03330 /* TicketsViewController.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
 				0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */,
+				BC0C3FA72753DA8B00E03330 /* UITableViewCell + Ext.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
 				0F967D4C272D94520090D0E6 /* GreetingModel.swift in Sources */,
 				0FA34A86274FEB8400F6BE3C /* ContainerViewController.swift in Sources */,
@@ -458,7 +496,9 @@
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
 				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
+				BC0C3FA22753DA2B00E03330 /* TicketsViewCell.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
+				BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */,
 				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
 			);
@@ -656,7 +696,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */ = {
+		0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nakiostudio/EasyPeasy.git";
 			requirement = {
@@ -664,7 +704,7 @@
 				minimumVersion = 1.10.0;
 			};
 		};
-		0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */ = {
+		0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
 			requirement = {
@@ -677,12 +717,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		0F967D75272EBE4D0090D0E6 /* EasyPeasy */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy.git" */;
+			package = 0F967D74272EBE4D0090D0E6 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
 			productName = EasyPeasy;
 		};
 		0FA34A76274E23F300F6BE3C /* SideMenu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu.git" */;
+			package = 0FA34A75274E23F300F6BE3C /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
 		};
 /* End XCSwiftPackageProductDependency section */
