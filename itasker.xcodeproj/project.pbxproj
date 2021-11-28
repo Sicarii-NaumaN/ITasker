@@ -38,37 +38,6 @@
 		8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8380005B856A8AA370CE1CE /* Pods_itasker.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		63D4E16C273B503400F3DF70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC670FB7DDD0D048291D46F39D4DE442;
-			remoteInfo = "Pods-itasker";
-		};
-		63D4E16E273B503400F3DF70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F0C7FE88342E3772A8A133204A1E1910;
-			remoteInfo = "UITextView+Placeholder";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		63D4E172273B503900F3DF70 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				63D4E171273B503900F3DF70 /* Pods_itasker.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0EC992E70E7119C137141822 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D4E170273B503900F3DF70 /* Pods_itasker.framework in Frameworks */,
 				0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */,
 				0FA34A77274E23F300F6BE3C /* SideMenu in Frameworks */,
 				8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */,
@@ -217,9 +185,6 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BCB6FAE327412E1E00F659EA /* Ticket */,
-				BCB6FADB2740407100F659EA /* TasksList */,
-				639B29F8272EE79700C5FFBC /* CreateTask */,
 				0FA34A78274E242400F6BE3C /* SideMenu */,
 				0F967D5F272EB8C10090D0E6 /* LoginScreen */,
 				0F967D5E272EB8830090D0E6 /* RegistrationScreen */,
@@ -231,10 +196,7 @@
 		0F967D59272EABB40090D0E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BCB6FAF327417A9E00F659EA /* UICollectionViewCell + Ext.swift */,
-				BCB6FAF227417A9E00F659EA /* UITableViewCell + Ext.swift */,
 				0F967D5A272EABF00090D0E6 /* Exitensions.swift */,
-				BCB6FB022741AD7200F659EA /* UIView + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,32 +272,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		639B29F8272EE79700C5FFBC /* CreateTask */ = {
-			isa = PBXGroup;
-			children = (
-				639B29FA272EE82000C5FFBC /* View */,
-				639B29FB272EE82A00C5FFBC /* Present */,
-				639B29F9272EE81900C5FFBC /* Model */,
-			);
-			path = CreateTask;
-			sourceTree = "<group>";
-		};
-		639B29F9272EE81900C5FFBC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		639B29FA272EE82000C5FFBC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				639B2A00272EF09E00C5FFBC /* UIButton.swift */,
-				639B2A0227388E5500C5FFBC /* UIText.swift */,
-				BCB6FB062746F2B200F659EA /* TableViewCell.swift */,
-				BCB6FB072746F2B200F659EA /* TableViewCell.xib */,
-				BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */,
-				BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */,
 		0FA34A78274E242400F6BE3C /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,83 +292,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		639B29FB272EE82A00C5FFBC /* Present */ = {
-			isa = PBXGroup;
-			children = (
-				639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */,
-			);
-			path = Present;
-			sourceTree = "<group>";
-		};
-		63D4E168273B503400F3DF70 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				63D4E16D273B503400F3DF70 /* Pods-itasker */,
-				63D4E16F273B503400F3DF70 /* UITextView+Placeholder */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		ABBF8C443DC224BED88EB42C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */,
-				DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		BCB6FADB2740407100F659EA /* TasksList */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6FADE2740409E00F659EA /* Present */,
-				BCB6FADD2740408D00F659EA /* Model */,
-				BCB6FADC2740408400F659EA /* View */,
-			);
-			path = TasksList;
-			sourceTree = "<group>";
-		};
-		BCB6FADC2740408400F659EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6FADF274040FD00F659EA /* TasksListViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BCB6FADD2740408D00F659EA /* Model */ = {
+		0FA34A81274E2F5000F6BE3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BCB6FADE2740409E00F659EA /* Present */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6FAE1274042DF00F659EA /* TasksListPresent.swift */,
-			);
-			path = Present;
-			sourceTree = "<group>";
-		};
-		BCB6FAE327412E1E00F659EA /* Ticket */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6FAFA274181DB00F659EA /* TicketsViewController.swift */,
-				BCB6FAFB274181DB00F659EA /* TicketsViewController.xib */,
-				BCB6FAFE274182B700F659EA /* TicketsViewCell.swift */,
-				BCB6FAFF274182B700F659EA /* TicketsViewCell.xib */,
-			);
-			path = Ticket;
-			sourceTree = "<group>";
-		};
-		E029433174A02055ADC11B1C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				63D4E167273B503400F3DF70 /* Pods.xcodeproj */,
-				63D4E166273B4FF800F3DF70 /* UITextView+Placeholder */,
-				63D4E165273B4FE700F3DF70 /* Pods */,
-				D692B4BD638DCA100F548B82 /* Pods_itasker.framework */,
 		0FA34A82274E2F5B00F6BE3C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,12 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F967D46272D93B70090D0E6 /* Build configuration list for PBXNativeTarget "itasker" */;
 			buildPhases = (
-				C5560691D4D9E9A0FFE36BB2 /* [CP] Check Pods Manifest.lock */,
+				4C06B235022C648462324A60 /* [CP] Check Pods Manifest.lock */,
 				0F967D2E272D93B30090D0E6 /* Sources */,
 				0F967D2F272D93B30090D0E6 /* Frameworks */,
 				0F967D30272D93B30090D0E6 /* Resources */,
-				53E479655D62E75F01BDAD4B /* [CP] Embed Pods Frameworks */,
-				63D4E172273B503900F3DF70 /* Embed Frameworks */,
+				15E4FD638F5D65E43E8C946E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -505,12 +370,6 @@
 			);
 			productRefGroup = 0F967D33272D93B30090D0E6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 63D4E168273B503400F3DF70 /* Products */;
-					ProjectRef = 63D4E167273B503400F3DF70 /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0F967D31272D93B30090D0E6 /* itasker */,
@@ -518,35 +377,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		63D4E16D273B503400F3DF70 /* Pods-itasker */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-itasker";
-			path = Pods_itasker.framework;
-			remoteRef = 63D4E16C273B503400F3DF70 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		63D4E16F273B503400F3DF70 /* UITextView+Placeholder */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "UITextView+Placeholder";
-			path = UITextView_Placeholder.framework;
-			remoteRef = 63D4E16E273B503400F3DF70 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		0F967D30272D93B30090D0E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
-				BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */,
-				BCB6FAFD274181DB00F659EA /* TicketsViewController.xib in Resources */,
-				BCB6FB15274A802900F659EA /* CreateTaskViewController.xib in Resources */,
-				BCB6FB01274182B700F659EA /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 				0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */,
 			);
@@ -601,19 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCB6FAF427417A9E00F659EA /* UITableViewCell + Ext.swift in Sources */,
 				0F967D3A272D93B30090D0E6 /* GreetViewController.swift in Sources */,
 				0FA34A84274E823C00F6BE3C /* SideMenuPresenter.swift in Sources */,
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
-				BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
-				639B2A01272EF09E00C5FFBC /* UIButton.swift in Sources */,
-				0F967D6D272EBA000090D0E6 /* GreetingView.swift in Sources */,
-				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
-				BCB6FAFC274181DB00F659EA /* TicketsViewController.swift in Sources */,
-				BCB6FB032741AD7200F659EA /* UIView + Ext.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
 				0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
@@ -622,22 +451,15 @@
 				0FA34A8A274FEBC800F6BE3C /* TasksViewController.swift in Sources */,
 				0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */,
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
-				BCB6FAE2274042DF00F659EA /* TasksListPresent.swift in Sources */,
 				0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */,
 				0FA34A88274FEBA100F6BE3C /* MenuViewController.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
-				BCB6FAF527417A9E00F659EA /* UICollectionViewCell + Ext.swift in Sources */,
-				639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */,
-				639B2A0327388E5500C5FFBC /* UIText.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
-				BCB6FAE0274040FD00F659EA /* TasksListViewController.swift in Sources */,
-				BCB6FB00274182B700F659EA /* TicketsViewCell.swift in Sources */,
 				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
 				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
-				BCB6FB14274A802900F659EA /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,9 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4A8R484TGN;
 				INFOPLIST_FILE = itasker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -799,9 +619,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4A8R484TGN;
 				INFOPLIST_FILE = itasker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

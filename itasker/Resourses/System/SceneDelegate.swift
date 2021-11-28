@@ -19,7 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-
         let presenter = GreetPresenter()
         let vc = GreetViewControler(presenter: presenter)
         
