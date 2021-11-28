@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>997118995194-3dj975bmb8b8ek29f8f7j1gm0hv0s22g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.997118995194-3dj975bmb8b8ek29f8f7j1gm0hv0s22g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDHGOUD8kjJdyw4Jrqt-mnRdu39g0B90aM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>997118995194</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Saturday.itasker-registration-</string>
+	<key>PROJECT_ID</key>
+	<string>itasker-344d7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>itasker-344d7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:997118995194:ios:54701d72ab3fc3e5b3b743</string>
+</dict>
+</plist>
