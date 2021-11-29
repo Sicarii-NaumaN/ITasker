@@ -44,7 +44,16 @@
 		BC0C3FA62753DA8B00E03330 /* UICollectionViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */; };
 		BC0C3FA72753DA8B00E03330 /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */; };
 		BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */; };
-		BC3D855A2753DC7700F358C1 /* UIButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */; };
+		BC3D856827556B6D00F358C1 /* CreateTaskPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D855D27556B6D00F358C1 /* CreateTaskPresent.swift */; };
+		BC3D856927556B6D00F358C1 /* UIBitton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D855F27556B6D00F358C1 /* UIBitton.swift */; };
+		BC3D856A27556B6D00F358C1 /* UITaskText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D856027556B6D00F358C1 /* UITaskText.swift */; };
+		BC3D856B27556B6D00F358C1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D856127556B6D00F358C1 /* UIButton.swift */; };
+		BC3D856C27556B6D00F358C1 /* UIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D856227556B6D00F358C1 /* UIText.swift */; };
+		BC3D856D27556B6D00F358C1 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D856427556B6D00F358C1 /* CreateTaskViewController.swift */; };
+		BC3D856E27556B6D00F358C1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D856527556B6D00F358C1 /* TableViewCell.swift */; };
+		BC3D856F27556B6D00F358C1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856627556B6D00F358C1 /* TableViewCell.xib */; };
+		BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */; };
+		BC3D85742755703400F358C1 /* TicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85732755703400F358C1 /* TicketPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +94,16 @@
 		BC0C3FA32753DA8B00E03330 /* UICollectionViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BC0C3FA42753DA8B00E03330 /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BC0C3FA52753DA8B00E03330 /* UIView + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
-		BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonIcon.swift; sourceTree = "<group>"; };
+		BC3D855D27556B6D00F358C1 /* CreateTaskPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskPresent.swift; sourceTree = "<group>"; };
+		BC3D855F27556B6D00F358C1 /* UIBitton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBitton.swift; sourceTree = "<group>"; };
+		BC3D856027556B6D00F358C1 /* UITaskText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITaskText.swift; sourceTree = "<group>"; };
+		BC3D856127556B6D00F358C1 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		BC3D856227556B6D00F358C1 /* UIText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIText.swift; sourceTree = "<group>"; };
+		BC3D856427556B6D00F358C1 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		BC3D856527556B6D00F358C1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BC3D856627556B6D00F358C1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
+		BC3D85732755703400F358C1 /* TicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPresenter.swift; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +212,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BC3D855B27556B6D00F358C1 /* CreateTask */,
 				BC0C3F962753DA2B00E03330 /* Ticket */,
 				0FA34A78274E242400F6BE3C /* SideMenu */,
 				0F967D5F272EB8C10090D0E6 /* LoginScreen */,
@@ -340,14 +359,70 @@
 		BC0C3F962753DA2B00E03330 /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
+				BC3D85722755701B00F358C1 /* Presenter */,
+				BC3D85712755700100F358C1 /* View */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
+		BC3D855B27556B6D00F358C1 /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D855C27556B6D00F358C1 /* Present */,
+				BC3D855E27556B6D00F358C1 /* Model */,
+				BC3D856327556B6D00F358C1 /* View */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
+		BC3D855C27556B6D00F358C1 /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D855D27556B6D00F358C1 /* CreateTaskPresent.swift */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		BC3D855E27556B6D00F358C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D855F27556B6D00F358C1 /* UIBitton.swift */,
+				BC3D856027556B6D00F358C1 /* UITaskText.swift */,
+				BC3D856127556B6D00F358C1 /* UIButton.swift */,
+				BC3D856227556B6D00F358C1 /* UIText.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC3D856327556B6D00F358C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D856427556B6D00F358C1 /* CreateTaskViewController.swift */,
+				BC3D856527556B6D00F358C1 /* TableViewCell.swift */,
+				BC3D856627556B6D00F358C1 /* TableViewCell.xib */,
+				BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC3D85712755700100F358C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				BC0C3F972753DA2B00E03330 /* TicketsViewController.swift */,
 				BC0C3F982753DA2B00E03330 /* TicketsViewController.xib */,
 				BC0C3F9A2753DA2B00E03330 /* TicketsViewCell.xib */,
 				BC0C3F9B2753DA2B00E03330 /* TicketViewCell.swift */,
 				BC0C3F9C2753DA2B00E03330 /* TicketsViewCell.swift */,
-				BC3D85592753DC7700F358C1 /* UIButtonIcon.swift */,
 			);
-			path = Ticket;
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC3D85722755701B00F358C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D85732755703400F358C1 /* TicketPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,7 +493,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0C3F9E2753DA2B00E03330 /* TicketsViewController.xib in Resources */,
+				BC3D856F27556B6D00F358C1 /* TableViewCell.xib in Resources */,
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
+				BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */,
 				BC0C3FA02753DA2B00E03330 /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 				0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */,
@@ -485,22 +562,29 @@
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
 				0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */,
+				BC3D856A27556B6D00F358C1 /* UITaskText.swift in Sources */,
 				BC0C3FA72753DA8B00E03330 /* UITableViewCell + Ext.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
 				0F967D4C272D94520090D0E6 /* GreetingModel.swift in Sources */,
+				BC3D85742755703400F358C1 /* TicketPresenter.swift in Sources */,
 				0FA34A86274FEB8400F6BE3C /* ContainerViewController.swift in Sources */,
 				0FA34A8A274FEBC800F6BE3C /* TasksViewController.swift in Sources */,
+				BC3D856B27556B6D00F358C1 /* UIButton.swift in Sources */,
 				0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */,
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
 				0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */,
 				0FA34A88274FEBA100F6BE3C /* MenuViewController.swift in Sources */,
 				0F967D7A272EC8130090D0E6 /* RegistrationViewController.swift in Sources */,
+				BC3D856D27556B6D00F358C1 /* CreateTaskViewController.swift in Sources */,
 				0F967D4E272D95320090D0E6 /* GreetPresenter.swift in Sources */,
-				BC3D855A2753DC7700F358C1 /* UIButtonIcon.swift in Sources */,
+				BC3D856C27556B6D00F358C1 /* UIText.swift in Sources */,
+				BC3D856927556B6D00F358C1 /* UIBitton.swift in Sources */,
 				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
+				BC3D856E27556B6D00F358C1 /* TableViewCell.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
 				BC0C3FA22753DA2B00E03330 /* TicketsViewCell.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
+				BC3D856827556B6D00F358C1 /* CreateTaskPresent.swift in Sources */,
 				BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */,
 				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,

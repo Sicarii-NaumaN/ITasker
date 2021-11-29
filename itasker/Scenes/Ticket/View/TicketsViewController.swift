@@ -8,13 +8,17 @@
 import UIKit
 import EasyPeasy
 
+protocol TicketsViewControllerDelegate: AnyObject {
+}
+
 class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // Vars
-    
+    weak var delegate: TasksViewControllerDelegate?
+    var presenter: TicketPresenter
     @IBOutlet weak var tableView: UITableView!
     
-    private var createTaskButton = UIButtonTextIcon(image: "", text: String.addNewTask, colorForButton: .orange, colorForIcon: .white)
+    private var createTaskButton = UIButtonTextIcon(image: "", text: String.addNewTask, colorForButton: .orange, colorForIcon: .white, colorForText: .white)
     
     let header = UILabel()
     
@@ -23,7 +27,17 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     let imageView = UIImageView(frame: .zero)
     
     // Funcs
+    init(presenter: TicketPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     override func viewDidLoad() {
+        self.createTaskButton.addTarget(self, action: #selector(addTaskButtonTapped), for: .touchUpInside)
         super.viewDidLoad()
         
         tableView.register(TicketsViewCell.nib, forCellReuseIdentifier: TicketsViewCell.identifire)
@@ -110,6 +124,11 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    @objc func addTaskButtonTapped() {
+        self.addTaskButtonTappedDelegate()
+    }
+    
+    
     private func setupLayout() {
         header.easy.layout(
             Top(50),
@@ -125,4 +144,11 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         )
     }
 
+}
+
+extension TicketsViewController {
+    func addTaskButtonTappedDelegate() {
+        presenter.showCreateTaskVC(self)
+    }
+    
 }

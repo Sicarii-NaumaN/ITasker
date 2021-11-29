@@ -8,10 +8,6 @@
 import UIKit
 import EasyPeasy
 
-class TableViewCell: UITableViewCell {
-    //highforrow    
-}
-
 
 class MenuViewController: UIViewController {
     
@@ -64,7 +60,7 @@ class MenuViewController: UIViewController {
         tableView.frame = CGRect(
             x: 0,
             y: view.bounds.height / 2,
-            width: view.bounds.size.width / 5,
+            width: view.bounds.size.width / 6,
             height: view.bounds.size.height
         )
     }

@@ -8,6 +8,8 @@ target 'itasker' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SideMenu'
+  pod 'UITextView+Placeholder'
+  pod 'DateTimePicker'
   # Pods for itasker
 
 end
