@@ -11,7 +11,9 @@ import UITextView_Placeholder
 import EasyPeasy
 import DateTimePicker
 
-class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate, UITextFieldDelegate {
+class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIColorPickerViewControllerDelegate {
+  
+    
     var presenter: CreateTaskPresenter
     
     // Screen width.
@@ -29,10 +31,10 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     //let datePicker = UIDatePicker()
     
     
-    let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
+    let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ КАТЕГОРИЮ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "trash", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
-    var picker = DateTimePicker()
+    var picker = UIColorPickerViewController()
     //let alert: AlertViewController
     
     var myButton: UIButtonTextIcon
@@ -43,24 +45,20 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     let describeTask = UILabel(frame: .zero)
     let myHeader = UILabel()
     
-    let imageViewDescribe = UIImageView(frame: .zero)
     let imageView = UIImageView(frame: .zero)
     
     var myTextField: TaskTextView
-    var myTextFieldDescription: TaskTextView
     
-    var dataForTable: [String] = ["нояб. 6, 10:00", "Ежедневно", "Теги"]
-    var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
-    var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
+    var dataForTable: [String] = ["Цвет", "Иконка"]
+    var imageForTable: [String] = ["eyedropper.full", "person.fill"]
+    var colorForTable: [UIColor] = [.systemOrange, .systemPurple]
     
     init(presenter: CreateTaskPresenter) {
         self.presenter = presenter
-        nameTask.text = "Название задачи"
-        describeTask.text = "Введите описание"
+        nameTask.text = "Название категории"
         
         myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
-        myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
-        
+   
         myButton = UIButtonTextIcon.create(input: inputMyButton)
         backButton = UIButtonTextIcon.create(input: inputBackButton)
         settingButton = UIButtonTextIcon.create(input: inputSettingButton)
@@ -88,21 +86,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     
     func createPicker() {
-        picker = DateTimePicker.create()
-        picker.frame = CGRect(x: 0, y: 0, width: screenWidth, height:
-                                screenHeight)
-        picker.dateFormat = "LLL d, HH:mm"
-        picker.doneButtonTitle = "Подтвердить"
-        picker.locale = Locale(identifier: "ru_RU")
-        picker.darkColor = UIColor.black
-        picker.highlightColor = UIColor.systemOrange
-        picker.isHidden = false
-        self.view.addSubview(picker)
         picker.delegate = self
-        
-        picker.dismissHandler = { [self] in
-            picker.removeFromSuperview()
-        }
+        present(picker, animated: true, completion: nil)
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -112,8 +97,16 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        myHeader.text = "Создать задачу"
+        myHeader.adjustsFontSizeToFitWidth = true
+        myHeader.numberOfLines = 2
+        
+        myHeader.textAlignment = .left
+        myHeader.text = """
+Создать категорию
+"""
+        
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
+
         
         tableView.register(TableViewCell.nib, forCellReuseIdentifier: TableViewCell.identifire)
         
@@ -126,8 +119,6 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         imageView.image = UIImage(systemName: "square.and.pencil")
         imageView.tintColor = .systemGray
         
-        imageViewDescribe.image = UIImage(systemName: "text.justify")
-        imageViewDescribe.tintColor = .systemGray
         
         backButton.configureButton()
         
@@ -136,34 +127,34 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         settingButton.configureButton()
         //settingButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
         
-        
         self.view.addSubview(myTextField)
-        self.view.addSubview(myTextFieldDescription)
         self.view.addSubview(backButton)
         self.view.addSubview(myHeader)
         self.view.addSubview(settingButton)
-        self.view.addSubview(imageViewDescribe)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
         //self.view.addSubview(picker)
         
-        myTextFieldDescription.configure(frame: CGRect(
-            x: 70,
-            y: 265,
-            width: screenWidth - 130,
-            height: 100)
-        )
         myTextField.configure(frame: CGRect(
-            x: 70,
-            y: 225,
-            width: screenWidth - 130,
-            height: 33)
+            x: 75,
+            y: 230,
+            width: screenWidth - 115,
+            height: 40)
         )
         
-        myTextFieldDescription.attribute()
         myButton.layer.cornerRadius = 2
         view.backgroundColor = .systemBackground
         setupLayout()
+    }
+    
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+            dismiss(animated: true, completion: nil)
+    }
+    
+    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+        colorForTable[0] = viewController.selectedColor
+        colorForTable[1] = viewController.selectedColor
+        tableView.reloadData()
     }
     
     override func awakeFromNib() {
@@ -177,7 +168,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 2
     }
     
     
@@ -211,6 +202,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         //tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0, 0] {
             createPicker()
+            tableView.reloadData()
         }
         if indexPath == [0, 1] {
             let alert = UIAlertController(title: "Повторять задачу", message: nil, preferredStyle: .alert)
@@ -242,31 +234,20 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         self.dismiss(animated: true, completion: nil)
     }
     
-    func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
-        dataForTable[0] = picker.selectedDateString
-        tableView.reloadData()
-    }
     
     private func setupLayout() {
         imageView.easy.layout(
-            Top(55).to(myHeader),
+            Top(40).to(myHeader),
             Right(10).to(myTextField),
             Width(25),
             Height(23)
         )
         
-        imageViewDescribe.easy.layout(
-            Top(25).to(imageView),
-            CenterX(0).to(imageView),
-            Width(25),
-            Height(20)
-        )
-        
         myHeader.easy.layout(
             Top(120),
-            CenterX(),
-            Height(50),
-            Width(230)
+            CenterX(10),
+            Height(80),
+            Width(300)
         )
         
         myButton.easy.layout(
