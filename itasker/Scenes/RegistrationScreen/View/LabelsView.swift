@@ -11,7 +11,7 @@ import EasyPeasy
 
 final class RegistrationLabels: UIView {
     
-    private var regButton: UIButton = {
+    var regButton: UIButton = {
         let button = UIButton()
         button.setTitle("Зарегистрироваться", for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
@@ -38,14 +38,14 @@ final class RegistrationLabels: UIView {
         return label
     }()
     
-    private var userLoginTextField: UITextField = {
+    var userLoginTextField: UITextField = {
         let textField = UITextField(frame: CGRect())
         textField.placeholder = "вот сюда логин надо"
         textField.borderStyle = .roundedRect
         return textField
     }()
     
-    private var userPasswordTextField: UITextField = {
+    var userPasswordTextField: UITextField = {
         let textField = UITextField(frame: CGRect())
         textField.placeholder = "вот сюда пароль надо"
         textField.borderStyle = .roundedRect

@@ -43,14 +43,14 @@ final class LoginLabels: UIView {
         return label
     }()
     
-    private var userLoginTextField: UITextField = {
+    var userLoginTextField: UITextField = {
         let textField = UITextField(frame: CGRect())
         textField.placeholder = "вот сюда логин надо"
         textField.borderStyle = .roundedRect
         return textField
     }()
     
-    private var userPasswordTextField: UITextField = {
+    var userPasswordTextField: UITextField = {
         let textField = UITextField(frame: CGRect())
         textField.placeholder = "вот сюда пароль надо"
         textField.borderStyle = .roundedRect

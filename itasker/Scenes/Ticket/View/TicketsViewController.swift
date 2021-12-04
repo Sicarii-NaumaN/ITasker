@@ -15,7 +15,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     // Vars
     weak var delegate: TasksViewControllerDelegate?
-    var presenter: TicketPresenter
+    private let presenter: TicketPresenter
     @IBOutlet weak var tableView: UITableView!
     
     private var createTaskButton = UIButtonTextIcon(image: "", text: String.addNewTask, colorForButton: .orange, colorForIcon: .white, colorForText: .white)
