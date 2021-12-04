@@ -32,7 +32,6 @@
 		0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F5A527419ACE00ACB55B /* loginView.swift */; };
 		0FF172CE273B2DA20027D9BC /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CD273B2DA20027D9BC /* LabelsView.swift */; };
 		0FF172D0273DB7410027D9BC /* RegAndLogCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */; };
-		0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FF172D127414BA60027D9BC /* GoogleService-Info.plist */; };
 		0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */; };
 		0FF678AD2730487700FA422C /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF678AC2730487700FA422C /* ButtonBlock.swift */; };
 		8334B135EBBC67E3C14BEDD6 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8380005B856A8AA370CE1CE /* Pods_itasker.framework */; };
@@ -54,6 +53,7 @@
 		BC3D856F27556B6D00F358C1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856627556B6D00F358C1 /* TableViewCell.xib */; };
 		BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */; };
 		BC3D85742755703400F358C1 /* TicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85732755703400F358C1 /* TicketPresenter.swift */; };
+		BCB26D1B275BB09D006A1467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +82,6 @@
 		0FA3F5A527419ACE00ACB55B /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		0FF172CD273B2DA20027D9BC /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
 		0FF172CF273DB7410027D9BC /* RegAndLogCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegAndLogCircles.swift; sourceTree = "<group>"; };
-		0FF172D127414BA60027D9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FF678A8272F0C5C00FA422C /* CirclesAndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesAndLabel.swift; sourceTree = "<group>"; };
 		0FF678AC2730487700FA422C /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
 		75EA5076601AA73AC575B19B /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		BC3D856627556B6D00F358C1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
 		BC3D85732755703400F358C1 /* TicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPresenter.swift; sourceTree = "<group>"; };
+		BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 		0F967D29272D93B30090D0E6 = {
 			isa = PBXGroup;
 			children = (
-				0FF172D127414BA60027D9BC /* GoogleService-Info.plist */,
+				BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */,
 				0F967D34272D93B30090D0E6 /* itasker */,
 				0F967D33272D93B30090D0E6 /* Products */,
 				9DEDC0E115BA98258AD6E1AD /* Frameworks */,
@@ -498,7 +498,7 @@
 				BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */,
 				BC0C3FA02753DA2B00E03330 /* TicketsViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
-				0FF172D227414BA70027D9BC /* GoogleService-Info.plist in Resources */,
+				BCB26D1B275BB09D006A1467 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:997118995194:ios:54701d72ab3fc3e5b3b743</string>
+	<string>1:997118995194:ios:d9bc17876477be1fb3b743</string>
+	<key>DATABASE_URL</key>
+	<string>https://itasker-344d7-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>

@@ -14,14 +14,33 @@ protocol GreetPresenterProtocol {
 }
 
 final class GreetPresenter: GreetPresenterProtocol {
-    
+    weak var controller : GreetViewControler?
 
     func showRegistrationVC(_ root: UIViewController) {
-        root.navigationController?.present(RegistrationViewController(), animated: true)
+        let presenter = RegistrationPresenter()
+        let vc = RegistrationViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        
+        root.navigationController?.present(vc, animated: true)
     }
     
     func showLoginVC(_ root: UIViewController) {
-        root.navigationController?.present(LoginViewController(presenter: self), animated: true)
+        let presenter = LoginPresenter()
+        let vc = LoginViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        root.navigationController?.present(vc, animated: true)
     }
     
     func showTrickyPassage(_ root: UIViewController) {
