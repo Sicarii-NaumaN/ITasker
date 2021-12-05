@@ -74,16 +74,12 @@ class UIButtonTextIcon: UIButton, ButtonView {
     }
     
     public func configureButton() {
-        configuration = .filled()
-        configuration?.baseBackgroundColor = colorButton
-        configuration?.baseForegroundColor = colorIcon
+        backgroundColor = colorButton
+        setTitleColor(colorText, for: .normal)
         
         labelButton?.center = self.center
         labelButton?.textAlignment = NSTextAlignment.center
-        
-        setTitleColor(colorText, for: .normal)
-        configuration?.imagePadding = ConstantsUIButton.imagePadding
-        
+
         if let myIcon = myIcon {
             addSubview(myIcon)
             configureIcon(myIcon: myIcon)
