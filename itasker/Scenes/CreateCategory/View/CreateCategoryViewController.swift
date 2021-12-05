@@ -11,10 +11,10 @@ import UITextView_Placeholder
 import EasyPeasy
 import DateTimePicker
 
-class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIColorPickerViewControllerDelegate {
+class CreateCategoryViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIColorPickerViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIDocumentPickerDelegate {
   
     
-    var presenter: CreateTaskPresenter
+    var presenter: CreateCategoryPresenter
     
     // Screen width.
     public var screenWidth: CGFloat {
@@ -25,11 +25,16 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
+
+    
+    var pickerIcon = UIPickerView()
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     //let datePicker = UIDatePicker()
     
+    var pickerData:[String] = ["person.fill", "bubble.left.fill", "highlighter", "books.vertical.fill", "graduationcap.fill", "person.2.fill", "person.3.fill", "globe.europe.africa.fill", "pawprint.fill", "paintbrush.pointed.fill", "briefcase.fill", "cart.fill", "giftcard.fill", "banknote.fill", "heart.fill", "cross.case.fill", "envelope.fill", "scroll.fill", "theatermasks.fill", "building.2.fill", "fork.knife", "lightbulb.fill", "car.fill", "display"]
     
     let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ КАТЕГОРИЮ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
@@ -51,9 +56,9 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     var dataForTable: [String] = ["Цвет", "Иконка"]
     var imageForTable: [String] = ["eyedropper.full", "person.fill"]
-    var colorForTable: [UIColor] = [.systemOrange, .systemPurple]
+    var colorForTable: [UIColor] = [.systemPurple, .systemPurple]
     
-    init(presenter: CreateTaskPresenter) {
+    init(presenter: CreateCategoryPresenter) {
         self.presenter = presenter
         nameTask.text = "Название категории"
         
@@ -90,6 +95,17 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         present(picker, animated: true, completion: nil)
     }
     
+    func createIconPicker() {
+        pickerIcon.delegate = self
+        //pickerIcon.dataSource = self
+        let width = 150.0
+        pickerIcon.frame = CGRect(x: Int(screenWidth - width)/2, y: 520, width: Int(width), height: 160)
+        //pickerIcon.center = self.view.center
+        self.view.addSubview(pickerIcon)
+        pickerIcon.reloadAllComponents()
+        //present(pickerIcon, animated: true, completion: nil)
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return false
     }
@@ -97,6 +113,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        createIconPicker()
         myHeader.adjustsFontSizeToFitWidth = true
         myHeader.numberOfLines = 2
         
@@ -108,13 +125,11 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
 
         
-        tableView.register(TableViewCell.nib, forCellReuseIdentifier: TableViewCell.identifire)
-        
+        tableView.register(CreateCategoryTableViewCell.nib, forCellReuseIdentifier: CreateCategoryTableViewCell.identifire)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = false
-        
         
         imageView.image = UIImage(systemName: "square.and.pencil")
         imageView.tintColor = .systemGray
@@ -133,7 +148,6 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         self.view.addSubview(settingButton)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
-        //self.view.addSubview(picker)
         
         myTextField.configure(frame: CGRect(
             x: 75,
@@ -178,7 +192,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifire, for: indexPath) as? TableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CreateCategoryTableViewCell.identifire, for: indexPath) as? CreateCategoryTableViewCell else {
             return UITableViewCell()
         }
         
@@ -204,22 +218,10 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             createPicker()
             tableView.reloadData()
         }
-        if indexPath == [0, 1] {
-            let alert = UIAlertController(title: "Повторять задачу", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ежедневно", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Еженедельно", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Ежемесячно", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Ежегодно", style: .default, handler: updateRepeatLabel))
-            alert.addAction(UIAlertAction(title: "Никогда", style: .default, handler: updateRepeatLabel))
-            self.present(alert, animated: true) {
-                alert.view.superview?.isUserInteractionEnabled = true
-                alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
-            }
-        }
     }
     
     @IBAction func handleDeleteBtn(sender: UIButtonTextIcon) {
-        let alert = UIAlertController(title: "Удалить задачу?", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Удалить категорию?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: .destructive))
         alert.addAction(UIAlertAction(title: "Нет", style: .default))
         //alert.view.tintColor = UIColor.systemRed
@@ -272,6 +274,37 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         )
     }
     
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 90
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
+        
+        // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+        }
+        
+        // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        myImageView.tintColor = colorForTable[1]
+        myImageView.image = UIImage(systemName: pickerData[row])
+        myImageView.contentMode = .scaleAspectFit
+        return myImageView
+       
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        imageForTable[1] = pickerData[row]
+        tableView.reloadData()
+    }
 }
 
 extension UIViewController {
@@ -296,4 +329,3 @@ extension UIViewController {
  // Pass the selected object to the new view controller.
  }
  */
-

@@ -22,7 +22,7 @@ import UIKit
 //    datePicker.datePickerMode = .date
 //}
 
-class TableViewCell: UITableViewCell {
+class CreateCategoryTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var layout: UIView!

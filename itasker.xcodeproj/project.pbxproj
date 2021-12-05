@@ -15,15 +15,15 @@
 		0F967D76272EBE4D0090D0E6 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0F967D75272EBE4D0090D0E6 /* EasyPeasy */; };
 		6340E385274D8A6A0040C8AA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340E384274D8A6A0040C8AA /* UIButton.swift */; };
 		6340E389274D8B880040C8AA /* UITaskText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340E388274D8B880040C8AA /* UITaskText.swift */; };
-		639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */; };
+		6374CEF4275D2A79009C0D38 /* CreateCategoryPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374CEEF275D2A79009C0D38 /* CreateCategoryPresent.swift */; };
 		63D4E170273B503900F3DF70 /* Pods_itasker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D692B4BD638DCA100F548B82 /* Pods_itasker.framework */; };
 		BCB6FAF427417A9E00F659EA /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FAF227417A9E00F659EA /* UITableViewCell + Ext.swift */; };
 		BCB6FAF527417A9E00F659EA /* UICollectionViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FAF327417A9E00F659EA /* UICollectionViewCell + Ext.swift */; };
 		BCB6FB032741AD7200F659EA /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB022741AD7200F659EA /* UIView + Ext.swift */; };
-		BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB062746F2B200F659EA /* TableViewCell.swift */; };
-		BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB072746F2B200F659EA /* TableViewCell.xib */; };
-		BCB6FB14274A802900F659EA /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */; };
-		BCB6FB15274A802900F659EA /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */; };
+		BCB6FB082746F2B200F659EA /* CreateCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB062746F2B200F659EA /* CreateCategoryTableViewCell.swift */; };
+		BCB6FB092746F2B200F659EA /* CreateCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB072746F2B200F659EA /* CreateCategoryTableViewCell.xib */; };
+		BCB6FB14274A802900F659EA /* CreateCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FB12274A802900F659EA /* CreateCategoryViewController.swift */; };
+		BCB6FB15274A802900F659EA /* CreateCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB6FB13274A802900F659EA /* CreateCategoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,17 +68,17 @@
 		4197A7C038308718A075F797 /* Pods-itasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.debug.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.debug.xcconfig"; sourceTree = "<group>"; };
 		6340E384274D8A6A0040C8AA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		6340E388274D8B880040C8AA /* UITaskText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITaskText.swift; sourceTree = "<group>"; };
-		639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskPresent.swift; sourceTree = "<group>"; };
+		6374CEEF275D2A79009C0D38 /* CreateCategoryPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryPresent.swift; sourceTree = "<group>"; };
 		63D4E165273B4FE700F3DF70 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		63D4E166273B4FF800F3DF70 /* UITextView+Placeholder */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "UITextView+Placeholder"; path = "Pods/UITextView+Placeholder"; sourceTree = "<group>"; };
 		63D4E167273B503400F3DF70 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		BCB6FAF227417A9E00F659EA /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BCB6FAF327417A9E00F659EA /* UICollectionViewCell + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Ext.swift"; sourceTree = "<group>"; };
 		BCB6FB022741AD7200F659EA /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
-		BCB6FB062746F2B200F659EA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		BCB6FB072746F2B200F659EA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
-		BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
+		BCB6FB062746F2B200F659EA /* CreateCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		BCB6FB072746F2B200F659EA /* CreateCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		BCB6FB12274A802900F659EA /* CreateCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryViewController.swift; sourceTree = "<group>"; };
+		BCB6FB13274A802900F659EA /* CreateCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCategoryViewController.xib; sourceTree = "<group>"; };
 		D692B4BD638DCA100F548B82 /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC66BBC17C5169E289147C19 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				639B29F8272EE79700C5FFBC /* CreateTask */,
+				639B29F8272EE79700C5FFBC /* CreateCategory */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -163,14 +163,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		639B29F8272EE79700C5FFBC /* CreateTask */ = {
+		639B29F8272EE79700C5FFBC /* CreateCategory */ = {
 			isa = PBXGroup;
 			children = (
 				639B29FA272EE82000C5FFBC /* View */,
 				639B29FB272EE82A00C5FFBC /* Present */,
 				639B29F9272EE81900C5FFBC /* Model */,
 			);
-			path = CreateTask;
+			path = CreateCategory;
 			sourceTree = "<group>";
 		};
 		639B29F9272EE81900C5FFBC /* Model */ = {
@@ -185,10 +185,10 @@
 		639B29FA272EE82000C5FFBC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BCB6FB062746F2B200F659EA /* TableViewCell.swift */,
-				BCB6FB072746F2B200F659EA /* TableViewCell.xib */,
-				BCB6FB12274A802900F659EA /* CreateTaskViewController.swift */,
-				BCB6FB13274A802900F659EA /* CreateTaskViewController.xib */,
+				BCB6FB062746F2B200F659EA /* CreateCategoryTableViewCell.swift */,
+				BCB6FB072746F2B200F659EA /* CreateCategoryTableViewCell.xib */,
+				BCB6FB12274A802900F659EA /* CreateCategoryViewController.swift */,
+				BCB6FB13274A802900F659EA /* CreateCategoryViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 		639B29FB272EE82A00C5FFBC /* Present */ = {
 			isa = PBXGroup;
 			children = (
-				639B29FE272EED8E00C5FFBC /* CreateTaskPresent.swift */,
+				6374CEEF275D2A79009C0D38 /* CreateCategoryPresent.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -339,8 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
-				BCB6FB092746F2B200F659EA /* TableViewCell.xib in Resources */,
-				BCB6FB15274A802900F659EA /* CreateTaskViewController.xib in Resources */,
+				BCB6FB092746F2B200F659EA /* CreateCategoryTableViewCell.xib in Resources */,
+				BCB6FB15274A802900F659EA /* CreateCategoryViewController.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,16 +395,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCB6FAF427417A9E00F659EA /* UITableViewCell + Ext.swift in Sources */,
-				BCB6FB082746F2B200F659EA /* TableViewCell.swift in Sources */,
+				BCB6FB082746F2B200F659EA /* CreateCategoryTableViewCell.swift in Sources */,
+				6374CEF4275D2A79009C0D38 /* CreateCategoryPresent.swift in Sources */,
 				6340E385274D8A6A0040C8AA /* UIButton.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
 				BCB6FB032741AD7200F659EA /* UIView + Ext.swift in Sources */,
 				0F967D5B272EABF00090D0E6 /* Exitensions.swift in Sources */,
 				0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */,
 				BCB6FAF527417A9E00F659EA /* UICollectionViewCell + Ext.swift in Sources */,
-				639B29FF272EED8E00C5FFBC /* CreateTaskPresent.swift in Sources */,
 				6340E389274D8B880040C8AA /* UITaskText.swift in Sources */,
-				BCB6FB14274A802900F659EA /* CreateTaskViewController.swift in Sources */,
+				BCB6FB14274A802900F659EA /* CreateCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

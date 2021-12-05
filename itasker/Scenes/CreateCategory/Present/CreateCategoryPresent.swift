@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol CreateTaskPresenterProtocol {
+protocol CreateCategoryPresenterProtocol {
     //func showAlert(_ root: UIViewController)
 }
 
-final class CreateTaskPresenter: CreateTaskPresenterProtocol {
+final class CreateCategoryPresenter: CreateCategoryPresenterProtocol {
     
 //    func showAlert(_ root: UIViewController) {
 //        root.navigationController?.present(AlertViewController(), animated: true)
