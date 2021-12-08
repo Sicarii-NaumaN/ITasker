@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F185B8D275F8B8A0045458A /* ExitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F185B8C275F8B8A0045458A /* ExitButton.swift */; };
 		0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D35272D93B30090D0E6 /* AppDelegate.swift */; };
 		0F967D38272D93B30090D0E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D37272D93B30090D0E6 /* SceneDelegate.swift */; };
 		0F967D3A272D93B30090D0E6 /* GreetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F967D39272D93B30090D0E6 /* GreetViewController.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F185B8C275F8B8A0045458A /* ExitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButton.swift; sourceTree = "<group>"; };
 		0F967D32272D93B30090D0E6 /* itasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F967D35272D93B30090D0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F967D37272D93B30090D0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			children = (
 				0FA34A85274FEB8400F6BE3C /* ContainerViewController.swift */,
 				0FA34A87274FEBA100F6BE3C /* MenuViewController.swift */,
+				0F185B8C275F8B8A0045458A /* ExitButton.swift */,
 				0FA34A89274FEBC800F6BE3C /* TasksViewController.swift */,
 			);
 			path = View;
@@ -582,6 +585,7 @@
 				0FA3F5A627419ACE00ACB55B /* loginView.swift in Sources */,
 				BC3D856E27556B6D00F358C1 /* TableViewCell.swift in Sources */,
 				0F967D54272DA1250090D0E6 /* ModuleBuilder.swift in Sources */,
+				0F185B8D275F8B8A0045458A /* ExitButton.swift in Sources */,
 				BC0C3FA22753DA2B00E03330 /* TicketsViewCell.swift in Sources */,
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
 				BC3D856827556B6D00F358C1 /* CreateTaskPresent.swift in Sources */,
@@ -728,13 +732,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALN8Y95MHJ;
 				INFOPLIST_FILE = itasker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -748,13 +753,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALN8Y95MHJ;
 				INFOPLIST_FILE = itasker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
