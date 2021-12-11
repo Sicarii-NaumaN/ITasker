@@ -83,7 +83,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         // Menu
         addChild(menuVC)
         view.addSubview(menuVC.view)
-        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: 0, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
+        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 6, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
 
         view.addSubview(eagleCircle)
 

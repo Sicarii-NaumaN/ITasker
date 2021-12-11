@@ -49,17 +49,17 @@ class MenuViewController: UIViewController {
     private var selected = IndexPath(row: -1, section: 0)
     
     enum MenuOptions: String, CaseIterable {
-        case plus = "1"
+        case all = "6"
         case home = "2"
         case study = "3"
         case portfel = "4"
         case group = "5"
-        case all = "6"
+        case plus = "1"
         
         var imageName: String {
             switch self {
-            case .home:
-                return "home1"
+            case .all:
+                return "all1"
             case .study:
                 return "study1"
             case .portfel:
@@ -68,8 +68,8 @@ class MenuViewController: UIViewController {
                 return "group1"
             case .plus:
                 return "plus1"
-            case .all:
-                return "all1"
+            case .home:
+                return "home1"
             }
         }
     }
@@ -111,7 +111,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let division = tableView.height / 7
+        let division = tableView.height / 10
         return division
     }
     
