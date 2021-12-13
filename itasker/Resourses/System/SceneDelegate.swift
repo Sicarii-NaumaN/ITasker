@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
+import Firebase
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
+    var addDelegate = UIApplicationDelegateAdaptor(AppDelegate.self)
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,8 +22,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let presenter = GreetPresenter()
-        let vc = GreetViewControler(presenter: presenter)
+        var vc : UIViewController = .init()
+        if Auth.auth().currentUser != nil {
+            let presenter = SideMenuPresenter()
+            let viewController = ContainerViewController(presenter: presenter)
+            presenter.root = viewController
+            vc = viewController
+        } else {
+            let presenter = GreetPresenter()
+            let controller = GreetViewControler(presenter: presenter)
+            presenter.controller = controller
+            vc = controller
+        }
         
         let navController = UINavigationController(rootViewController: vc)
         navController.navigationBar.isHidden = true

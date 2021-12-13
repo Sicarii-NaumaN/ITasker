@@ -13,7 +13,9 @@ import DateTimePicker
 
 class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, DateTimePickerDelegate, UITextFieldDelegate {
     var presenter: CreateTaskPresenter
+    private let userID : String
     
+    let isSettingsScreen: Bool
     // Screen width.
     public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
@@ -28,8 +30,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     //let datePicker = UIDatePicker()
     
-    
-    let inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
+    let task: Task
+    let inputMyButton : InputInitButton
     let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "trash", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     var picker = DateTimePicker()
@@ -53,13 +55,23 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
     
-    init(presenter: CreateTaskPresenter) {
+    init(presenter: CreateTaskPresenter, userID: String, isSettings: Bool, task: Task = Task(id: "", title: "", description: "", date: Date(), taskType: "", deadline: Date())) {
+        self.userID = userID
         self.presenter = presenter
-        nameTask.text = "Название задачи"
-        describeTask.text = "Введите описание"
-        
+        isSettingsScreen = isSettings
+        self.task = task
+        if !isSettingsScreen {
+            nameTask.text = "Название задачи"
+            describeTask.text = "Введите описание"
+            inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
+        } else {
+            inputMyButton = InputInitButton(image: "", text: "СОХРАНИТЬ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
+            nameTask.text = task.title
+            describeTask.text = task.description
+        }
         myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
         myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
+        
         
         myButton = UIButtonTextIcon.create(input: inputMyButton)
         backButton = UIButtonTextIcon.create(input: inputBackButton)
@@ -69,6 +81,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         super.init(nibName: nil, bundle: nil)
         //alert.init()
         settingButton.addTarget(self, action: #selector(handleDeleteBtn), for: .touchUpInside)
+        myButton.addTarget(self, action: #selector(handleCreateTask), for: .touchUpInside)
         
         myTextField.delegate = self
     }
@@ -112,7 +125,12 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        myHeader.text = "Создать задачу"
+        if !isSettingsScreen {
+            myHeader.text = "Создать задачу"
+        } else {
+            myHeader.text = "Редактировать"
+        }
+       
         myHeader.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.semibold)
         
         tableView.register(TableViewCell.nib, forCellReuseIdentifier: TableViewCell.identifire)
@@ -229,13 +247,55 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     @IBAction func handleDeleteBtn(sender: UIButtonTextIcon) {
         let alert = UIAlertController(title: "Удалить задачу?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: .destructive))
-        alert.addAction(UIAlertAction(title: "Нет", style: .default))
+        alert.addAction(UIAlertAction(title: "Нет", style: .cancel))
+    
         //alert.view.tintColor = UIColor.systemRed
         self.present(alert, animated: true) {
             alert.view.superview?.isUserInteractionEnabled = true
             alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
         }
     }
+    
+    @IBAction func handleCreateTask(sender: UIButtonTextIcon) {
+        let currentDate = Date()
+        let taskID: String
+        let isNewTask: Bool
+        if !isSettingsScreen {
+            taskID = String(arc4random())
+            isNewTask = true
+        } else {
+            taskID = self.task.id
+            isNewTask = false
+        }
+        var task = Task(id: taskID, title: self.myTextField.text, description: self.myTextFieldDescription.text, date: currentDate, taskType: "", deadline: picker.selectedDate)
+        self.presenter.createTask(root: self, task: task, userID: self.userID, isNewTask: isNewTask)
+    }
+    
+//    func parseDeadLine(_ deadline: String, _ curDate: Date) -> Date {
+//        if deadline.isEmpty {
+//            return Date()
+//        }
+//
+//        var items = deadline.components(separatedBy: " ")
+//
+//        let trimmed = String(items[1].dropLast())
+//        items[1] = trimmed
+//
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let hour = calendar.component(.hour, from: date)
+//        let minutes = calendar.component(.minute, from: date)
+//        let year = calendar.component(.year, from: date)
+//        let day = calendar.component(.day, from: date)
+//
+//        cell.deadline.textColor = .gray
+//        cell.deadline.font = UIFont.systemFont(ofSize: 15)
+//        cell.deadline.text = "\(hour):\(minutes)-\(hour + 1):\(minutes)"
+//
+//        cell.date.textColor = .gray
+//        cell.date.font = UIFont.systemFont(ofSize: 15)
+//        cell.date.text = "\(day) \(date.month) \(year)"
+//    }
     
     @objc func alertControllerBackgroundTapped()
     {

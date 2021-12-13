@@ -7,6 +7,7 @@
 
 import UIKit
 import EasyPeasy
+import Firebase
 
 protocol SideButtonDelegate: AnyObject {
     func sideMenuButtonTappedDelegate()
@@ -15,9 +16,9 @@ protocol SideButtonDelegate: AnyObject {
 class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     
     var presenter: SideMenuPresenter
-    
-    let menuVC = MenuViewController()
-    let tasksVC = TicketsViewController(presenter: TicketPresenter())
+    private var userID = "default"
+    let menuVC : MenuViewController
+    let tasksVC : TicketsViewController
     var navVC: UINavigationController?
     
 
@@ -36,7 +37,14 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     }
     
     init(presenter: SideMenuPresenter) {
+        if let userID = FirebaseAuth.Auth.auth().currentUser?.uid as? String {
+            tasksVC = TicketsViewController(presenter: TicketPresenter(), userID: userID)
+        } else {
+            tasksVC = TicketsViewController(presenter: TicketPresenter(), userID: self.userID)
+        }
+        
         self.presenter = presenter
+        menuVC = MenuViewController(presenter: self.presenter)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -44,31 +52,57 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    private func addChildVCs() {
+//        //Tasks
+//        tasksVC.delegate = self
+//        let navVC = UINavigationController(rootViewController: tasksVC)
+//        navVC.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        addChild(navVC)
+//        view.addSubview(navVC.view)
+//        self.navVC = navVC
+//        self.navVC?.view.frame = CGRect(x: 0, y: 0, width: self.tasksVC.view.frame.width * 5/6, height: self.tasksVC.view.frame.height)
+//      //  self.navVC?.view.frame.origin.x = self.tasksVC.view.frame.width - 370
+//
+//        // Menu
+//        addChild(menuVC)
+//        view.addSubview(menuVC.view)
+//        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: 0, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
+//
+//        view.addSubview(eagleCircle)
+//
+//        eagleCircle.easy.layout(
+//            Top(-100),
+//            Right(-50),
+//            Size(self.tasksVC.view.frame.width * 1 / 2)
+//
+//        )
+//    }
+    
     private func addChildVCs() {
         //Tasks
         tasksVC.delegate = self
         let navVC = UINavigationController(rootViewController: tasksVC)
-        navVC.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         addChild(navVC)
         view.addSubview(navVC.view)
         self.navVC = navVC
-        self.navVC?.view.frame = CGRect(x: 0, y: 0, width: self.tasksVC.view.frame.width * 5/6, height: self.tasksVC.view.frame.height)
+        self.navVC?.view.frame = CGRect(x: 0, y: 0, width: self.tasksVC.view.frame.width * 5/6, height: UIScreen.main.bounds.height)
       //  self.navVC?.view.frame.origin.x = self.tasksVC.view.frame.width - 370
-        
+
         // Menu
         addChild(menuVC)
         view.addSubview(menuVC.view)
-        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.topbarHeight, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height - 200)
+        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 6, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
 
         view.addSubview(eagleCircle)
         
+
         eagleCircle.easy.layout(
             Top(-100),
-            Right(-100),
+            Right(-50),
             Size(self.tasksVC.view.frame.width * 1 / 2)
-            
+
         )
     }
-    
+
 
 }

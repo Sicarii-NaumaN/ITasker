@@ -14,23 +14,41 @@ protocol GreetPresenterProtocol {
 }
 
 final class GreetPresenter: GreetPresenterProtocol {
-    
+    weak var controller : GreetViewControler?
 
     func showRegistrationVC(_ root: UIViewController) {
-        root.navigationController?.present(RegistrationViewController(), animated: true)
-    }
-    
-    func showLoginVC(_ root: UIViewController) {
-        root.navigationController?.present(LoginViewController(presenter: self), animated: true)
-    }
-    
-    func showTrickyPassage(_ root: UIViewController) {
-        let vc = ContainerViewController(presenter: SideMenuPresenter())
-        vc.modalPresentationStyle = .fullScreen
+        let presenter = RegistrationPresenter()
+        let vc = RegistrationViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        
         root.navigationController?.present(vc, animated: true)
     }
     
+    func showLoginVC(_ root: UIViewController) {
+        let presenter = LoginPresenter()
+        let vc = LoginViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        root.navigationController?.present(vc, animated: true)
+    }
     
-    
+    func showTrickyPassage(_ root: UIViewController) {
+        let presenter = SideMenuPresenter()
+        let vc = ContainerViewController(presenter: presenter)
+        presenter.root = vc
+        vc.modalPresentationStyle = .fullScreen
+        root.navigationController?.present(vc, animated: true)
+    }
 }
 

@@ -31,7 +31,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var icon: UIImageView!
     
     var datePicker: UIDatePicker?
-    
     var onDate: ((Date)->())?
     
     override func awakeFromNib() {
