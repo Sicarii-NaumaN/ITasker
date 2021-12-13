@@ -55,6 +55,7 @@
 		BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */; };
 		BC3D85742755703400F358C1 /* TicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85732755703400F358C1 /* TicketPresenter.swift */; };
 		BCB26D1B275BB09D006A1467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */; };
+		BCF24A9627660C700052D1B4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF24A9527660C700052D1B4 /* Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
 		BC3D85732755703400F358C1 /* TicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPresenter.swift; sourceTree = "<group>"; };
 		BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCF24A9527660C700052D1B4 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01EAE1AEED2BC7EB9276F24 /* Pods-itasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itasker.release.xcconfig"; path = "Target Support Files/Pods-itasker/Pods-itasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +216,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BCF24A9427660C4F0052D1B4 /* DBManager */,
 				BC3D855B27556B6D00F358C1 /* CreateTask */,
 				BC0C3F962753DA2B00E03330 /* Ticket */,
 				0FA34A78274E242400F6BE3C /* SideMenu */,
@@ -428,6 +431,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BCF24A9427660C4F0052D1B4 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				BCF24A9527660C700052D1B4 /* Manager.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -561,6 +572,7 @@
 				0F967D73272EBA600090D0E6 /* LoginPresenter.swift in Sources */,
 				BC0C3FA12753DA2B00E03330 /* TicketViewCell.swift in Sources */,
 				BC0C3F9D2753DA2B00E03330 /* TicketsViewController.swift in Sources */,
+				BCF24A9627660C700052D1B4 /* Manager.swift in Sources */,
 				0F967D78272EC58B0090D0E6 /* LoginViewController.swift in Sources */,
 				0F967D6B272EB9B30090D0E6 /* RegistrationPresenter.swift in Sources */,
 				0F967D36272D93B30090D0E6 /* AppDelegate.swift in Sources */,
@@ -732,14 +744,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ALN8Y95MHJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = itasker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -753,14 +765,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ALN8Y95MHJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = itasker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saturday.itasker-registration-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

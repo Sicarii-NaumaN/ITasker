@@ -13,6 +13,8 @@ class GreetViewControler: UIViewController {
     
     var presenter: GreetPresenter
     
+    var onLogout : (()->())?
+    
     private var circles = CirclesAndLabel()
     
     

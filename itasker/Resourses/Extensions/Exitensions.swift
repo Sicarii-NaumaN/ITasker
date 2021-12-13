@@ -68,6 +68,7 @@ extension String {
     public static let headerFamilyTasks = "Семья"
     public static let headerJobTasks = "Работа"
     public static let headerУduTasks = "Учёба"
+    
 }
 
 extension Date {
@@ -77,6 +78,7 @@ extension Date {
         dateFormatter.dateFormat = "LLL"
         return dateFormatter.string(from: self)
     }
+    
 }
   
 extension UIViewController {

@@ -24,7 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         var vc : UIViewController = .init()
         if Auth.auth().currentUser != nil {
-            vc = ContainerViewController(presenter: SideMenuPresenter())
+            let presenter = SideMenuPresenter()
+            let viewController = ContainerViewController(presenter: presenter)
+            presenter.root = viewController
+            vc = viewController
         } else {
             let presenter = GreetPresenter()
             let controller = GreetViewControler(presenter: presenter)

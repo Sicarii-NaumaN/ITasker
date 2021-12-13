@@ -7,6 +7,7 @@
 
 import UIKit
 import EasyPeasy
+import Firebase
 
 protocol SideButtonDelegate: AnyObject {
     func sideMenuButtonTappedDelegate()
@@ -15,9 +16,9 @@ protocol SideButtonDelegate: AnyObject {
 class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     
     var presenter: SideMenuPresenter
-    
-    let menuVC = MenuViewController()
-    let tasksVC = TicketsViewController(presenter: TicketPresenter())
+    private var userID = "default"
+    let menuVC : MenuViewController
+    let tasksVC : TicketsViewController
     var navVC: UINavigationController?
     
 
@@ -36,7 +37,14 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
     }
     
     init(presenter: SideMenuPresenter) {
+        if let userID = FirebaseAuth.Auth.auth().currentUser?.uid as? String {
+            tasksVC = TicketsViewController(presenter: TicketPresenter(), userID: userID)
+        } else {
+            tasksVC = TicketsViewController(presenter: TicketPresenter(), userID: self.userID)
+        }
+        
         self.presenter = presenter
+        menuVC = MenuViewController(presenter: self.presenter)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -86,6 +94,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 6, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
 
         view.addSubview(eagleCircle)
+        
 
         eagleCircle.easy.layout(
             Top(-100),

@@ -62,6 +62,20 @@ extension RegistrationViewController {
 }
 
 extension RegistrationViewController: RegistrationPresenterOutput {
+    func logAlert(error: String) {
+        let alert = UIAlertController(title: error, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Повторить", style: .default))
+        self.present(alert, animated: true) {
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertCanNotLogIn)))
+        }
+    }
+    
+    @objc func alertCanNotLogIn() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    
     func redirect() {
         self.dismiss(animated: true) { [weak self] in
             guard let self = self else { return }

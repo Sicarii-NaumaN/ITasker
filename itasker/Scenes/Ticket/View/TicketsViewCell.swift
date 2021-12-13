@@ -15,6 +15,11 @@ class TicketsViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var leftView: UIView!
     
+    var taskID: String = ""
+    var taskDescription: String = ""
+    var dateTimestamp = Date()
+    var deadlineTimestamp = Date()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

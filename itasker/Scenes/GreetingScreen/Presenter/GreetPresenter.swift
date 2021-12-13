@@ -44,12 +44,11 @@ final class GreetPresenter: GreetPresenterProtocol {
     }
     
     func showTrickyPassage(_ root: UIViewController) {
-        let vc = ContainerViewController(presenter: SideMenuPresenter())
+        let presenter = SideMenuPresenter()
+        let vc = ContainerViewController(presenter: presenter)
+        presenter.root = vc
         vc.modalPresentationStyle = .fullScreen
         root.navigationController?.present(vc, animated: true)
     }
-    
-    
-    
 }
 

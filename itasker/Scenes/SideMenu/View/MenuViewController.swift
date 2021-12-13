@@ -7,6 +7,7 @@
 
 import UIKit
 import EasyPeasy
+import Firebase
 
 final class MenuCell: UITableViewCell {
     static let identifier = "MenuCell"
@@ -47,6 +48,16 @@ final class MenuCell: UITableViewCell {
 class MenuViewController: UIViewController {
     
     private var selected = IndexPath(row: -1, section: 0)
+    var presenter: SideMenuPresenter
+    
+    init(presenter: SideMenuPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     enum MenuOptions: String, CaseIterable {
         case all = "6"
@@ -122,7 +133,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuCell.identifier, for: indexPath) as? MenuCell else { return UITableViewCell() }
-                print(MenuOptions.allCases[indexPath.row-1].imageName)
+//                print(MenuOptions.allCases[indexPath.row-1].imageName)
         cell.configure(with: MenuOptions.allCases[indexPath.row-1].imageName)
         cell.backgroundColor = #colorLiteral(red: 0.1489986479, green: 0.1490316391, blue: 0.1489965916, alpha: 1)
         if selected == indexPath {
@@ -134,8 +145,16 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
-        print("Вот такая хуета\(indexPath)")
+         
+        
         selected = indexPath
+        if selected == [0,1] {
+            debugPrint("[DEBUG] Logout tapped")
+            debugPrint("[DEBUG] Logout for user \(String(describing: FirebaseAuth.Auth.auth().currentUser))")
+            self.presenter.logout()
+            debugPrint("[DEBUG] Logout for user \(String(describing: FirebaseAuth.Auth.auth().currentUser))")
+            
+        }
         tableView.reloadData()
     }
     
