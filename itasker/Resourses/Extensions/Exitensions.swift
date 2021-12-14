@@ -65,9 +65,10 @@ extension String {
     public static let addNewTask = "+ ДОБАВИТЬ ЗАДАЧУ"
     
     public static let headerAllTasks = "Все задачи"
-    public static let headerFamilyTasks = "Семья"
+    public static let headerFamilyTasks = "Семья" //
     public static let headerJobTasks = "Работа"
     public static let headerУduTasks = "Учёба"
+    public static let headerУduTasks = "Дом"
     
 }
 
