@@ -68,7 +68,7 @@ extension String {
     public static let headerFamilyTasks = "Семья" //
     public static let headerJobTasks = "Работа"
     public static let headerУduTasks = "Учёба"
-    public static let headerУduTasks = "Дом"
+    //public static let headerУduTasks = "Дом"
     
 }
 

@@ -51,7 +51,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     var myTextField: TaskTextView
     var myTextFieldDescription: TaskTextView
     
-    var dataForTable: [String] = ["нояб. 6, 10:00", "Ежедневно", "Теги"]
+    var dataForTable: [String] = ["нояб. 6, 10:00", "Ежедневно", "Категория"]
     var imageForTable: [String] = ["calendar.badge.clock", "arrow.triangle.2.circlepath", "tag"]
     var colorForTable: [UIColor] = [.systemOrange, .systemRed, .systemBlue, .systemPurple]
     
@@ -102,7 +102,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     func createPicker() {
         picker = DateTimePicker.create()
-        picker.frame = CGRect(x: 0, y: 0, width: screenWidth, height:
+        picker.frame = CGRect(x: 0, y: -65, width: screenWidth, height:
                                 screenHeight)
         picker.dateFormat = "LLL d, HH:mm"
         picker.doneButtonTitle = "Подтвердить"
@@ -167,13 +167,13 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         
         myTextFieldDescription.configure(frame: CGRect(
             x: 70,
-            y: 265,
+            y: 236,
             width: screenWidth - 130,
             height: 100)
         )
         myTextField.configure(frame: CGRect(
             x: 70,
-            y: 225,
+            y: 185,
             width: screenWidth - 130,
             height: 33)
         )
@@ -225,6 +225,12 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         tableView.reloadData()
     }
     
+    func updateRepeatLabelCategory(action: UIAlertAction) {
+        print(action.title!)
+        dataForTable[2] = action.title!
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0, 0] {
@@ -240,6 +246,17 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             self.present(alert, animated: true) {
                 alert.view.superview?.isUserInteractionEnabled = true
                 alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+            }
+        }
+        if indexPath == [0, 2] {
+            let alert_category = UIAlertController(title: "Выберите категорию", message: nil, preferredStyle: .alert)
+            alert_category.addAction(UIAlertAction(title: "Дом", style: .default, handler: updateRepeatLabelCategory))
+            alert_category.addAction(UIAlertAction(title: "Семья", style: .default, handler: updateRepeatLabelCategory))
+            alert_category.addAction(UIAlertAction(title: "Работа", style: .default, handler: updateRepeatLabelCategory))
+            alert_category.addAction(UIAlertAction(title: "Учеба", style: .default, handler: updateRepeatLabelCategory))
+            self.present(alert_category, animated: true) {
+                alert_category.view.superview?.isUserInteractionEnabled = true
+                alert_category.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
             }
         }
     }
@@ -267,8 +284,8 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             taskID = self.task.id
             isNewTask = false
         }
-        var task = Task(id: taskID, title: self.myTextField.text, description: self.myTextFieldDescription.text, date: currentDate, taskType: "", deadline: picker.selectedDate)
-        self.presenter.createTask(root: self, task: task, userID: self.userID, isNewTask: isNewTask)
+        var task = Task(id: taskID, title: self.myTextField.text, description: self.myTextFieldDescription.text, date: currentDate, taskType: dataForTable[2], deadline: picker.selectedDate)
+        self.presenter.createTask(root: self, task: task, userID: self.userID, isSettings: isNewTask)
     }
     
 //    func parseDeadLine(_ deadline: String, _ curDate: Date) -> Date {
@@ -299,7 +316,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     @objc func alertControllerBackgroundTapped(_ :UIAlertAction) -> Void
     {
-        self.presenter.deleteTask(root: self, taskID: self.task.id, isNewTask: self.isSettingsScreen)
+        self.presenter.deleteTask(root: self, taskID: self.task.id, isSettings: self.isSettingsScreen)
     }
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
@@ -309,7 +326,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     private func setupLayout() {
         imageView.easy.layout(
-            Top(55).to(myHeader),
+            Top(40).to(myHeader),
             Right(10).to(myTextField),
             Width(25),
             Height(23)
@@ -323,28 +340,28 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         )
         
         myHeader.easy.layout(
-            Top(120),
+            Top(100),
             CenterX(),
             Height(50),
             Width(230)
         )
         
         myButton.easy.layout(
-            Top(screenHeight - 120),
+            Top(screenHeight - 170),
             CenterX(),
             Height(50),
             Width(300)
         )
         
         settingButton.easy.layout(
-            Top(68),
+            Top(60),
             CenterX(135),
             Height(30),
             Width(30)
         )
         
         backButton.easy.layout(
-            Top(74),
+            Top(60),
             Left(50),
             Height(20),
             Width(25)
