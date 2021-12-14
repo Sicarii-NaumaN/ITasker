@@ -246,7 +246,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     @IBAction func handleDeleteBtn(sender: UIButtonTextIcon) {
         let alert = UIAlertController(title: "Удалить задачу?", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Да", style: .destructive))
+        alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: self.alertControllerBackgroundTapped))
         alert.addAction(UIAlertAction(title: "Нет", style: .cancel))
     
         //alert.view.tintColor = UIColor.systemRed
@@ -297,9 +297,9 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
 //        cell.date.text = "\(day) \(date.month) \(year)"
 //    }
     
-    @objc func alertControllerBackgroundTapped()
+    @objc func alertControllerBackgroundTapped(_ :UIAlertAction) -> Void
     {
-        self.dismiss(animated: true, completion: nil)
+        self.presenter.deleteTask(root: self, taskID: self.task.id, isNewTask: self.isSettingsScreen)
     }
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {

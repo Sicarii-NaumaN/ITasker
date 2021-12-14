@@ -114,7 +114,9 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.taskID = userTasks[indexPath.row].id
         cell.deadlineTimestamp = userTasks[indexPath.row].deadline
         cell.dateTimestamp = userTasks[indexPath.row].date
+        
         cell.leftView.backgroundColor = .orange
+        
         cell.label.text = userTasks[indexPath.row].title
         count += 1
         
