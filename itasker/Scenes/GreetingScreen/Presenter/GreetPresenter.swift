@@ -5,32 +5,50 @@
 //  Created by Данил Морозов on 30.10.2021.
 //
 
-import Foundation
+import UIKit
 
-
-protocol GreetViewProtocol: AnyObject {
-    func setGreeting(greeting: String)
+protocol GreetPresenterProtocol {
+    func showRegistrationVC(_ root: UIViewController)
+    func showLoginVC(_ root: UIViewController)
+    func showTrickyPassage(_ root: UIViewController)
 }
 
-protocol GreetViewPresenterProtocol: AnyObject {
-    init(view: GreetViewProtocol, person: Person)
-    func showGreeting()
-}
+final class GreetPresenter: GreetPresenterProtocol {
+    weak var controller : GreetViewControler?
 
-
-class GreetPresenter: GreetViewPresenterProtocol {
-    let view: GreetViewProtocol
-    let person: Person
-    
-    required init(view: GreetViewProtocol, person: Person) {
-        self.view = view
-        self.person = person
+    func showRegistrationVC(_ root: UIViewController) {
+        let presenter = RegistrationPresenter()
+        let vc = RegistrationViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        
+        root.navigationController?.present(vc, animated: true)
     }
     
-    func showGreeting() {
-        let greeting = "Дарова, " + self.person.firstName + "!"
-        self.view.setGreeting(greeting: greeting)
+    func showLoginVC(_ root: UIViewController) {
+        let presenter = LoginPresenter()
+        let vc = LoginViewController(presenter: presenter)
+        presenter.controller = vc
+        vc.onClose = { [weak self] in
+            guard let self = self else { return }
+            if let controller = self.controller {
+                self.showTrickyPassage(controller)
+            }
+        }
+        root.navigationController?.present(vc, animated: true)
     }
     
-    
+    func showTrickyPassage(_ root: UIViewController) {
+        let presenter = SideMenuPresenter()
+        let vc = ContainerViewController(presenter: presenter)
+        presenter.root = vc
+        vc.modalPresentationStyle = .fullScreen
+        root.navigationController?.present(vc, animated: true)
+    }
 }
+

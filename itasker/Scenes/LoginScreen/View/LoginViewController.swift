@@ -7,19 +7,19 @@
 
 import UIKit
 
-class LoginViewControler: UIViewController {
+class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter
+
+    let width = UIScreen.main.bounds.width
+    let heigth = UIScreen.main.bounds.height
     
-    private var circle = CoolCircleForDisign(frame: CGRect(x: 200, y: 200, width: 200, height: 200))
+    private var password = ""
+    private var login = ""
     
-    private lazy var coolButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .systemPink
-        button.setTitle("hit me", for: .normal)
-        button.setTitle("thanks", for: .highlighted)
-        return button
-    }()
+    var onClose : (()->())?
+    
+    private var labels = LoginLabels()
     
     init(presenter: LoginPresenter) {
         self.presenter = presenter
@@ -30,23 +30,56 @@ class LoginViewControler: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = labels
+    }
 
-    
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.addSubview(circle)
-        view.addSubview(coolButton)
-        coolButton.frame = CGRect(x: 200, y: 400, width: 200, height: 50)
-        coolButton.addTarget(self, action: #selector(didCoolButtonTapped), for: .touchUpInside)
-        coolButton.layer.cornerRadius = 20
-        coolButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        view.backgroundColor = .systemBackground
         
+        labels.enterButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
     
-    @objc func didCoolButtonTapped() {
-        presenter.showRegistrationVC(self)
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
+    @objc func loginTapped() {
+        password = labels.userPasswordTextField.text ?? ""
+        login = labels.userLoginTextField.text ?? ""
+        self.loginButtonTappedDelegate(email: login, password: password)
+    }
+}
+
+extension LoginViewController {
+    func loginButtonTappedDelegate(email : String, password: String) {
+        debugPrint("[DEBUG] login tapped")
+        presenter.login(email: email, password: password)
+    }
+}
+
+extension LoginViewController: LoginPresenterOutput {
+    func logAlert(error: String) {
+        let alert = UIAlertController(title: error, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Повторить", style: .default))
+        self.present(alert, animated: true) {
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertCanNotLogIn)))
+        }
+    }
+    
+    @objc func alertCanNotLogIn() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+
+    func redirect() {
+        self.dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            self.onClose?()
+        }
+    }
 }
