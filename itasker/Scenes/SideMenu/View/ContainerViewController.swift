@@ -24,7 +24,13 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
 
     private var eagleCircle: UIView = {
         let buttomRightCircle = CoolCircleForDisign()
-        buttomRightCircle.backgroundColor = UIColor(red: 255.0/255.0, green: 159.0/255.0, blue: 10.0/255.0, alpha: 1)
+        buttomRightCircle.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        return buttomRightCircle
+    }()
+    
+    private var eagleCircleLittle: UIView = {
+        let buttomRightCircle = CoolCircleForDisign()
+        buttomRightCircle.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         return buttomRightCircle
     }()
         
@@ -91,15 +97,23 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         // Menu
         addChild(menuVC)
         view.addSubview(menuVC.view)
-        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 6, width: self.tasksVC.view.frame.width, height: self.tasksVC.view.frame.height)
+        self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 9, width: self.tasksVC.view.frame.width + 80, height: self.tasksVC.view.frame.height)
 
         view.addSubview(eagleCircle)
+        view.addSubview(eagleCircleLittle)
         
 
         eagleCircle.easy.layout(
             Top(-100),
             Right(-50),
             Size(self.tasksVC.view.frame.width * 1 / 2)
+
+        )
+        
+        eagleCircleLittle.easy.layout(
+            Top(-10).to(eagleCircle),
+            Right(-55).to(eagleCircle),
+            Size(self.tasksVC.view.frame.width * 1 / 12)
 
         )
     }
