@@ -13,12 +13,13 @@ struct ConstantsUIText {
 }
 
 class TaskTextView: UITextView {
-    init(myText: UILabel?, frame: CGRect, textContainer: NSTextContainer?) {
+    init(myText: UILabel?, textinput: String? = nil, frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         if let myText = myText {
             placeholder = myText.text
         }
         self.frame = frame
+        self.text = textinput
     }
 
     required init?(coder: NSCoder) {
@@ -42,12 +43,12 @@ class TaskTextView: UITextView {
         tintColor = .orange
     }
     
-    func attribute() {
-        let style = NSMutableParagraphStyle()
-        style.lineSpacing = 5
-        
-        let myAttribute = [ NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue, NSAttributedString.Key.paragraphStyle : style] as [NSAttributedString.Key : Any]
-        let myAttrString = NSAttributedString(string:  text, attributes: myAttribute)
-        attributedText = myAttrString
-    }
+//    func attribute() {
+//        let style = NSMutableParagraphStyle()
+//        style.lineSpacing = 5
+//        
+//        let myAttribute = [ NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue, NSAttributedString.Key.paragraphStyle : style] as [NSAttributedString.Key : Any]
+//        let myAttrString = NSAttributedString(string:  text, attributes: myAttribute)
+//        attributedText = myAttrString
+//    }
 }

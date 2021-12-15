@@ -23,14 +23,14 @@ final class ButtonBlock: UIView {
     
     var regButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        button.backgroundColor = UIColor(red: 255.0/255.0, green: 159.0/255.0, blue: 10.0/255.0, alpha: 1)
         button.setTitle("Регистрация", for: .normal)
         return button
     }()
     
     var loginButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        button.backgroundColor = UIColor(red: 255.0/255.0, green: 159.0/255.0, blue: 10.0/255.0, alpha: 1)
         button.setTitle("Авторизация", for: .normal)
         return button
     }()
@@ -44,7 +44,7 @@ final class ButtonBlock: UIView {
     
     private lazy var separatingRectangle: UIView = {
         let rectView = UIView()
-        rectView.backgroundColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
+        rectView.backgroundColor = .white
 //        rectView.layer.cornerRadius = 10
         return rectView
     }()
@@ -98,7 +98,7 @@ final class ButtonBlock: UIView {
             Top(0).to(loginButton),
             CenterX().to(loginButton),
             Width(self.width),
-            Height(3)
+            Height(2)
         )
         regButton.easy.layout(
             Top().to(separatingRectangle),

@@ -51,6 +51,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         
         self.presenter = presenter
         menuVC = MenuViewController(presenter: self.presenter)
+        menuVC.delegate = tasksVC
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -100,7 +101,7 @@ class ContainerViewController: UIViewController, TasksViewControllerDelegate {
         self.menuVC.view.frame = CGRect(x: self.tasksVC.view.frame.width * 5 / 6, y: self.tasksVC.view.frame.height / 9, width: self.tasksVC.view.frame.width + 80, height: self.tasksVC.view.frame.height)
 
         view.addSubview(eagleCircle)
-        view.addSubview(eagleCircleLittle)
+//        view.addSubview(eagleCircleLittle)
         
 
         eagleCircle.easy.layout(

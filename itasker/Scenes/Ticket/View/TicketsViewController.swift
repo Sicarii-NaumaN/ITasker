@@ -19,9 +19,14 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     private let presenter: TicketPresenter
     @IBOutlet weak var tableView: UITableView!
     
+    var filter : String? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     private let userID : String
     private var userTasks = [Task]()
-    private var createTaskButton = UIButtonTextIcon(image: "", text: String.addNewTask, colorForButton: .orange, colorForIcon: .white, colorForText: .white)
+    private var createTaskButton = UIButtonTextIcon(image: "", text: String.addNewTask, colorForButton: #colorLiteral(red: 0.1489986479, green: 0.1490316391, blue: 0.1489965916, alpha: 1), colorForIcon: .white, colorForText: .white)
     
     let header = UILabel()
     
@@ -94,7 +99,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        self.userTasks = Manager.shared.getTasks(userID)
+        self.userTasks = Manager.shared.getTasks(userID, filter)
         return userTasks.count
     }
     
@@ -115,7 +120,21 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.deadlineTimestamp = userTasks[indexPath.row].deadline
         cell.dateTimestamp = userTasks[indexPath.row].date
         
-        cell.leftView.backgroundColor = .orange
+        debugPrint("-----------------", userTasks[indexPath.row].taskType)
+        switch userTasks[indexPath.row].taskType {
+        case "Дом":
+            cell.leftView.backgroundColor = #colorLiteral(red: 0.3651353121, green: 0.9017430544, blue: 0.9974831939, alpha: 1)
+        case "Семья":
+            cell.leftView.backgroundColor = #colorLiteral(red: 0.8543118834, green: 0.4794931412, blue: 1, alpha: 1)
+        case "Работа":
+            cell.leftView.backgroundColor = #colorLiteral(red: 1, green: 0.6216245294, blue: 0.04360324889, alpha: 1)
+        case "Учеба":
+            cell.leftView.backgroundColor = #colorLiteral(red: 0.9997467399, green: 0.4097053111, blue: 0.3796779513, alpha: 1)
+        default:
+            cell.leftView.backgroundColor = #colorLiteral(red: 1, green: 0.6216245294, blue: 0.04360324889, alpha: 1)
+
+        }
+        
         
         cell.label.text = userTasks[indexPath.row].title
         count += 1

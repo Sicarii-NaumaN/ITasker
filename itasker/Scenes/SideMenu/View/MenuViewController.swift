@@ -49,7 +49,7 @@ class MenuViewController: UIViewController {
     
     private var selected = IndexPath(row: -1, section: 0)
     var presenter: SideMenuPresenter
-    
+    var delegate: TicketsViewController?
     init(presenter: SideMenuPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -132,6 +132,7 @@ class MenuViewController: UIViewController {
         tableView.dataSource = self
         view.backgroundColor = #colorLiteral(red: 0.1489986479, green: 0.1490316391, blue: 0.1489965916, alpha: 1)
         tableView.isScrollEnabled = false
+//        tableView.selectRow(at: .init(row: 6, section: 0), animated: true, scrollPosition: .bottom)
         
     }
     
@@ -188,6 +189,25 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             debugPrint("[DEBUG] Logout for user \(String(describing: FirebaseAuth.Auth.auth().currentUser))")
             self.presenter.logout()
             debugPrint("[DEBUG] Logout for user \(String(describing: FirebaseAuth.Auth.auth().currentUser))")
+        }  else if selected == [0,2] {
+            
+            
+            delegate?.filter = "Дом"
+        } else if selected == [0,3] {
+            
+            delegate?.filter = "Учеба"
+        } else if selected == [0,4] {
+            
+            delegate?.filter = "Работа"
+        } else if selected == [0,5] {
+            debugPrint("---------------------------------------")
+            delegate?.filter = "Семья"
+        } else if selected == [0,6] {
+            debugPrint("---------------------------------------")
+            delegate?.filter = nil
+        } else if selected == [0,7] {
+            debugPrint("---------------------------------------")
+            self.presenter.showCreateCategoryVC(self)
         }
         tableView.reloadData()
     }

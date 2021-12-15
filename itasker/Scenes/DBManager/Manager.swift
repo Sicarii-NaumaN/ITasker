@@ -17,7 +17,7 @@ final class Manager {
     func deleteTask(_ id: String) {
         UserDefaults.standard.removeObject(forKey: id)
     }
-    func getTasks(_ id: String) -> [Task] {
+    func getTasks(_ id: String, _ filter: String? = nil) -> [Task] {
         var tasks = [Task]()
         
         do {
@@ -33,6 +33,12 @@ final class Manager {
                     } else {
                         debugPrint("[ERROR] Can not cast to Task")
                     }
+                }
+                if let filter = filter {
+                    tasks = tasks.filter{
+                        $0.taskType == filter
+                    }
+                    
                 }
                 return tasks.reversed()
             } else {

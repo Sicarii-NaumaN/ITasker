@@ -10,6 +10,8 @@ import Firebase
 
 protocol SideMenuPresenterProtocol {
     func logout()
+    func showCreateCategoryVC(_ root: UIViewController)
+    func setFilters(filter: String?)
 }
 
 final class SideMenuPresenter: SideMenuPresenterProtocol {
@@ -38,5 +40,20 @@ final class SideMenuPresenter: SideMenuPresenterProtocol {
            debugPrint("[ERROR] Error while logout")
         }
     }
-        
+    
+    func showCreateCategoryVC(_ root: UIViewController) {
+        let presenter = CreateCategoryPresenter()
+        let vc = CreateCategoryViewController(presenter: presenter)
+   
+        root.present(vc, animated: true)
+    }
+    
+    func setFilters(filter: String?) {
+//        root.
+//        let userID : Strin
+//        if let userID = FirebaseAuth.Auth.auth().currentUser.uid {
+//            userID = "Default"
+//        }
+//        Manager.shared.getTasks(userID, filter)
+    }
 }

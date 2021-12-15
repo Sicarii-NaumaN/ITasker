@@ -32,13 +32,13 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
     
     let task: Task
     let inputMyButton : InputInitButton
-    let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
+//    let inputBackButton = InputInitButton(image: "arrow.left", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     let inputSettingButton = InputInitButton(image: "trash", text: nil, colorForButton: .clear, colorForIcon: .black, colorForText: nil)
     var picker = DateTimePicker()
     //let alert: AlertViewController
     
     var myButton: UIButtonTextIcon
-    var backButton: UIButtonTextIcon
+//    var backButton: UIButtonTextIcon
     let settingButton: UIButtonTextIcon
     
     let nameTask = UILabel(frame: .zero)
@@ -60,27 +60,34 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         self.presenter = presenter
         isSettingsScreen = isSettings
         self.task = task
+        nameTask.text = "Название задачи"
+        describeTask.text = "Введите описание"
+        myTextField = TaskTextView(myText: nameTask, textinput: "", frame: .zero, textContainer: nil)
+        myTextFieldDescription = TaskTextView(myText: describeTask, textinput: "",frame: .zero, textContainer: nil)
+        
         if !isSettingsScreen {
-            nameTask.text = "Название задачи"
-            describeTask.text = "Введите описание"
+            
             inputMyButton = InputInitButton(image: "", text: "СОЗДАТЬ ЗАДАЧУ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
         } else {
             inputMyButton = InputInitButton(image: "", text: "СОХРАНИТЬ", colorForButton: .black, colorForIcon: nil, colorForText: .white)
-            nameTask.text = task.title
-            describeTask.text = task.description
+            myTextFieldDescription.text = task.description
+            myTextField.text = task.title
+//            nameTask.text = task.title
+//            describeTask.text = task.description
         }
-        myTextField = TaskTextView(myText: nameTask, frame: .zero, textContainer: nil)
-        myTextFieldDescription = TaskTextView(myText: describeTask, frame: .zero, textContainer: nil)
         
         
         myButton = UIButtonTextIcon.create(input: inputMyButton)
-        backButton = UIButtonTextIcon.create(input: inputBackButton)
+//        backButton = UIButtonTextIcon.create(input: inputBackButton)
+        
         settingButton = UIButtonTextIcon.create(input: inputSettingButton)
-
         
         super.init(nibName: nil, bundle: nil)
         //alert.init()
+    
+            
         settingButton.addTarget(self, action: #selector(handleDeleteBtn), for: .touchUpInside)
+        
         myButton.addTarget(self, action: #selector(handleCreateTask), for: .touchUpInside)
         
         myTextField.delegate = self
@@ -147,7 +154,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         imageViewDescribe.image = UIImage(systemName: "text.justify")
         imageViewDescribe.tintColor = .systemGray
         
-        backButton.configureButton()
+//        backButton.configureButton()
         
         myButton.configureButton()
         
@@ -157,9 +164,11 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
         
         self.view.addSubview(myTextField)
         self.view.addSubview(myTextFieldDescription)
-        self.view.addSubview(backButton)
+//        self.view.addSubview(backButton)
         self.view.addSubview(myHeader)
+        if isSettingsScreen {
         self.view.addSubview(settingButton)
+        }
         self.view.addSubview(imageViewDescribe)
         self.view.addSubview(imageView)
         self.view.addSubview(myButton)
@@ -178,7 +187,7 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             height: 33)
         )
         
-        myTextFieldDescription.attribute()
+//        myTextFieldDescription.attribute()
         myButton.layer.cornerRadius = 2
         view.backgroundColor = .systemBackground
         setupLayout()
@@ -284,7 +293,14 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             taskID = self.task.id
             isNewTask = false
         }
-        var task = Task(id: taskID, title: self.myTextField.text, description: self.myTextFieldDescription.text, date: currentDate, taskType: dataForTable[2], deadline: picker.selectedDate)
+        
+        var taskType : String
+        if dataForTable[2] == "Категория" {
+            taskType = self.task.taskType
+        } else {
+            taskType = dataForTable[2]
+        }
+        var task = Task(id: taskID, title: self.myTextField.text, description: self.myTextFieldDescription.text, date: currentDate, taskType: taskType, deadline: picker.selectedDate)
         self.presenter.createTask(root: self, task: task, userID: self.userID, isSettings: isNewTask)
     }
     
@@ -360,12 +376,12 @@ class CreateTaskViewController: UIViewController, UITextViewDelegate, UITableVie
             Width(30)
         )
         
-        backButton.easy.layout(
-            Top(60),
-            Left(50),
-            Height(20),
-            Width(25)
-        )
+//        backButton.easy.layout(
+//            Top(60),
+//            Left(50),
+//            Height(20),
+//            Width(25)
+//        )
     }
     
 }

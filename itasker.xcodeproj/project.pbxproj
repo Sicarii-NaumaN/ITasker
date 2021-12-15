@@ -54,6 +54,11 @@
 		BC3D856F27556B6D00F358C1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856627556B6D00F358C1 /* TableViewCell.xib */; };
 		BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */; };
 		BC3D85742755703400F358C1 /* TicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D85732755703400F358C1 /* TicketPresenter.swift */; };
+		BCA5DEDD276A486C00D1B655 /* CreateCategoryPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5DED2276A486C00D1B655 /* CreateCategoryPresent.swift */; };
+		BCA5DEE2276A486C00D1B655 /* CreateCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5DED9276A486C00D1B655 /* CreateCategoryViewController.swift */; };
+		BCA5DEE3276A486C00D1B655 /* CreateCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5DEDA276A486C00D1B655 /* CreateCategoryTableViewCell.swift */; };
+		BCA5DEE4276A486C00D1B655 /* CreateCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA5DEDB276A486C00D1B655 /* CreateCategoryViewController.xib */; };
+		BCA5DEE5276A486C00D1B655 /* CreateCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA5DEDC276A486C00D1B655 /* CreateCategoryTableViewCell.xib */; };
 		BCB26D1B275BB09D006A1467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */; };
 		BCF24A9627660C700052D1B4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF24A9527660C700052D1B4 /* Manager.swift */; };
 /* End PBXBuildFile section */
@@ -106,6 +111,11 @@
 		BC3D856627556B6D00F358C1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BC3D856727556B6D00F358C1 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
 		BC3D85732755703400F358C1 /* TicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPresenter.swift; sourceTree = "<group>"; };
+		BCA5DED2276A486C00D1B655 /* CreateCategoryPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryPresent.swift; sourceTree = "<group>"; };
+		BCA5DED9276A486C00D1B655 /* CreateCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryViewController.swift; sourceTree = "<group>"; };
+		BCA5DEDA276A486C00D1B655 /* CreateCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		BCA5DEDB276A486C00D1B655 /* CreateCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateCategoryViewController.xib; sourceTree = "<group>"; };
+		BCA5DEDC276A486C00D1B655 /* CreateCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		BCB26D1A275BB09D006A1467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCF24A9527660C700052D1B4 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		D8380005B856A8AA370CE1CE /* Pods_itasker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itasker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +226,7 @@
 		0F967D58272EAB370090D0E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BCA5DED0276A486C00D1B655 /* CreateCategory */,
 				BCF24A9427660C4F0052D1B4 /* DBManager */,
 				BC3D855B27556B6D00F358C1 /* CreateTask */,
 				BC0C3F962753DA2B00E03330 /* Ticket */,
@@ -431,6 +442,43 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BCA5DED0276A486C00D1B655 /* CreateCategory */ = {
+			isa = PBXGroup;
+			children = (
+				BCA5DED1276A486C00D1B655 /* Present */,
+				BCA5DED3276A486C00D1B655 /* Model */,
+				BCA5DED8276A486C00D1B655 /* View */,
+			);
+			name = CreateCategory;
+			path = itasker/Scenes/CreateCategory;
+			sourceTree = SOURCE_ROOT;
+		};
+		BCA5DED1276A486C00D1B655 /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				BCA5DED2276A486C00D1B655 /* CreateCategoryPresent.swift */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		BCA5DED3276A486C00D1B655 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCA5DED8276A486C00D1B655 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCA5DED9276A486C00D1B655 /* CreateCategoryViewController.swift */,
+				BCA5DEDA276A486C00D1B655 /* CreateCategoryTableViewCell.swift */,
+				BCA5DEDB276A486C00D1B655 /* CreateCategoryViewController.xib */,
+				BCA5DEDC276A486C00D1B655 /* CreateCategoryTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BCF24A9427660C4F0052D1B4 /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,7 +558,9 @@
 				BC3D856F27556B6D00F358C1 /* TableViewCell.xib in Resources */,
 				0F967D42272D93B70090D0E6 /* LaunchScreen.storyboard in Resources */,
 				BC3D857027556B6D00F358C1 /* CreateTaskViewController.xib in Resources */,
+				BCA5DEE4276A486C00D1B655 /* CreateCategoryViewController.xib in Resources */,
 				BC0C3FA02753DA2B00E03330 /* TicketsViewCell.xib in Resources */,
+				BCA5DEE5276A486C00D1B655 /* CreateCategoryTableViewCell.xib in Resources */,
 				0F967D3F272D93B70090D0E6 /* Assets.xcassets in Resources */,
 				BCB26D1B275BB09D006A1467 /* GoogleService-Info.plist in Resources */,
 			);
@@ -566,6 +616,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F967D3A272D93B30090D0E6 /* GreetViewController.swift in Sources */,
+				BCA5DEE3276A486C00D1B655 /* CreateCategoryTableViewCell.swift in Sources */,
+				BCA5DEDD276A486C00D1B655 /* CreateCategoryPresent.swift in Sources */,
 				0FA34A84274E823C00F6BE3C /* SideMenuPresenter.swift in Sources */,
 				0F967D6F272EBA2B0090D0E6 /* LoginModel.swift in Sources */,
 				BC0C3FA62753DA8B00E03330 /* UICollectionViewCell + Ext.swift in Sources */,
@@ -602,6 +654,7 @@
 				0F967D71272EBA4C0090D0E6 /* CoolCircleForDisign.swift in Sources */,
 				BC3D856827556B6D00F358C1 /* CreateTaskPresent.swift in Sources */,
 				BC0C3FA82753DA8B00E03330 /* UIView + Ext.swift in Sources */,
+				BCA5DEE2276A486C00D1B655 /* CreateCategoryViewController.swift in Sources */,
 				0FF678A9272F0C5C00FA422C /* CirclesAndLabel.swift in Sources */,
 				0F967D69272EB9840090D0E6 /* RegistrationModel.swift in Sources */,
 			);
