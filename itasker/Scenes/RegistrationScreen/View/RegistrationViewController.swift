@@ -39,6 +39,7 @@ class RegistrationViewController: UIViewController,
         labels.regButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+
     }
     
     
